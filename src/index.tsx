@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = () => {
+const App = (): React.FunctionComponentElement<unknown> => {
     return (
         <div>
             Miau Miau!!!
