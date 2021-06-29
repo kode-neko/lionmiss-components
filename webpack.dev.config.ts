@@ -1,7 +1,7 @@
 import path from "path";
 import { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: Configuration = {
   mode: "development",
@@ -11,6 +11,30 @@ const config: Configuration = {
   entry: "./src/index.tsx",
   module: {
     rules: [
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts/",
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: (): string => {
+            if (process.env.NODE_ENV === "development")
+              return "[path][name].[ext]";
+            return "[contenthash].[ext]";
+          },
+          outputPath: "imgs/"
+        }
+      },
+      {
+        test: /\.(sass|scss|css)$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
       {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
@@ -28,8 +52,8 @@ const config: Configuration = {
       template: "src/public/index.html",
     }),
     new ForkTsCheckerWebpackPlugin({
-      async: false
-    })
+      async: false,
+    }),
   ],
   devtool: "inline-source-map",
   devServer: {

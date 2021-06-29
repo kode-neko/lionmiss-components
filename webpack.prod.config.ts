@@ -1,5 +1,6 @@
 import path from "path";
 import { Configuration } from "webpack";
+import MiniCSSExtractPluging from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
@@ -16,6 +17,29 @@ const config: Configuration = {
   module: {
     rules: [
       {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts/"
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: (): string => {
+            if(process.env.NODE_ENV === "development")
+              return "[path][name].[ext]";
+            return "[contenthash].[ext]"
+          }
+        }
+      },
+      {
+        test: /\.(sass|scss|css)$/i,
+        use: [MiniCSSExtractPluging.loader, "css-loader", "sass-loader"],
+      },
+      {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
         use: {
@@ -28,6 +52,9 @@ const config: Configuration = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
+    new MiniCSSExtractPluging({
+      filename: "[name].css",
+    }),
     new HtmlWebpackPlugin({
       template: "src/public/index.html",
     }),
