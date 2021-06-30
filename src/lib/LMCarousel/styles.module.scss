@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.mainCont {
+  position: relative;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 4px 4px 2px rgba(16, 10, 24, 0.16);
+
+  .contImgs {
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .contDisplay {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: "right 0.5s";
+
+  .elementList {
+    display: inline-block;
+  }
+}
+
+.center {
+  align-self: flex-end;
+  background: white;
+  position: relative;
+  bottom: 14px;
+  border-radius: 2px 2px 0 0;
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 6px 6px 0px 6px;
+    height: 12px;
+    width: auto;
+
+    .listElement {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .dot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: black;
+        border-radius: 50%;
+      }
+    }
+
+    .listElement:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.left {
+  padding: 6px 6px 6px 0px;
+  border-radius: 0px 2px 2px 0px;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .triangleLeft {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid black;
+    border-bottom: 6px solid transparent;
+    display: inline-block;
+  }
+}
+
+.right {
+  padding: 6px 0px 6px 6px;
+  border-radius: 2px 0px 0px 2px;
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .triangleRight {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 6px solid black;
+    border-bottom: 6px solid transparent;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contDisplay {
+    width: 100vw;
+  }
+
+  .cont {
+    width: 100vw;
+    height: auto;
+  }
+
+  .list {
+    width: 400vw;
+  }
+
+  .imgEle {
+    width: 100vw;
+  }
+}
