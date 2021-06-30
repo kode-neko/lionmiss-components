@@ -21,26 +21,26 @@ const config: Configuration = {
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
-          outputPath: "fonts/"
-        }
+          outputPath: "fonts/",
+        },
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
           name: (): string => {
-            if(process.env.NODE_ENV === "development")
+            if (process.env.NODE_ENV === "development")
               return "[path][name].[ext]";
-            return "[contenthash].[ext]"
-          }
-        }
+            return "[contenthash].[ext]";
+          },
+        },
       },
       {
         test: /\.(sass|scss|css)$/i,
         use: [MiniCSSExtractPluging.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(ts|js)x?$/i,
+        test: /\.(js|ts|tsx|jsx)?$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

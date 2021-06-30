@@ -17,7 +17,7 @@ const config: Configuration = {
         options: {
           name: "[name].[ext]",
           outputPath: "fonts/",
-        }
+        },
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -28,15 +28,24 @@ const config: Configuration = {
               return "[path][name].[ext]";
             return "[contenthash].[ext]";
           },
-          outputPath: "imgs/"
-        }
+          outputPath: "imgs/",
+        },
       },
       {
-        test: /\.(sass|scss|css)$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.(sass|scss|css)$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          "sass-loader",
+        ],
       },
       {
-        test: /\.(ts|js)x?$/i,
+        test: /\.(js|ts|tsx|jsx)?$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
