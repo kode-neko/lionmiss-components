@@ -1,0 +1,25 @@
+{
+  "woman": {
+    "title": "Woman",
+    "tops": "Tops",
+    "bottom": "Bottom",
+    "dress": "Dresses",
+    "overcoat": "Overcoat",
+    "accesories": "Accesories"
+  },
+  "man": {
+    "title": "Man",
+    "tops": "Tops",
+    "bottom": "Bottom",
+    "robe": "Robe",
+    "overcoat": "Overcoat",
+    "accesories": "Accesories"
+  },
+  "about-us": "About us",
+  "faq": "Faq",
+  "user": {
+    "language": "Language",
+    "cart": "Cart",
+    "config": "Config"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "woman": {
+    "title": "Mujer",
+    "tops": "Tops",
+    "bottom": "Bottom",
+    "dress": "Vestidos",
+    "overcoat": "Chaquetas",
+    "accesories": "Complementos"
+  },
+  "man": {
+    "title": "Hombre",
+    "tops": "Tops",
+    "bottom": "Bottom",
+    "robe": "Túnicas",
+    "overcoat": "Chaquetas",
+    "accesories": "Complementos"
+  },
+  "about-us": "Información",
+  "faq": "Ayuda",
+  "user": {
+    "language": "Idioma",
+    "cart": "Carrito",
+    "config": "Configuración"
+  }
+}

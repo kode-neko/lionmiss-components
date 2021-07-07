@@ -1,5 +1,5 @@
 import React from "react";
-import { useKNCarousel, KNCarouselSlides } from "kodeneko-react-components/dist";
+import { useKNCarousel, KNCarouselSlides } from "kodeneko-react-components";
 import LMCarouselControls from "./LMCarouselControls";
 import styles from "./styles.module.scss";
 import { LMCarouselProps } from "./types";

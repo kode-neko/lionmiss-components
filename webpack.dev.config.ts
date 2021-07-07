@@ -5,12 +5,20 @@ import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: Configuration = {
   mode: "development",
+  cache: false,
   output: {
     publicPath: "/",
   },
   entry: "./src/index.tsx",
   module: {
     rules: [
+      {
+        test: /\.(js|ts|tsx|jsx)?$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: "file-loader",
@@ -44,13 +52,6 @@ const config: Configuration = {
           "sass-loader",
         ],
       },
-      {
-        test: /\.(js|ts|tsx|jsx)?$/i,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
     ],
   },
   resolve: {
@@ -69,7 +70,7 @@ const config: Configuration = {
     static: path.join(__dirname, "build"),
     historyApiFallback: true,
     port: 4000,
-    open: true,
+    open: false,
     hot: true,
   },
 };

@@ -17,7 +17,7 @@ const LMCarouselControls: React.FC<LMCarouselControlsProps> = ({
       <div className={styles.center}>
         <ul className={styles.list}>
           {imgList.map((img, indexImg) => (
-            <li className={styles.listElement}>
+            <li key={indexImg} className={styles.listElement}>
               <span
                 className={styles.dot}
                 key={indexImg}
