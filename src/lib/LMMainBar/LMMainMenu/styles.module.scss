@@ -1,0 +1,45 @@
+@import "../../style.scss";
+
+.cont {
+  position: relative;
+  display: inline-block;
+  .menu {
+    .opt {
+      display: inline-block;
+      list-style: none;
+      margin-bottom: 20px;
+      a {
+        padding: 16px;
+        color: $color-white;
+        .arrow {
+          margin-left: 4px;
+        }
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+
+  .submenu {
+    position: absolute;
+    top: 30px;
+    display: block;
+    background-color: $color-white;
+    z-index: 1;
+    border-radius: $border-radius-size;
+    @include shadow;
+    .list {
+      padding: 16px 0;
+      a {
+        color: $color-black;
+        display: inline-block;
+        width: 130px;
+        padding: 8px 20px;
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}

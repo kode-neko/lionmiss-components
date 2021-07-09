@@ -11,6 +11,7 @@ import {
   faWindowClose,
   faCheck,
   faCaretLeft,
+  faCaretDown
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -24,5 +25,6 @@ library.add(
   faTshirt,
   faWindowClose,
   faCheck,
-  faCaretLeft
+  faCaretLeft,
+  faCaretDown
 );

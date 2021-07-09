@@ -1,0 +1,26 @@
+@import "../../style.scss";
+
+.mainTitle {
+  display: inline-block;
+  margin: 10px;
+  width: 80px;
+  font-family: Righteous, cursive;
+  text-align: center;
+  background-color: $color-black;
+  border-radius: 0 0 4px 0;
+  border-right: 4px solid $color-main;
+  border-bottom: 4px solid $color-main;
+
+  h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 28px;
+    color: $color-white;
+    font-weight: normal;
+
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
-type MenuOpt = {
+interface MenuOpt{
   name: string;
   opts?: MenuOpt[];
   path?: string[];

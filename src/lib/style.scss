@@ -1,13 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import "reset-css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 $color-main: rgba(160, 107, 227, 1);
 $color-main-darken: rgba(135, 105, 173, 1);
 $color-second: rgba(111, 175, 234, 1);
 $color-black: rgba(16, 10, 24, 1);
 $color-white: rgba(244, 244, 244, 1);
-$color-mid: rgba(213, 210, 216, 1); 
+$color-mid: rgba(213, 210, 216, 1);
 
-$back-gradient: linear-gradient(to right, rgba(200, 200, 200, 1), rgba(213, 210, 216, 1));
+$back-gradient: linear-gradient(
+  to right,
+  rgba(200, 200, 200, 1),
+  rgba(213, 210, 216, 1)
+);
 
 $border-radius-size: 2px;
+
+@mixin shadow {
+  box-shadow: 4px 4px 2px rgba(16, 10, 24, .16);;
+}
+
+body {
+  font-family: "Roboto";
+  color: $color-black;
+  a {
+    text-decoration: none;
+    color: $color-black;
+  }
+}

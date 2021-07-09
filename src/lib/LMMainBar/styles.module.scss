@@ -1,6 +1,15 @@
-@import url('../style.scss');
+@import "../style.scss";
 
-.mainTitle {
-    font-family: Righteous;
-    
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: $color-black;
+    .left{
+
+    }
+    .right{
+
+    }
 }

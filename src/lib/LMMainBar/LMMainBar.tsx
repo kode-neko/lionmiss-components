@@ -1,12 +1,15 @@
 import React from "react";
-import { mainMenu, userMenu } from "../constants";
+import { userMenu } from "../constants";
 import { MenuOpt } from "../types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
-import styles from "./styles.module.scss";
 import { TFunction } from "i18next";
+import LMMainTitle from "./LMMainTitle";
+import LMMainMenu from "./LMMainMenu/LMMainMenu";
+import styles from "./styles.module.scss";
 
-const createPath = (pathList: string[], t: TFunction) => pathList.map(ele => t(ele)).join('/')
+const createPath = (pathList: string[], t: TFunction) =>
+  pathList.map((ele) => t(ele)).join("/");
 
 export const LMMainBar: React.FC = () => {
   const { t: tMM } = useTranslation("mainMenu");
@@ -33,16 +36,18 @@ export const LMMainBar: React.FC = () => {
   };
 
   return (
-    <div>
-      <div className={styles.mainTitle}>
-        <h1>WEB_TITLE</h1>
+    <div className={styles.cont}>
+      <div className={styles.left}>
+        <LMMainTitle />
+        <LMMainMenu />
       </div>
-      <div>{createMenu(mainMenu)}</div>
-      <div>
-        <input type="text" />
-        <FontAwesomeIcon icon="search" />
+      <div className={styles.right}>
+        <div>
+          <input type="text" />
+          <FontAwesomeIcon icon="search" />
+        </div>
+        <div>{createMenu(userMenu)}</div>
       </div>
-      <div>{createMenu(userMenu)}</div>
     </div>
   );
 };
