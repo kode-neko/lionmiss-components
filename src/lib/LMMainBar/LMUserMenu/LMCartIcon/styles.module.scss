@@ -23,9 +23,30 @@
       display: inline-block;
       position: relative;
       top: 4px;
-      font-size: 16px;
+      font-size: 14spx;
       font-weight: bold;
       color: $color-white;
     }
   }
+}
+
+@keyframes addedItemAnimation {
+  0% {
+    bottom: -4px;
+  }
+  50% {
+    bottom: 8px;
+  }
+  75% {
+    bottom: -8px;
+  }
+  100% {
+    bottom: -4px;
+  }
+}
+
+.addedItem {
+  animation-name: addedItemAnimation;
+  animation-duration: .75s;
+  animation-timing-function: ease;
 }

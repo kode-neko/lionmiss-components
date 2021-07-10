@@ -10,7 +10,8 @@ export const LMMainBar: React.FC<LMMainMenuProps> = ({
   webTitle,
   mainMenu,
   userMenu,
-  userInfo
+  userInfo,
+  onSearch,
 }) => (
   <div className={styles.cont}>
     <div className={styles.left}>
@@ -23,7 +24,7 @@ export const LMMainBar: React.FC<LMMainMenuProps> = ({
     </div>
     <div className={styles.right}>
       <div className={styles.search}>
-        <LMSearchInput />
+        <LMSearchInput onSearch={onSearch} />
       </div>
       <LMUserMenu userMenu={userMenu} userInfo={userInfo} />
     </div>

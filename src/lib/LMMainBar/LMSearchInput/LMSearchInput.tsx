@@ -1,15 +1,16 @@
 import React, { useState, KeyboardEvent, ChangeEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import style from "./styles.module.scss";
+import { LMSearchInputProps } from "./types";
 
-export const LMSearchInput: React.FC = () => {
+export const LMSearchInput: React.FC<LMSearchInputProps> = ({ onSearch }) => {
   const [valueSearch, setValueSearch] = useState<string>("");
   const handleOnChangeSearch = (e: ChangeEvent<HTMLInputElement>) =>
     setValueSearch(e.target.value);
   const handleKeyUpSearch = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "enter") console.log("Buscar");
+    if (e.key === "Enter") onSearch(valueSearch);
   };
-  const handleBlurSearch = () => console.log("Buscar");
+  const handleBlurSearch = () => onSearch(valueSearch);
 
   return (
     <div className={style.cont}>
@@ -21,7 +22,9 @@ export const LMSearchInput: React.FC = () => {
         onKeyUp={handleKeyUpSearch}
         onBlur={handleBlurSearch}
       />
-      <div className={style.icon}><FontAwesomeIcon icon="search" /></div>
+      <div className={style.icon}>
+        <FontAwesomeIcon icon="search" />
+      </div>
     </div>
   );
 };

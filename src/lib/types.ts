@@ -22,14 +22,9 @@ type LMCartProduct = {
   product: LMProduct;
 };
 
-type LMCart = {
-  id: string;
-  items: LMCartProduct[];
-};
-
 type LMUserInfo = {
   lang: string;
-  cart: LMCart;
+  cart: LMCartProduct[];
 };
 
-export { LMMenuOpt, LMProduct, LMCartProduct, LMCart, LMUserInfo };
+export { LMMenuOpt, LMProduct, LMCartProduct, LMUserInfo };

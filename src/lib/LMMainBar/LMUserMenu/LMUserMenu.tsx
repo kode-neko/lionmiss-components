@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMCartIcon } from "./LMCartIcon";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   userMenu,
@@ -14,26 +15,27 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   const { t } = useTranslation("paths");
 
   const createLMMenuOpt = (opt: LMMenuOpt) => {
-    let tpl = null;
+    let tpl: JSX.Element;
 
     switch (opt.name) {
       case "user.language":
         tpl = <span className={styles.lang}>{userInfo.lang}</span>;
         break;
       case "user.cart":
-        tpl = <LMCartIcon cont={3} />;
+        tpl = <LMCartIcon cont={userInfo.cart.length} />;
         break;
       default:
-        tpl = opt.icon && (
-          <FontAwesomeIcon className={styles.icon} icon={opt.icon} />
-        );
+        tpl = opt.icon ? <FontAwesomeIcon className={styles.icon} icon={opt.icon} /> : <></>;
     }
 
     return (
       <li key={opt.name} className={styles.opt}>
-        <a className={styles.link} href={createPath(opt.path || [], t)}>
-          {tpl}
-        </a>
+        {opt.path && (
+          <a className={styles.link} href={createPath(opt.path, t)}>
+            {tpl}
+          </a>
+        )}
+        {!opt.path && tpl}
       </li>
     );
   };
