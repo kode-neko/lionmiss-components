@@ -1,0 +1,22 @@
+@import "../../style.scss";
+
+.cont {
+  display: flex;
+  align-items: flex-end;
+  .input {
+    height: 24px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $color-white;
+    margin-right: 10px;
+    color: $color-white;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  .icon {
+    display: inline-block;
+    color: $color-white;
+    font-size: 24px;
+  }
+}

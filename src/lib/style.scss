@@ -10,6 +10,10 @@ $color-black: rgba(16, 10, 24, 1);
 $color-white: rgba(244, 244, 244, 1);
 $color-mid: rgba(213, 210, 216, 1);
 
+$color-error: rgba(214, 75, 45, 1);
+$color-ok: rgba(72, 173, 100, 1);
+$color-rate: rgba(253, 195, 45, 1);
+
 $back-gradient: linear-gradient(
   to right,
   rgba(200, 200, 200, 1),
@@ -22,8 +26,13 @@ $border-radius-size: 2px;
   box-shadow: 4px 4px 2px rgba(16, 10, 24, .16);;
 }
 
+* {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto";
+  font-size: 16px;
   color: $color-black;
   a {
     text-decoration: none;

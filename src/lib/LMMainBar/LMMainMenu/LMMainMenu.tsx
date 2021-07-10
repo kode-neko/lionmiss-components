@@ -1,35 +1,31 @@
-import React, { useState, useMemo } from "react";
-import { mainMenu } from "../../constants";
-import { MenuOpt } from "../../types";
+import React, { useState } from "react";
+import { LMMenuOpt } from "../../types";
 import { useTranslation } from "react-i18next";
 import { createPath } from "../utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { LMMainMenuProps, LMMenuOptPlus } from "./types";
 import styles from "./styles.module.scss";
 
-interface MenuOptPlus extends MenuOpt {
-  visible: boolean;
-}
-
-export const LMMainMenu: React.FC = () => {
+export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   const { t: tMM } = useTranslation("mainMenu");
   const { t: tP } = useTranslation("paths");
   const createMenuPlus = () =>
     mainMenu.map((opt) => ({ ...opt, visible: false }));
-  const [menuPlus, setMenuPlus] = useState<MenuOptPlus[]>(createMenuPlus());
+  const [menuPlus, setMenuPlus] = useState<LMMenuOptPlus[]>(createMenuPlus());
 
-  const handleMouseOverMenuOpt = (name: string) => {
+  const handleMouseOverLMMenuOpt = (name: string) => {
     const newMenuPlus = menuPlus.map((opt) =>
       opt.name === name ? { ...opt, visible: true } : opt
     );
     setMenuPlus(newMenuPlus);
   };
 
-  const handleMouseLeaveMenuOpt = () => {
+  const handleMouseLeaveLMMenuOpt = () => {
     const newMenuPlus = menuPlus.map((opt) => ({ ...opt, visible: false }));
     setMenuPlus(newMenuPlus);
   };
 
-  const createSubmenu = (menu: MenuOpt[], visible: boolean) => (
+  const createSubmenu = (menu: LMMenuOpt[], visible: boolean) => (
     <div
       className={styles.submenu}
       style={{ display: visible ? "block" : "none" }}
@@ -44,7 +40,7 @@ export const LMMainMenu: React.FC = () => {
     </div>
   );
 
-  const createMenuOpt = (opt: MenuOptPlus) => {
+  const createLMMenuOpt = (opt: LMMenuOptPlus) => {
     const submenu = opt.opts && createSubmenu(opt.opts, opt.visible);
     const link = (
       <a href={createPath(opt.path || [], tP)}>
@@ -60,20 +56,17 @@ export const LMMainMenu: React.FC = () => {
       <li
         className={styles.opt}
         key={opt.name}
-        onMouseOver={() => handleMouseOverMenuOpt(opt.name)}
-        onMouseLeave={() => handleMouseLeaveMenuOpt()}
+        onMouseOver={() => handleMouseOverLMMenuOpt(opt.name)}
+        onMouseLeave={() => handleMouseLeaveLMMenuOpt()}
       >
         {link}
         {submenu}
       </li>
     );
   };
+
   return (
-    <div className={styles.cont}>
-      <ul className={styles.menu}>
-        {menuPlus.map((opt) => createMenuOpt(opt))}
-      </ul>
-    </div>
+    <ul className={styles.menu}>{menuPlus.map((opt) => createLMMenuOpt(opt))}</ul>
   );
 };
 

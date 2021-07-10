@@ -1,15 +1,35 @@
 @import "../style.scss";
 
 .cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-black;
+  padding: 0 20px;
+  height: 100px;
+  .left {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
-    background-color: $color-black;
-    .left{
-
+    justify-content: start;
+    align-items: center;
+    .mainTitle {
+      margin-right: 92px;
     }
-    .right{
-
+    .mainMenu {
+      position: relative;
+      top: 10px;
+      display: inline-block;
     }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    .search {
+      display: inline-block;
+      margin-right: 64px;
+    }
+  }
 }

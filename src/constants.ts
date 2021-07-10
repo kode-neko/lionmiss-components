@@ -1,8 +1,8 @@
-import { MenuOpt } from "./types";
+import { LMMenuOpt } from "./lib/types";
 
 const WEB_TITLE = "Lion Miss";
 
-const mainMenu: MenuOpt[] = [
+const mainMenu: LMMenuOpt[] = [
   {
     name: "woman.title",
     path: ["woman"],
@@ -50,7 +50,7 @@ const mainMenu: MenuOpt[] = [
   { name: "faq", path: ["faq"] },
 ];
 
-const userMenu: MenuOpt[] = [
+const userMenu: LMMenuOpt[] = [
   { name: "user.language" },
   {
     name: "user.cart",
