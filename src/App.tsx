@@ -7,6 +7,7 @@ import { LMCartProduct, LMProduct, LMUserInfo } from "./lib/types";
 import "./App.css";
 import "./lib/icons";
 import "./lib/i18n";
+import { LMModal } from "./lib/LMModal";
 
 const catImgs: ImgCarousel[] = [
   {
@@ -49,22 +50,46 @@ const userInfo: LMUserInfo = {
 
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
+  const [modal, setModal] = useState<boolean>(false);
   return (
-    <div className="App">
-      <LMMainBar
-        webTitle={WEB_TITLE}
-        mainMenu={mainMenu}
-        userMenu={userMenu}
-        userInfo={user}
-        onSearch={() => console.log('buscar')}
+    <>
+      <LMModal
+        visible={modal}
+        title="Title"
+        content={
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        }
+        ok="Accept"
+        cancel="Cancel"
+        onClickOk={() => console.log("ok")}
+        onClickCancel={() => console.log("cancel")}
+        onClickClose={() => {
+          console.log("cerrar");
+          setModal(false);
+        }}
       />
-      <LMCarousel imgList={catImgs} width={1200} />;
-      <button
-        onClick={() => setUser({ ...user, cart: [...user.cart, cartProduct] })}
-      >
-        Añadir
-      </button>
-    </div>
+      <div className="App">
+        <LMMainBar
+          webTitle={WEB_TITLE}
+          mainMenu={mainMenu}
+          userMenu={userMenu}
+          userInfo={user}
+          onSearch={() => console.log("buscar")}
+        />
+        <LMCarousel imgList={catImgs} width={1200} />;
+        <button
+          onClick={() =>
+            setUser({ ...user, cart: [...user.cart, cartProduct] })
+          }
+        >
+          Añadir
+        </button>
+        <button onClick={() => setModal(true)}>Modal</button>
+      </div>
+    </>
   );
 };
 

@@ -2,6 +2,11 @@
 
 .cont {
   display: flex;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  box-sizing: border-box ;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
