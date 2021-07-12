@@ -4,9 +4,9 @@ import LMMainMenu from "./LMMainMenu/LMMainMenu";
 import styles from "./styles.module.scss";
 import LMSearchInput from "./LMSearchInput";
 import LMUserMenu from "./LMUserMenu";
-import { LMMainMenuProps } from "./types";
+import { LMMainBarProps } from "./types";
 
-export const LMMainBar: React.FC<LMMainMenuProps> = ({
+export const LMMainBar: React.FC<LMMainBarProps> = ({
   webTitle,
   mainMenu,
   userMenu,

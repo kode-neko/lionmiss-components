@@ -1,0 +1,12 @@
+@import "../style.scss";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-mid;
+  .body {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

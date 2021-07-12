@@ -16,6 +16,9 @@ import "./lib/icons";
 import "./lib/i18n";
 import { LMModal } from "./lib/LMModal";
 import LMMainFooter from "./lib/LMMainFooter/LMMainFooter";
+import { LMBaseLayout } from "./lib/LMBaseLayout";
+import { LMMainBarProps } from "./lib/LMMainBar/types";
+import { LMMainFooterProps } from "./lib/LMMainFooter/types";
 
 const catImgs: ImgCarousel[] = [
   {
@@ -60,6 +63,19 @@ const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
 
+  const mainBarProps: LMMainBarProps = {
+    webTitle: WEB_TITLE,
+    mainMenu: mainMenu,
+    userMenu: userMenu,
+    userInfo: user,
+    onSearch: () => console.log("buscar"),
+  };
+  const mainFooter: LMMainFooterProps = {
+    columnsInfo: columnsInfo,
+    socialMedia: socialMedia,
+    credits: WEB_CREDITS,
+  };
+
   return (
     <>
       <LMModal
@@ -80,29 +96,19 @@ const App = (): React.FunctionComponentElement<unknown> => {
           setModal(false);
         }}
       />
-      <div className="App">
-        <LMMainBar
-          webTitle={WEB_TITLE}
-          mainMenu={mainMenu}
-          userMenu={userMenu}
-          userInfo={user}
-          onSearch={() => console.log("buscar")}
-        />
-        <LMCarousel imgList={catImgs} width={1200} />;
-        <button
-          onClick={() =>
-            setUser({ ...user, cart: [...user.cart, cartProduct] })
-          }
-        >
-          Añadir
-        </button>
-        <button onClick={() => setModal(true)}>Modal</button>
-      </div>
-      <LMMainFooter
-        columnsInfo={columnsInfo}
-        socialMedia={socialMedia}
-        credits={WEB_CREDITS}
-      />
+      <LMBaseLayout mainMenu={mainBarProps} mainFooter={mainFooter}>
+        <div style={{textAlign: 'center'}}><LMCarousel imgList={catImgs} width={1200} /></div>
+        <div>
+          <button
+            onClick={() =>
+              setUser({ ...user, cart: [...user.cart, cartProduct] })
+            }
+          >
+            Añadir
+          </button>
+          <button onClick={() => setModal(true)}>Modal</button>
+        </div>
+      </LMBaseLayout>
     </>
   );
 };

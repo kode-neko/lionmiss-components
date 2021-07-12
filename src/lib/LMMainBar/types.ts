@@ -1,7 +1,7 @@
 import { LMMenuOpt, LMUserInfo } from "../types";
 import { LMSearchInputProps } from "./LMSearchInput/types";
 
-type LMMainMenuProps = {
+type LMMainBarProps = {
   webTitle: string;
   mainMenu: LMMenuOpt[];
   userMenu: LMMenuOpt[];
@@ -9,4 +9,4 @@ type LMMainMenuProps = {
   onSearch: LMSearchInputProps['onSearch']
 };
 
-export { LMMainMenuProps };
+export { LMMainBarProps };
