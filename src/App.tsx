@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import cat01 from "./cat01.jpg";
 import LMCarousel, { ImgCarousel } from "./lib/LMCarousel";
 import LMMainBar from "./lib/LMMainBar/LMMainBar";
-import { WEB_TITLE, mainMenu, userMenu } from "./constants";
+import {
+  WEB_TITLE,
+  mainMenu,
+  userMenu,
+  WEB_CREDITS,
+  columnsInfo,
+  socialMedia,
+} from "./constants";
 import { LMCartProduct, LMProduct, LMUserInfo } from "./lib/types";
 import "./App.css";
 import "./lib/icons";
 import "./lib/i18n";
 import { LMModal } from "./lib/LMModal";
+import LMMainFooter from "./lib/LMMainFooter/LMMainFooter";
 
 const catImgs: ImgCarousel[] = [
   {
@@ -51,6 +59,7 @@ const userInfo: LMUserInfo = {
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
+
   return (
     <>
       <LMModal
@@ -89,6 +98,11 @@ const App = (): React.FunctionComponentElement<unknown> => {
         </button>
         <button onClick={() => setModal(true)}>Modal</button>
       </div>
+      <LMMainFooter
+        columnsInfo={columnsInfo}
+        socialMedia={socialMedia}
+        credits={WEB_CREDITS}
+      />
     </>
   );
 };

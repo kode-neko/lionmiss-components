@@ -11,8 +11,17 @@ import {
   faWindowClose,
   faCheck,
   faCaretLeft,
-  faCaretDown
+  faCaretDown,
+  faCommentDots,
+  faMobileAlt
 } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faInstagram,
+  faPinterest,
+  faTwitterSquare,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faSearch,
@@ -26,5 +35,11 @@ library.add(
   faWindowClose,
   faCheck,
   faCaretLeft,
-  faCaretDown
+  faCaretDown,
+  faCommentDots,
+  faMobileAlt,
+  faInstagram,
+  faPinterest,
+  faTwitterSquare,
+  faFacebook
 );
