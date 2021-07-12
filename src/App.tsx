@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import cat01 from "./cat01.jpg";
 import LMCarousel, { ImgCarousel } from "./lib/LMCarousel";
-import LMMainBar from "./lib/LMMainBar/LMMainBar";
 import {
   WEB_TITLE,
   mainMenu,
@@ -15,10 +14,12 @@ import "./App.css";
 import "./lib/icons";
 import "./lib/i18n";
 import { LMModal } from "./lib/LMModal";
-import LMMainFooter from "./lib/LMMainFooter/LMMainFooter";
 import { LMBaseLayout } from "./lib/LMBaseLayout";
 import { LMMainBarProps } from "./lib/LMMainBar/types";
 import { LMMainFooterProps } from "./lib/LMMainFooter/types";
+import { LMNotificationProps } from "./lib/LMNotification/types";
+import { tshirtLMIcon } from "./lib/LMIcons";
+import { notProductAddedLM, sendNotificationLM } from "./lib/LMNotification";
 
 const catImgs: ImgCarousel[] = [
   {
@@ -97,16 +98,19 @@ const App = (): React.FunctionComponentElement<unknown> => {
         }}
       />
       <LMBaseLayout mainMenu={mainBarProps} mainFooter={mainFooter}>
-        <div style={{textAlign: 'center'}}><LMCarousel imgList={catImgs} width={1200} /></div>
         <div>
           <button
-            onClick={() =>
-              setUser({ ...user, cart: [...user.cart, cartProduct] })
-            }
+            onClick={() => {
+              setUser({ ...user, cart: [...user.cart, cartProduct] });
+              sendNotificationLM(notProductAddedLM);
+            }}
           >
             Añadir
           </button>
           <button onClick={() => setModal(true)}>Modal</button>
+        </div>
+        <div style={{ textAlign: "center", height: "1000px" }}>
+          {/* <LMCarousel imgList={catImgs} width={1200} /> */}
         </div>
       </LMBaseLayout>
     </>

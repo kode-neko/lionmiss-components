@@ -1,0 +1,71 @@
+@import "../style.scss";
+
+.cont {
+  position: fixed;
+  right: 0;
+  top: 110px;
+}
+
+.notification {
+  position: relative;
+  height: 64px;
+  width: 470px;
+  background-color: $color-main;
+  color: $color-white;
+  border-radius: $border-radius-size;
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  @include shadow;
+  .close {
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      color: $color-black;
+    }
+  }
+  .body {
+    margin-left: 32px;
+    align-self: center;
+    font-size: 20px;
+    .icon {
+      vertical-align: middle;
+    }
+    .msg {
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  }
+}
+
+.reveal {
+    animation-name: reveal;
+    animation-duration: 1s;
+}
+
+.disapear {
+    animation-name: disapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  from {
+    left: 470px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes disapear {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 470px;
+    }
+  }
+  
