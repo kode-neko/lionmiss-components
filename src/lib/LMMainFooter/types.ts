@@ -1,20 +1,12 @@
-import { IconName } from "@fortawesome/fontawesome-svg-core";
-
-type LMMainFooterOpt = {
-  title: string | JSX.Element;
-  icon?: IconName;
-  submenu?: LMMainFooterOpt[];
-  path?: string[];
-};
+import { LMMenuOpt } from "../types";
 
 type LMMainFooterProps = {
   isMobile: boolean;
-  columnsInfo: LMMainFooterOpt[];
-  socialMedia: LMMainFooterOpt[];
+  columnsInfo: LMMenuOpt[];
+  socialMedia: LMMenuOpt[];
   credits: string[];
 };
 
 export {
-  LMMainFooterOpt,
   LMMainFooterProps,
 };

@@ -1,10 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  LMMainFooterOpt
-} from "../lib/LMMainFooter/types";
+import { commentIconLM, facebookIconLM, instagramIconLM, phoneIconLM, pinterestIconLM, twitterIconLM } from "../lib/LMIcons";
+import { LMMenuOpt } from "../lib/types";
 
-const columnsInfo: LMMainFooterOpt[] = [
+const columnsInfo: LMMenuOpt[] = [
   {
     title: "help.title",
     path: ["help"],
@@ -31,7 +29,7 @@ const columnsInfo: LMMainFooterOpt[] = [
       {
         title: (
           <>
-            <FontAwesomeIcon icon="comment-dots" /> <span>Chat</span>
+            {commentIconLM} <span>Chat</span>
           </>
         ),
         path: ["contact", "chat"],
@@ -39,7 +37,7 @@ const columnsInfo: LMMainFooterOpt[] = [
       {
         title: (
           <>
-            <FontAwesomeIcon icon="mobile-alt" /> <span>600 00 00 00</span>
+            {phoneIconLM} <span>600 00 00 00</span>
           </>
         ),
         path: ["contact", "phone"],
@@ -48,25 +46,21 @@ const columnsInfo: LMMainFooterOpt[] = [
   },
 ];
 
-const socialMedia: LMMainFooterOpt[] = [
+const socialMedia: LMMenuOpt[] = [
   {
-    title: "instagram",
-    icon: "instagram",
+    title: instagramIconLM,
     path: [],
   },
   {
-    title: "pinterest",
-    icon: "pinterest",
+    title: pinterestIconLM,
     path: [],
   },
   {
-    title: "twitter",
-    icon: "twitter-square",
+    title: twitterIconLM,
     path: [],
   },
   {
-    title: "facebook",
-    icon: "facebook",
+    title: facebookIconLM,
     path: [],
   },
 ];

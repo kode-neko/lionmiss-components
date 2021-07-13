@@ -1,13 +1,11 @@
 import React, { useRef, useState } from "react";
-import { closeLMIcon, downArrowLMIcon, upArrowLMIcon } from "../../LMIcons";
+import { closeIconLM, arrowDownIconLM, arrowUpIconLM } from "../../LMIcons";
 import { LMMainMenuSideProps } from "./types";
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { createPath } from "../utils";
 import classNames from "classnames";
 import { LMMenuOpt } from "../../types";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
   visible,
@@ -36,8 +34,10 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
     return (
       <ul className={styles.submenu}>
         {subMenu.map((opt) => (
-          <li key={opt.name}>
-            <a href={opt.path && createPath(opt.path, tP)}>{tMM(opt.name)}</a>
+          <li key={opt.title as string}>
+            <a href={opt.path && createPath(opt.path, tP)}>
+              {tMM(opt.title as string)}
+            </a>
           </li>
         ))}
       </ul>
@@ -46,17 +46,21 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
 
   const createOption = (opt: LMMenuOpt) => {
     return (
-      <li key={opt.name}>
-        <a href={opt.path && createPath(opt.path, tP)}>{tMM(opt.name)}</a>
-        {opt.opts && (
+      <li key={opt.title as string}>
+        <a href={opt.path && createPath(opt.path, tP)}>
+          {tMM(opt.title as string)}
+        </a>
+        {opt.submenu && (
           <span
             className={styles.arrow}
-            onClick={() => handleClickOpt(opt.name)}
+            onClick={() => handleClickOpt(opt.title as string)}
           >
-            {visibleSubmenu === opt.name ? upArrowLMIcon : downArrowLMIcon}
+            {visibleSubmenu === opt.title ? arrowUpIconLM : arrowDownIconLM}
           </span>
         )}
-        {opt.opts && visibleSubmenu === opt.name && createSubMenu(opt.opts)}
+        {opt.submenu &&
+          visibleSubmenu === (opt.title as string) &&
+          createSubMenu(opt.submenu)}
       </li>
     );
   };
@@ -75,7 +79,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
       >
         <div className={styles.close}>
           <button className={styles.btn} onClick={onClose}>
-            {closeLMIcon}
+            {closeIconLM}
           </button>
         </div>
         <ul className={styles.mainMenu}>
@@ -85,7 +89,9 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
         <ul className={styles.info}>
           {columnsInfo.map((opt) => (
             <li key={opt.title as string}>
-              <a href={createPath(opt.path || [], tP)}>{tMF(opt.title as string)}</a>
+              <a href={createPath(opt.path || [], tP)}>
+                {tMF(opt.title as string)}
+              </a>
             </li>
           ))}
         </ul>
@@ -96,7 +102,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
               href={createPath(ele.path || [], tP)}
               title={ele.title as string}
             >
-              <FontAwesomeIcon icon={["fab", ele.icon as IconName]} />
+              {ele.title}
             </a>
           ))}
         </div>

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { LMMenuOpt } from "../../types";
 import { useTranslation } from "react-i18next";
 import { createPath } from "../utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LMMainMenuProps, LMMenuOptPlus } from "./types";
 import styles from "./styles.module.scss";
+import { arrowDownIconLM } from "../../LMIcons";
 
 export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   const { t: tMM } = useTranslation("mainMenu");
@@ -15,7 +15,7 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
 
   const handleMouseOverLMMenuOpt = (name: string) => {
     const newMenuPlus = menuPlus.map((opt) =>
-      opt.name === name ? { ...opt, visible: true } : opt
+      opt.title === name ? { ...opt, visible: true } : opt
     );
     setMenuPlus(newMenuPlus);
   };
@@ -32,8 +32,10 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
     >
       <ul className={styles.list}>
         {menu.map((opt) => (
-          <li key={opt.name}>
-            <a href={createPath(opt.path || [], tP)}>{tMM(opt.name)}</a>
+          <li key={opt.title as string}>
+            <a href={createPath(opt.path || [], tP)}>
+              {tMM(opt.title as string)}
+            </a>
           </li>
         ))}
       </ul>
@@ -41,22 +43,18 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   );
 
   const createLMMenuOpt = (opt: LMMenuOptPlus) => {
-    const submenu = opt.opts && createSubmenu(opt.opts, opt.visible);
+    const submenu = opt.submenu && createSubmenu(opt.submenu, opt.visible);
     const link = (
       <a href={createPath(opt.path || [], tP)}>
-        {tMM(opt.name)}
-        {opt.opts && (
-          <span className={styles.arrow}>
-            <FontAwesomeIcon icon="caret-down" />
-          </span>
-        )}
+        {tMM(opt.title as string)}
+        {opt.submenu && <span className={styles.arrow}>{arrowDownIconLM}</span>}
       </a>
     );
     return (
       <li
         className={styles.opt}
-        key={opt.name}
-        onMouseOver={() => handleMouseOverLMMenuOpt(opt.name)}
+        key={opt.title as string}
+        onMouseOver={() => handleMouseOverLMMenuOpt(opt.title as string)}
         onMouseLeave={() => handleMouseLeaveLMMenuOpt()}
       >
         {link}

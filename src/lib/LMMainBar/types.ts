@@ -1,4 +1,3 @@
-import { LMMainFooterOpt } from "../LMMainFooter/types";
 import { LMMenuOpt, LMUserInfo } from "../types";
 import { LMSearchInputProps } from "./LMSearchInput/types";
 
@@ -8,8 +7,8 @@ type LMMainBarProps = {
   mainMenu: LMMenuOpt[];
   userMenu: LMMenuOpt[];
   userInfo: LMUserInfo;
-  columnsInfo: LMMainFooterOpt[];
-  socialMedia: LMMainFooterOpt[];
+  columnsInfo: LMMenuOpt[];
+  socialMedia: LMMenuOpt[];
   onSearch: LMSearchInputProps['onSearch']
 };
 

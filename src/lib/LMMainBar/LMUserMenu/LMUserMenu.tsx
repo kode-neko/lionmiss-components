@@ -2,7 +2,6 @@ import React from "react";
 import { LMMenuOpt } from "../../types";
 import { useTranslation } from "react-i18next";
 import { createPath } from "../utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMCartIcon } from "./LMCartIcon";
@@ -16,7 +15,7 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   const createLMMenuOpt = (opt: LMMenuOpt) => {
     let tpl: JSX.Element;
 
-    switch (opt.name) {
+    switch (opt.title) {
       case "user.language":
         tpl = <span className={styles.lang}>{userInfo.lang}</span>;
         break;
@@ -24,11 +23,11 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
         tpl = <LMCartIcon cont={userInfo.cart.length} />;
         break;
       default:
-        tpl = opt.icon ? <FontAwesomeIcon className={styles.icon} icon={opt.icon} /> : <></>;
+        tpl = opt.title as JSX.Element;
     }
 
     return (
-      <li key={opt.name} className={styles.opt}>
+      <li key={opt.title as string} className={styles.opt}>
         {opt.path && (
           <a className={styles.link} href={createPath(opt.path, t)}>
             {tpl}

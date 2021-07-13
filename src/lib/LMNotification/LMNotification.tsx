@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Subject } from "rxjs";
 import { LMNotificationProps, LMNotificationPropsPlus } from "./types";
 import styles from "./styles.module.scss";
-import { closeLMIcon } from "../LMIcons";
+import { closeIconLM } from "../LMIcons";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 const subjectNotificationLM: Subject<LMNotificationPropsPlus> = new Subject();
 
@@ -16,6 +17,7 @@ export function sendNotificationLM(notification: LMNotificationProps): void {
 }
 
 const LMNotification: React.FC = () => {
+  const { t } = useTranslation("notification");
   const [notificationList, _setNotificationList] = useState<
     LMNotificationPropsPlus[]
   >([]);
@@ -70,12 +72,12 @@ const LMNotification: React.FC = () => {
             className={styles.close}
             onClick={() => setCloseSelected(noti.key)}
           >
-            {closeLMIcon}
+            {closeIconLM}
           </div>
           <div className={styles.body}>
             <span className={styles.icon}>{noti.icon}</span>
             <span className={styles.msg}>
-              {noti.msg} {noti.key}
+              {t(noti.msg)}
             </span>
           </div>
         </div>

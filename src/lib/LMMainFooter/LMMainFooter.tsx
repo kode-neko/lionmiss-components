@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { LMMainFooterOpt, LMMainFooterProps } from "./types";
 import style from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
 import { createPath } from "../LMMainBar/utils";
-import { IconName } from "@fortawesome/fontawesome-svg-core";
+import { LMMainFooterProps } from "./types";
+import { LMMenuOpt } from "../types";
+
 
 const LMMainFooter: React.FC<LMMainFooterProps> = ({
   isMobile,
@@ -15,7 +16,7 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
   const { t: tMM } = useTranslation("mainFooter");
   const { t: tP } = useTranslation("paths");
 
-  const colInfo = (col: LMMainFooterOpt) => {
+  const colInfo = (col: LMMenuOpt) => {
     const { title, submenu } = col;
     return (
       <div className={style.info}>
@@ -24,7 +25,7 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
           {submenu?.map((opt, index) => (
             <li key={index}>
               <a href={createPath(opt.path || [], tP)}>
-                {typeof opt.title === 'string' ? tMM(opt.title) : opt.title}
+                {typeof opt.title === "string" ? tMM(opt.title) : opt.title}
               </a>
             </li>
           ))}
@@ -48,7 +49,7 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
                   href={createPath(social.path || [], tP)}
                   title={social.title as string}
                 >
-                  <FontAwesomeIcon icon={["fab", social.icon as IconName]} />
+                  {social.title}
                 </a>
               ))}
             </div>

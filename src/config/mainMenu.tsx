@@ -2,50 +2,50 @@ import { LMMenuOpt } from "../lib/types";
 
 const mainMenu: LMMenuOpt[] = [
   {
-    name: "woman.title",
+    title: "woman.title",
     path: ["woman"],
-    opts: [
-      { name: "woman.tops", path: ["woman", "top"] },
+    submenu: [
+      { title: "woman.tops", path: ["woman", "top"] },
       {
-        name: "woman.bottom",
+        title: "woman.bottom",
         path: ["woman", "bottom"],
       },
       {
-        name: "woman.dress",
+        title: "woman.dress",
         path: ["woman", "dress"],
       },
       {
-        name: "woman.overcoat",
+        title: "woman.overcoat",
         path: ["woman", "overcoat"],
       },
       {
-        name: "woman.accesories",
+        title: "woman.accesories",
         path: ["woman", "accesories"],
       },
     ],
   },
   {
-    name: "man.title",
+    title: "man.title",
     path: ["man"],
-    opts: [
-      { name: "man.tops", path: ["man", "top"] },
+    submenu: [
+      { title: "man.tops", path: ["man", "top"] },
       {
-        name: "man.bottom",
+        title: "man.bottom",
         path: ["man", "bottom"],
       },
-      { name: "man.robe", path: ["man", "robe"] },
+      { title: "man.robe", path: ["man", "robe"] },
       {
-        name: "man.overcoat",
+        title: "man.overcoat",
         path: ["man", "overcoat"],
       },
       {
-        name: "man.accesories",
+        title: "man.accesories",
         path: ["man", "accesories"],
       },
     ],
   },
-  { name: "about-us", path: ["about-us"] },
-  { name: "faq", path: ["faq"] },
+  { title: "about-us", path: ["about-us"] },
+  { title: "faq", path: ["faq"] },
 ];
 
 export { mainMenu };

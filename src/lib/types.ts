@@ -1,11 +1,9 @@
-import { IconName } from "@fortawesome/fontawesome-svg-core";
 import { LMMainBarProps } from "./LMMainBar/types";
 import { LMMainFooterProps } from "./LMMainFooter/types";
 interface LMMenuOpt {
-  name: string;
-  opts?: LMMenuOpt[];
+  title: string | JSX.Element;
+  submenu?: LMMenuOpt[];
   path?: string[];
-  icon?: IconName;
   res?: boolean;
 }
 

@@ -1,15 +1,14 @@
+import { userIconLM } from "../lib/LMIcons";
 import { LMMenuOpt } from "../lib/types";
 
 const userMenu: LMMenuOpt[] = [
-    { name: "user.language" },
-    {
-      name: "user.cart",
-      path: ["cart"],
-      icon: "shopping-bag",
-      res: true
-    },
-    { name: "user.config", path: ["config"], icon: "user", res: true },
-  ];
-  
+  { title: "user.language" },
+  {
+    title: "user.cart",
+    path: ["cart"],
+    res: true,
+  },
+  { title: userIconLM, path: ["config"], res: true },
+];
 
 export { userMenu };

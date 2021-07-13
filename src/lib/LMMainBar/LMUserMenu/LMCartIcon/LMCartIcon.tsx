@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef } from "react";
+import { bagIconLM } from "../../../LMIcons";
 import styles from "./styles.module.scss";
 import { LMCartIconProps } from "./types";
 
@@ -9,8 +9,9 @@ export const LMCartIcon: React.FC<LMCartIconProps> = ({ cont }) => {
     refCounter.current?.classList.remove(styles.addedItem);
   }
   useEffect(() => {
-    refCounter.current?.addEventListener("animationend", removeAnimation);
-    return () => refCounter.current?.removeEventListener("animationend", removeAnimation)
+    const ele = refCounter.current
+    ele?.addEventListener("animationend", removeAnimation);
+    return () => ele?.removeEventListener("animationend", removeAnimation)
   }, [refCounter]);
   
   useEffect(() => {
@@ -19,7 +20,7 @@ export const LMCartIcon: React.FC<LMCartIconProps> = ({ cont }) => {
 
   return (
     <div className={styles.cont}>
-      <FontAwesomeIcon className={styles.bag} icon={"shopping-bag"} />
+      <span className={styles.bag}>{bagIconLM}</span>
       {cont > 0 && (
         <div ref={refCounter} className={styles.counter}>
           <div className={styles.number}>{cont}</div>

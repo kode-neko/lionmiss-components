@@ -2,6 +2,7 @@
 
 .cont {
   display: inline-block;
+  
   .bag {
     display: inline-block;
     position: relative;
@@ -22,8 +23,8 @@
     .number {
       display: inline-block;
       position: relative;
-      top: 4px;
-      font-size: 14spx;
+      top: -4px;
+      font-size: 14px;
       font-weight: bold;
       color: $color-white;
     }
@@ -47,6 +48,6 @@
 
 .addedItem {
   animation-name: addedItemAnimation;
-  animation-duration: .75s;
+  animation-duration: 0.75s;
   animation-timing-function: ease;
 }

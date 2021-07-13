@@ -6,7 +6,7 @@ import LMSearchInput from "./LMSearchInput";
 import LMUserMenu from "./LMUserMenu";
 import { LMMainBarProps } from "./types";
 import { useDisplay } from "../hooks";
-import { menuLMIcon } from "../LMIcons";
+import { menuIconLM } from "../LMIcons";
 import { LMMainMenuSide } from "./LMMainMenuSide";
 
 export const LMMainBar: React.FC<LMMainBarProps> = ({
@@ -35,7 +35,7 @@ export const LMMainBar: React.FC<LMMainBarProps> = ({
             className={styles.menu}
             onClick={() => setVisibleMenuSlide(true)}
           >
-            {menuLMIcon}
+            {menuIconLM}
           </div>
         </div>
         <div className={styles.center}>
