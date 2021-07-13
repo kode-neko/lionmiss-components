@@ -9,7 +9,7 @@ import {
   columnsInfo,
   socialMedia,
 } from "./constants";
-import { LMCartProduct, LMProduct, LMUserInfo } from "./lib/types";
+import { LMCartProduct, LMMainBarConfig, LMMainFooterConfig, LMProduct, LMUserInfo } from "./lib/types";
 import "./App.css";
 import "./lib/icons";
 import "./lib/i18n";
@@ -64,7 +64,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
 
-  const mainBarProps: LMMainBarProps = {
+  const mainBarProps: LMMainBarConfig = {
     webTitle: WEB_TITLE,
     mainMenu: mainMenu,
     userMenu: userMenu,
@@ -73,7 +73,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
     socialMedia: socialMedia,
     onSearch: () => console.log("buscar"),
   };
-  const mainFooter: LMMainFooterProps = {
+  const mainFooter: LMMainFooterConfig = {
     columnsInfo: columnsInfo,
     socialMedia: socialMedia,
     credits: WEB_CREDITS,

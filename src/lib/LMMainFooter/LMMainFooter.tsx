@@ -19,34 +19,37 @@ const LMMainFooterColInfo: React.FC<LMMainFooterColInfoProps> = ({ col }) => {
 };
 
 const LMMainFooter: React.FC<LMMainFooterProps> = ({
+  isMobile,
   columnsInfo,
   socialMedia,
   credits,
 }) => {
   return (
     <div className={style.cont}>
-      <div className={style.infoCont}>
-        <div className={style.columnsInfo}>
-          {columnsInfo.map((col, index) => (
-            <LMMainFooterColInfo key={index} col={col} />
-          ))}
-        </div>
-        <div className={style.socialMedia}>
-          <div className={style.socialList}>
-            {socialMedia.map((ele) => (
-              <a key={ele.title} href={ele.path} title={ele.title}>
-                <FontAwesomeIcon icon={["fab", ele.icon]} />
-              </a>
+      {!isMobile && (
+        <div className={style.infoCont}>
+          <div className={style.columnsInfo}>
+            {columnsInfo.map((col, index) => (
+              <LMMainFooterColInfo key={index} col={col} />
             ))}
           </div>
-          <div className={style.about}>
-            <span className={style.text}>About Us</span>
-            <span className={style.icon}>
-              <FontAwesomeIcon icon="smile" />
-            </span>
+          <div className={style.socialMedia}>
+            <div className={style.socialList}>
+              {socialMedia.map((ele) => (
+                <a key={ele.title} href={ele.path} title={ele.title}>
+                  <FontAwesomeIcon icon={["fab", ele.icon]} />
+                </a>
+              ))}
+            </div>
+            <div className={style.about}>
+              <span className={style.text}>About Us</span>
+              <span className={style.icon}>
+                <FontAwesomeIcon icon="smile" />
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div className={style.credits}>
         {credits.map((ele, index) => (
           <span key={index}>{ele}</span>

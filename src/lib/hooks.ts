@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 function useDisplay(widthDisplay: number): boolean | undefined {
-  const ref = useRef(null);
   const [isResponsive, setIsResponsive] = useState<boolean>();
 
   useEffect(() => {

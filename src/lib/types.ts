@@ -1,4 +1,6 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
+import { LMMainBarProps } from "./LMMainBar/types";
+import { LMMainFooterProps } from "./LMMainFooter/types";
 interface LMMenuOpt {
   name: string;
   opts?: LMMenuOpt[];
@@ -27,4 +29,15 @@ type LMUserInfo = {
   cart: LMCartProduct[];
 };
 
-export { LMMenuOpt, LMProduct, LMCartProduct, LMUserInfo };
+type LMMainBarConfig = Omit<LMMainBarProps, "isMobile">;
+
+type LMMainFooterConfig = Omit<LMMainFooterProps, "isMobile">;
+
+export {
+  LMMenuOpt,
+  LMProduct,
+  LMCartProduct,
+  LMUserInfo,
+  LMMainBarConfig,
+  LMMainFooterConfig,
+};

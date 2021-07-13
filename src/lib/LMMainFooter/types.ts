@@ -22,10 +22,15 @@ type LMMainFooterSocialMedia = {
 };
 
 type LMMainFooterProps = {
+  isMobile: boolean;
   columnsInfo: LMMainFooterColInfo[];
   socialMedia: LMMainFooterSocialMedia[];
   credits: string[];
 };
+
+type LMMobile = {
+  isMobile: boolean;
+}
 
 export {
   LMMainFooterColInfoEle,

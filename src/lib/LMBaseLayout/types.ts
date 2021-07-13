@@ -1,9 +1,8 @@
-import { LMMainBarProps } from "../LMMainBar/types";
-import { LMMainFooterProps } from "../LMMainFooter/types";
+import { LMMainBarConfig, LMMainFooterConfig } from "../types";
 
 interface LMBaseLayoutProps {
-    mainMenu: LMMainBarProps,
-    mainFooter: LMMainFooterProps
+    mainMenu: LMMainBarConfig,
+    mainFooter: LMMainFooterConfig
 }
 
 export { LMBaseLayoutProps };
