@@ -71,6 +71,7 @@ const userMenu: LMMenuOpt[] = [
 const columnsInfo: LMMainFooterColInfo[] = [
   {
     title: "Help",
+    path: "",
     info: [
       { title: "Sizing", path: "" },
       { title: "Shipping", path: "" },
@@ -80,6 +81,7 @@ const columnsInfo: LMMainFooterColInfo[] = [
   },
   {
     title: "Policies",
+    path: "",
     info: [
       { title: "Private Policies", path: "" },
       { title: "Cookies", path: "" },
@@ -88,6 +90,7 @@ const columnsInfo: LMMainFooterColInfo[] = [
   },
   {
     title: "Contact",
+    path: "",
     info: [
       {
         title: (

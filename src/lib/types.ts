@@ -1,5 +1,4 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
-
 interface LMMenuOpt {
   name: string;
   opts?: LMMenuOpt[];

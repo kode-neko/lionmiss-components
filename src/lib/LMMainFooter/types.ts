@@ -8,6 +8,7 @@ type LMMainFooterColInfoEle = {
 type LMMainFooterColInfo = {
   title: string;
   info: LMMainFooterColInfoEle[];
+  path: string;
 };
 
 type LMMainFooterColInfoProps = {

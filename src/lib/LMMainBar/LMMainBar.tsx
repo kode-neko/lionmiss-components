@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LMMainTitle from "./LMMainTitle";
 import LMMainMenu from "./LMMainMenu/LMMainMenu";
 import styles from "./styles.module.scss";
@@ -18,18 +18,25 @@ export const LMMainBar: React.FC<LMMainBarProps> = ({
   socialMedia,
   onSearch,
 }) => {
+  const [visibleMenuSlide, setVisibleMenuSlide] = useState<boolean>(false);
   const isMobile = useDisplay(992);
   return isMobile ? (
     <>
       <LMMainMenuSide
+        visible={visibleMenuSlide}
         mainMenu={mainMenu}
         columnsInfo={columnsInfo}
         socialMedia={socialMedia}
-        onClose={() => console.log('cerrar menu')}
+        onClose={() => setVisibleMenuSlide(false)}
       />
       <div className={styles.contRes}>
         <div className={styles.left}>
-          <div className={styles.menu}>{menuLMIcon}</div>
+          <div
+            className={styles.menu}
+            onClick={() => setVisibleMenuSlide(true)}
+          >
+            {menuLMIcon}
+          </div>
         </div>
         <div className={styles.center}>
           <LMMainTitle webTitle={webTitle} />
