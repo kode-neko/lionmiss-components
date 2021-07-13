@@ -1,41 +1,20 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
-type LMMainFooterColInfoEle = {
+type LMMainFooterOpt = {
   title: string | JSX.Element;
-  path: string;
-};
-
-type LMMainFooterColInfo = {
-  title: string;
-  info: LMMainFooterColInfoEle[];
-  path: string;
-};
-
-type LMMainFooterColInfoProps = {
-  col: LMMainFooterColInfo;
-};
-
-type LMMainFooterSocialMedia = {
-  title: string;
-  icon: IconName;
-  path: string;
+  icon?: IconName;
+  submenu?: LMMainFooterOpt[];
+  path?: string[];
 };
 
 type LMMainFooterProps = {
   isMobile: boolean;
-  columnsInfo: LMMainFooterColInfo[];
-  socialMedia: LMMainFooterSocialMedia[];
+  columnsInfo: LMMainFooterOpt[];
+  socialMedia: LMMainFooterOpt[];
   credits: string[];
 };
 
-type LMMobile = {
-  isMobile: boolean;
-}
-
 export {
-  LMMainFooterColInfoEle,
-  LMMainFooterColInfo,
-  LMMainFooterColInfoProps,
-  LMMainFooterSocialMedia,
+  LMMainFooterOpt,
   LMMainFooterProps,
 };

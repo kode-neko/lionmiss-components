@@ -18,7 +18,6 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
       opt.name === name ? { ...opt, visible: true } : opt
     );
     setMenuPlus(newMenuPlus);
-  
   };
 
   const handleMouseLeaveLMMenuOpt = () => {
@@ -67,7 +66,9 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   };
 
   return (
-    <ul className={styles.menu}>{menuPlus.map((opt) => createLMMenuOpt(opt))}</ul>
+    <ul className={styles.menu}>
+      {menuPlus.map((opt) => createLMMenuOpt(opt))}
+    </ul>
   );
 };
 

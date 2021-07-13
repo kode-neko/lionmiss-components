@@ -1,0 +1,24 @@
+{
+  "help": {
+    "title": "Help",
+    "sizing": "Sizing",
+    "shipping": "Shipping",
+    "payment": "Payment Methods",
+    "questions": "Faq"
+  },
+  "policies": {
+    "title": "Policies",
+    "private": "Privacy Policy",
+    "cookies": "Cookies",
+    "terms": "Terms & Conditions"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "social": {
+    "instagram": "Instagram",
+    "pinterest": "Pinterest",
+    "twitter": "Twitter",
+    "facebook": "Facebook"
+  }
+}

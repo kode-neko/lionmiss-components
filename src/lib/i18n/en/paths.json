@@ -10,5 +10,21 @@
   "about-us": "about-us",
   "faq": "faq",
   "cart": "cart",
-  "config": "config"
+  "config": "config",
+  "help": "help",
+  "sizing": "sizing",
+  "shipping": "shipping",
+  "payment": "payment",
+  "question": "question",
+  "policies": "policies",
+  "private": "private",
+  "cookies": "cookies",
+  "terms": "terms",
+  "contact": "contact",
+  "chat": "chat",
+  "phone": "phone",
+  "instagram": "instagram",
+  "pinterest": "pinterest",
+  "twitter": "twitter",
+  "facebook": "facebook"
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Subject } from "rxjs";
 import { LMNotificationProps, LMNotificationPropsPlus } from "./types";
 import styles from "./styles.module.scss";

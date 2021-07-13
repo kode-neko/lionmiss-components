@@ -3,8 +3,6 @@ import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
 import { LMCartIconProps } from "./types";
 
-
-
 export const LMCartIcon: React.FC<LMCartIconProps> = ({ cont }) => {
   const refCounter = useRef<HTMLDivElement>(null);
   const removeAnimation = () => {

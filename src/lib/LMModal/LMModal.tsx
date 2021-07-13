@@ -4,6 +4,7 @@ import classnames from "classnames";
 import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LMButton from "../LMMainBar/LMButton/LMButton";
+import { useTranslation } from "react-i18next";
 
 export const LMModal: React.FC<LMModalProps> = ({
   visible,

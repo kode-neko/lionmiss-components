@@ -1,6 +1,5 @@
 import {
-  LMMainFooterColInfo,
-  LMMainFooterSocialMedia,
+  LMMainFooterOpt
 } from "../../LMMainFooter/types";
 import { LMMenuOpt } from "../../types";
 
@@ -17,8 +16,8 @@ type LMMainSubMenuOptProps = {
 type LMMainMenuSideProps = {
   visible: boolean;
   mainMenu: LMMenuOpt[];
-  columnsInfo: LMMainFooterColInfo[];
-  socialMedia: LMMainFooterSocialMedia[];
+  columnsInfo: LMMainFooterOpt[];
+  socialMedia: LMMainFooterOpt[];
   onClose: () => void;
 };
 

@@ -5,11 +5,14 @@ import { LMSearchInputProps } from "./types";
 
 export const LMSearchInput: React.FC<LMSearchInputProps> = ({ onSearch }) => {
   const [valueSearch, setValueSearch] = useState<string>("");
+
   const handleOnChangeSearch = (e: ChangeEvent<HTMLInputElement>) =>
     setValueSearch(e.target.value);
+
   const handleKeyUpSearch = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") onSearch(valueSearch);
   };
+  
   const handleBlurSearch = () => onSearch(valueSearch);
 
   return (

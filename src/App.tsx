@@ -6,14 +6,15 @@ import {
   WEB_CREDITS,
   columnsInfo,
   socialMedia,
-} from "./constants";
+} from "./config";
 import { LMCartProduct, LMMainBarConfig, LMMainFooterConfig, LMProduct, LMUserInfo } from "./lib/types";
 import "./App.css";
 import "./lib/icons";
 import "./lib/i18n";
 import { LMModal } from "./lib/LMModal";
 import { LMBaseLayout } from "./lib/LMBaseLayout";
-import { notProductAddedLM, sendNotificationLM } from "./lib/LMNotification";
+import { sendNotificationLM } from "./lib/LMNotification";
+import { productAddedNoti } from "./msgs/notifications";
 
 const product: LMProduct = {
   id: "1",
@@ -79,7 +80,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
           <button
             onClick={() => {
               setUser({ ...user, cart: [...user.cart, cartProduct] });
-              sendNotificationLM(notProductAddedLM);
+              sendNotificationLM(productAddedNoti);
             }}
           >
             Añadir

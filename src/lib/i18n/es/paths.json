@@ -10,5 +10,21 @@
   "about-us": "informacion",
   "faq": "ayuda",
   "cart": "cart",
-  "config": "config"
+  "config": "config",
+  "help": "ayuda",
+  "sizing": "sizing",
+  "shipping": "envios",
+  "payment": "metodo-pago",
+  "question": "preguntas",
+  "policies": "politicas",
+  "private": "privacidad",
+  "cookies": "cookies",
+  "terms": "terminos",
+  "contact": "contacto",
+  "chat": "chat",
+  "phone": "telefono",
+  "instagram": "instagram",
+  "pinterest": "pinterest",
+  "twitter": "twitter",
+  "facebook": "facebook"
 }
