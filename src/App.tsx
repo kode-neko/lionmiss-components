@@ -69,6 +69,8 @@ const App = (): React.FunctionComponentElement<unknown> => {
     mainMenu: mainMenu,
     userMenu: userMenu,
     userInfo: user,
+    columnsInfo: columnsInfo,
+    socialMedia: socialMedia,
     onSearch: () => console.log("buscar"),
   };
   const mainFooter: LMMainFooterProps = {

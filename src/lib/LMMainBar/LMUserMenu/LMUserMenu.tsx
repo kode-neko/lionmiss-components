@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMCartIcon } from "./LMCartIcon";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   userMenu,

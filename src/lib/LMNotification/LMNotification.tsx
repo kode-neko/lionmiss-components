@@ -29,7 +29,7 @@ const LMNotification: React.FC = () => {
 
   const nextFunc = (notification: LMNotificationPropsPlus) => {
     notification.ref?.current?.addEventListener("animationend", (e) => {
-      console.log('hola?', e);
+      console.log(e);
     });
     setNotificationList([...notificationListRef.current, notification]);
   };

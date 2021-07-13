@@ -12,6 +12,7 @@ import {
   faCheck,
   faCaretLeft,
   faCaretDown,
+  faCaretUp,
   faCommentDots,
   faMobileAlt
 } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +37,7 @@ library.add(
   faCheck,
   faCaretLeft,
   faCaretDown,
+  faCaretUp,
   faCommentDots,
   faMobileAlt,
   faInstagram,

@@ -1,11 +1,11 @@
 @import "../style.scss";
 
-.cont {
+@mixin baseMenu {
   display: flex;
   position: sticky;
   z-index: 1;
   top: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
@@ -13,6 +13,20 @@
   background-color: $color-black;
   padding: 0 20px;
   height: 100px;
+}
+
+.contRes {
+  @include baseMenu;
+  .left .menu {
+    color: $color-main;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.cont {
+  @include baseMenu;
   .left {
     display: flex;
     flex-direction: row;

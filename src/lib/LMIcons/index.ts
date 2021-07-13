@@ -1,1 +1,7 @@
-export { tshirtLMIcon, closeLMIcon  } from "./LMIcons";
+export {
+  tshirtLMIcon,
+  closeLMIcon,
+  menuLMIcon,
+  downArrowLMIcon,
+  upArrowLMIcon,
+} from "./LMIcons";

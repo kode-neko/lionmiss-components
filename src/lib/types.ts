@@ -5,6 +5,7 @@ interface LMMenuOpt {
   opts?: LMMenuOpt[];
   path?: string[];
   icon?: IconName;
+  res?: boolean;
 }
 
 type LMProduct = {

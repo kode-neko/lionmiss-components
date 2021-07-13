@@ -2,7 +2,7 @@ import { LMMenuOpt, LMUserInfo } from "../../types";
 
 type LMUserMenuProps = {
     userMenu: LMMenuOpt[];
-    userInfo: LMUserInfo
+    userInfo: LMUserInfo;
 }
 
 export {
