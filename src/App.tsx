@@ -19,6 +19,8 @@ import { LMModal, LMBaseLayout, sendNotificationLM } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
 import model from "./model.webp";
+import "./i18n";
+import LMInput from "./lib/LMForm/LMInput/LMInput";
 
 const product: LMProduct = {
   id: "222",
@@ -111,11 +113,12 @@ const App = (): React.FunctionComponentElement<unknown> => {
           <LMProductCard
             img={model}
             product={product}
-            onClickProduct={() => console.log('product')}
+            onClickProduct={() => console.log("product")}
             onClickAdd={() => console.log("cart")}
             onClickFav={() => console.log("fav")}
           />
         </div>
+        <LMInput label="Title" infoHint="Please don’t exced 50 characters" />
         <div style={{ textAlign: "center", height: "1000px" }}>
           {/* <LMCarousel imgList={catImgs} width={1200} /> */}
         </div>

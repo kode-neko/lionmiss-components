@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { MouseEvent } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 import LMBaseComponentProps from "./types";
 
@@ -18,12 +18,7 @@ export const LMBaseComponent: React.FC<LMBaseComponentProps> = ({
         styles.cont,
         classNameXtra && [...classNameXtraExtract]
       )}
-      onClick={(e: MouseEvent<HTMLDivElement>) => {
-        e.stopPropagation();
-        e.preventDefault();
-        if (onClick) onClick();
-        return false;
-      }}
+      onClick={onClick}
       {...props}
     >
       {children}

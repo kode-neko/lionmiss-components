@@ -5,6 +5,7 @@ import styles from "./styles.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LMButton from "../LMMainBar/LMButton/LMButton";
 import { useTranslation } from "react-i18next";
+import { closeIconLM } from "../LMIcons";
 
 export const LMModal: React.FC<LMModalProps> = ({
   visible,
@@ -47,11 +48,7 @@ export const LMModal: React.FC<LMModalProps> = ({
         )}
       >
         <div className={styles.header}>
-          <FontAwesomeIcon
-            className={styles.closeBtn}
-            icon="window-close"
-            onClick={handleClickClose}
-          />
+          <div className={styles.closeBtn}>{closeIconLM}</div>
         </div>
         <div className={styles.body}>
           <h3 className={styles.subheader}>{title}</h3>

@@ -14,10 +14,7 @@ const LMProductCard: React.FC<LMProductCardProps> = ({
 }) => {
   const { name, price, colors } = product;
   return (
-    <LMBaseComponent
-      classNameXtra={styles.cont}
-      onClick={onClickProduct}
-    >
+    <LMBaseComponent classNameXtra={styles.cont} onClick={onClickProduct}>
       <div className={styles.img}>
         <img src={img} />
       </div>
@@ -26,8 +23,22 @@ const LMProductCard: React.FC<LMProductCardProps> = ({
         <div className={styles.info}>
           <div className={styles.price}>{price} €</div>
           <div className={styles.actions}>
-            <button onClick={onClickAdd}>{bagIconLM}</button>
-            <button onClick={onClickFav}>{heartIconLM}</button>
+            <button
+              onClick={(e) => {
+                onClickAdd();
+                e.stopPropagation();
+              }}
+            >
+              {bagIconLM}
+            </button>
+            <button
+              onClick={(e) => {
+                onClickFav();
+                e.stopPropagation();
+              }}
+            >
+              {heartIconLM}
+            </button>
           </div>
         </div>
         {product.colors && (

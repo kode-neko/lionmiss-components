@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { createPath } from "../utils";
 import { LMMainFooterProps } from "./types";
 import { LMMenuOpt } from "../types";
+import { smileIconLM } from "../LMIcons";
 
 const LMMainFooter: React.FC<LMMainFooterProps> = ({
   isMobile,
@@ -21,8 +22,8 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
       <div className={style.info}>
         <div className={style.title}>{tMM(title as string)}</div>
         <ul>
-          {submenu?.map((opt, index) => (
-            <li key={index}>
+          {submenu?.map(opt => (
+            <li key={opt.title as string}>
               <a href={createPath(opt.path || [], tP)}>
                 {typeof opt.title === "string" ? tMM(opt.title) : opt.title}
               </a>
@@ -56,7 +57,7 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
               <a href={tP('about-us')}>
                 <span className={style.text}>{tMM('about-us')}</span>
                 <span className={style.icon}>
-                  <FontAwesomeIcon icon="smile" />
+                  {smileIconLM}
                 </span>
               </a>
             </div>
