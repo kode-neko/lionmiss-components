@@ -14,6 +14,7 @@ export {
   arrowUpIconLM,
   commentIconLM,
   phoneIconLM,
+  heartIconLM,
   
   instagramIconLM,
   pinterestIconLM,

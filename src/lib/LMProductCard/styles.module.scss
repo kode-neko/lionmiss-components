@@ -1,0 +1,69 @@
+@import "../style.scss";
+
+.img {
+  margin-bottom: 10px;
+
+  img {
+    height: 50vh;
+    width: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.cont {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 4px rgba(160, 107, 227, 0.3);
+
+    .title {
+      color: $color-main;
+    }
+  }
+}
+
+.infoCont {
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .info {
+    color: $color-black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .price {
+      font-weight: bold;
+      font-size: 24px;
+      display: inline-block;
+      align-self: center;
+    }
+
+    .actions {
+      button {
+        padding: 4px 8px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        &:hover {
+          color: $color-main;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .colors {
+    & * {
+      margin-right: 10px;
+    }
+  }
+}

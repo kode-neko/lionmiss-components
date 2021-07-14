@@ -7,12 +7,31 @@ interface LMMenuOpt {
   res?: boolean;
 }
 
+enum LMColor {
+  Red = 'red',
+  Orange = 'orange',
+  Yellow = 'yellow',
+  Green = 'green',
+  Aqua = 'aqua',
+  Blue = 'blue',
+  Purple = 'purple',
+  Pink = 'pink',
+  White = 'white',
+  Black = 'black'
+}
+
+type LMProductProps = {
+  key: string;
+  value: string;
+}
+
 type LMProduct = {
   id: string;
   name: string;
   price: number;
   description: string;
-  details: string[];
+  details: LMProductProps[];
+  colors: LMColor[];
   unds: number;
 };
 
@@ -27,6 +46,8 @@ type LMUserInfo = {
   cart: LMCartProduct[];
 };
 
+
+
 type LMMainBarConfig = Omit<LMMainBarProps, "isMobile">;
 
 type LMMainFooterConfig = Omit<LMMainFooterProps, "isMobile">;
@@ -36,6 +57,7 @@ export {
   LMProduct,
   LMCartProduct,
   LMUserInfo,
+  LMColor,
   LMMainBarConfig,
   LMMainFooterConfig,
 };

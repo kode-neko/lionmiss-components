@@ -1,7 +1,9 @@
-@import '../style.scss';
+@import "../style.scss";
 
 .cont {
-    background-color: $color-white;
-    padding: 10px;
-    @include shadow;
+  background-color: $color-white;
+  border-radius: $border-radius-size;
+  padding: 10px;
+  display: inline-block;
+  @include shadow;
 }

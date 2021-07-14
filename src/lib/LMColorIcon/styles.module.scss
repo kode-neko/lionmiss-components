@@ -1,0 +1,53 @@
+@import "../style.scss";
+
+.color {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 1;
+}
+
+.selected {
+  opacity: 1;
+}
+
+.red {
+  background-color: rgba(185, 86, 86, 1);
+}
+
+.orange {
+  background-color: rgba(222, 141, 66, 1);
+}
+
+.yellow {
+  background-color: rgba(229, 206, 83, 1);
+}
+
+.green {
+  background-color: rgba(135, 185, 86, 1);
+}
+
+.aqua {
+  background-color: rgba(86, 185, 185, 1);
+}
+
+.blue {
+  background-color: rgba(86, 126, 185, 1);
+}
+
+.purple {
+  background-color: rgba(162, 110, 202, 1);
+}
+
+.pink {
+  background-color: rgba(214, 112, 179, 1);
+}
+
+.white {
+  background-color: rgba(212, 212, 212, 1);
+}
+
+.black {
+  background-color: rgba(58, 58, 58, 1);
+}
