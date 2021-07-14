@@ -56,12 +56,19 @@
     .about {
       font-size: 24px;
       text-align: center;
-      & > .text {
+      &:hover {
+        color: $color-main;
+      }
+      & > a .text {
         color: $color-white;
         font-weight: bold;
         margin-right: 10px;
+
+        &:hover {
+          color: $color-main;
+        }
       }
-      & > .icon {
+      & > a .icon {
         color: $color-main;
       }
     }

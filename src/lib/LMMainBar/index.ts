@@ -1,2 +1,1 @@
-import { LMMainBar } from "./LMMainBar";
-export { LMMainBar };
+export { LMMainBar } from "./LMMainBar";

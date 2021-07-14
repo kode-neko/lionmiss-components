@@ -1,7 +1,7 @@
 import React from "react";
 import { LMMenuOpt } from "../../types";
 import { useTranslation } from "react-i18next";
-import { createPath } from "../utils";
+import { createPath } from "../../utils";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMCartIcon } from "./LMCartIcon";

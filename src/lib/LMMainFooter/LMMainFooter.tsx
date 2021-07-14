@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import style from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
-import { createPath } from "../LMMainBar/utils";
+import { createPath } from "../utils";
 import { LMMainFooterProps } from "./types";
 import { LMMenuOpt } from "../types";
-
 
 const LMMainFooter: React.FC<LMMainFooterProps> = ({
   isMobile,
@@ -54,10 +53,12 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
               ))}
             </div>
             <div className={style.about}>
-              <span className={style.text}>About Us</span>
-              <span className={style.icon}>
-                <FontAwesomeIcon icon="smile" />
-              </span>
+              <a href={tP('about-us')}>
+                <span className={style.text}>{tMM('about-us')}</span>
+                <span className={style.icon}>
+                  <FontAwesomeIcon icon="smile" />
+                </span>
+              </a>
             </div>
           </div>
         </div>

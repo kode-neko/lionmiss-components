@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import {
-  WEB_TITLE,
+  columnsInfo,
   mainMenu,
+  socialMedia,
   userMenu,
   WEB_CREDITS,
-  columnsInfo,
-  socialMedia,
+  WEB_TITLE,
 } from "./config";
-import { LMCartProduct, LMMainBarConfig, LMMainFooterConfig, LMProduct, LMUserInfo } from "./lib/types";
-import "./App.css";
-import "./lib/icons";
-import "./lib/i18n";
-import { LMModal } from "./lib/LMModal";
-import { LMBaseLayout } from "./lib/LMBaseLayout";
-import { sendNotificationLM } from "./lib/LMNotification";
+import {
+  LMCartProduct,
+  LMMainBarConfig,
+  LMMainFooterConfig,
+  LMProduct,
+  LMUserInfo,
+} from "./lib/types";
+import { LMModal, LMBaseLayout, sendNotificationLM } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 
 const product: LMProduct = {
