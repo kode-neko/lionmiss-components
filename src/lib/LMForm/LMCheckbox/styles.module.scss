@@ -45,13 +45,17 @@
 }
 
 .cont:hover .checkbox {
-  background-color: $color-main;
+  background-color: $color-second;
+  border-color: $color-second;
 }
 
 .cont .checkboxBrowser:checked ~ .checkbox {
   background-color: $color-main;
 }
 
+.cont:hover .checkboxBrowser:checked ~ .checkbox {
+  background-color: $color-second;
+}
 
 .checkbox:after {
   content: "";
