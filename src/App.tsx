@@ -15,12 +15,19 @@ import {
   LMProduct,
   LMUserInfo,
 } from "./lib/types";
-import { LMModal, LMBaseLayout, sendNotificationLM } from "./lib";
+import {
+  LMModal,
+  LMBaseLayout,
+  sendNotificationLM,
+  LMBaseComponent,
+} from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
 import model from "./model.webp";
 import "./i18n";
 import LMInput from "./lib/LMForm/LMInput/LMInput";
+import LMCheckBox from "./lib/LMForm/LMCheckbox/LMCheckbox";
+import LMButton from "./lib/LMMainBar/LMButton/LMButton";
 
 const product: LMProduct = {
   id: "222",
@@ -61,6 +68,8 @@ const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
 
+  const [w, setw] = useState<boolean>(false);
+
   const mainBarProps: LMMainBarConfig = {
     webTitle: WEB_TITLE,
     mainMenu: mainMenu,
@@ -76,7 +85,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
     socialMedia: socialMedia,
     credits: WEB_CREDITS,
   };
-  console.log(model);
+
   return (
     <>
       <LMModal
@@ -98,27 +107,43 @@ const App = (): React.FunctionComponentElement<unknown> => {
         }}
       />
       <LMBaseLayout mainMenu={mainBarProps} mainFooter={mainFooter}>
-        <div>
-          <button
+        <LMBaseComponent>
+          <LMButton
             onClick={() => {
               setUser({ ...user, cart: [...user.cart, cartProduct] });
               sendNotificationLM(productAddedNoti);
             }}
           >
             Añadir
-          </button>
-          <button onClick={() => setModal(true)}>Modal</button>
-        </div>
-        <div style={{ width: "250px" }}>
-          <LMProductCard
-            img={model}
-            product={product}
-            onClickProduct={() => console.log("product")}
-            onClickAdd={() => console.log("cart")}
-            onClickFav={() => console.log("fav")}
-          />
-        </div>
-        <LMInput label="Title" infoHint="Please don’t exced 50 characters" />
+          </LMButton>
+          <LMButton onClick={() => setModal(true)}>Modal</LMButton>
+        </LMBaseComponent>
+
+        <LMProductCard
+          img={model}
+          product={product}
+          onClickProduct={() => console.log("product")}
+          onClickAdd={() => console.log("cart")}
+          onClickFav={() => console.log("fav")}
+        />
+
+        <LMBaseComponent>
+          <div>
+            <LMInput
+              label="Title"
+              placeholder="patatas"
+              infoHint="Please don’t exced 50 characters"
+            />
+            <LMCheckBox
+              value="patatas"
+              label="label"
+              checked={w}
+              id="confeti"
+              onChange={() => setw(!w)}
+            />
+          </div>
+        </LMBaseComponent>
+
         <div style={{ textAlign: "center", height: "1000px" }}>
           {/* <LMCarousel imgList={catImgs} width={1200} /> */}
         </div>

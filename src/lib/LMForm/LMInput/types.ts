@@ -1,5 +1,6 @@
 type LMInputProps = {
   label?: string;
+  placeholder?: string;
   value?: string;
   infoHint?: string;
   errorHint?: string;

@@ -14,12 +14,12 @@ export const LMBaseLayout: React.FC<LMBaseLayoutProps> = ({
   const isMobile = useDisplay(992);
   return (
     <>
-    <LMNotification />
-    <div className={styles.layout}>
-      <LMMainBar {...mainMenu} isMobile={!!isMobile} />
-      <div className={styles.body}>{children}</div>
-      <LMMainFooter {...mainFooter} isMobile={!!isMobile} />
-    </div>
+      <LMNotification />
+      <div className={styles.layout}>
+        <LMMainBar {...mainMenu} isMobile={!!isMobile} />
+        <div className={styles.body}>{children}</div>
+        <LMMainFooter {...mainFooter} isMobile={!!isMobile} />
+      </div>
     </>
   );
 };

@@ -23,8 +23,8 @@
     border-color: $color-error;
   }
 
-  &:focus {
-    //outline: 2px solid $color-main;
+  &:focus-visible {
+    outline: 2px solid $color-main;
   }
 
   &::placeholder,
