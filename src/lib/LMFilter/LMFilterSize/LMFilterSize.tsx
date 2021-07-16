@@ -11,11 +11,11 @@ export const LMFilterSize: React.FC<LMFilterSizeProps> = ({
   return (
     <div className={styles.cont}>
       {Object.keys(LMSize).map((size) => (
-        <div key={size} onChange={() => onChange(size as LMSize)}>
+        <div key={size} className={styles.check}>
           <LMCheckBox
             label={size}
             value={size}
-            checked={size === selectedList.find(ele => ele === size)}
+            checked={size === selectedList.find((ele) => ele === size)}
             id={size}
             name={size}
             onChange={() => onChange(size as LMSize)}

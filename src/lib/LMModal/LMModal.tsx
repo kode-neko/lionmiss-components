@@ -2,9 +2,7 @@ import React from "react";
 import { LMModalProps } from "./types";
 import classnames from "classnames";
 import styles from "./styles.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LMButton from "../LMMainBar/LMButton/LMButton";
-import { useTranslation } from "react-i18next";
+import LMButton from "../LMButton/LMButton";
 import { closeIconLM } from "../LMIcons";
 
 export const LMModal: React.FC<LMModalProps> = ({
@@ -48,7 +46,9 @@ export const LMModal: React.FC<LMModalProps> = ({
         )}
       >
         <div className={styles.header}>
-          <div className={styles.closeBtn}>{closeIconLM}</div>
+          <div className={styles.closeBtn} onClick={handleClickClose}>
+            {closeIconLM}
+          </div>
         </div>
         <div className={styles.body}>
           <h3 className={styles.subheader}>{title}</h3>

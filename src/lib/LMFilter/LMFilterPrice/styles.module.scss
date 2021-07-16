@@ -3,26 +3,25 @@
 .cont {
   position: relative;
   display: flex;
-  align-content: space-between;
-}
-
-@mixin overlap {
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .currency {
-  @include overlap;
+  position: absolute;
+  top: 10px;
+  left: 46px;
 }
 
 @mixin input {
+  position: relative;
   input {
-    @include overlap;
     border: 2px solid $color-main;
     border-radius: $border-radius-size;
     width: 40px;
     height: 30px;
+    padding-left: 20px;
+    margin-left: 10px;
   }
 }
 

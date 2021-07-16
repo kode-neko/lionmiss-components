@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { LMFilterPriceProps } from "./types";
 import styles from "./styles.module.scss";
 
@@ -12,6 +12,14 @@ const LMFilterPrice: React.FC<LMFilterPriceProps> = ({
 }) => {
   const inputMinPropMax = max - 1;
   const inputMaxPropMin = min + 1;
+  const handleChangeMin = (e: ChangeEvent<HTMLInputElement>) => {
+    const min = Number(e.target.value);
+    onChangeMin(min >= valMax ? valMax - 1 : min);
+  };
+  const handleChangeMax = (e: ChangeEvent<HTMLInputElement>) => {
+    const max = Number(e.target.value);
+    onChangeMax(max <= valMin ? valMin + 1 : max);
+  };
   return (
     <div className={styles.cont}>
       <div className={styles.min}>
@@ -19,11 +27,10 @@ const LMFilterPrice: React.FC<LMFilterPriceProps> = ({
         <span className={styles.currency}>€</span>
         <input
           id="min"
-          type="number"
           value={valMin}
           min={min}
           max={inputMinPropMax}
-          onChange={(e) => onChangeMin(Number(e.target.value))}
+          onChange={handleChangeMin}
         />
       </div>
       <div className={styles.max}>
@@ -31,11 +38,10 @@ const LMFilterPrice: React.FC<LMFilterPriceProps> = ({
         <span className={styles.currency}>€</span>
         <input
           id="max"
-          type="number"
           value={valMax}
           min={inputMaxPropMin}
           max={max}
-          onChange={(e) => onChangeMax(Number(e.target.value))}
+          onChange={handleChangeMax}
         />
       </div>
     </div>

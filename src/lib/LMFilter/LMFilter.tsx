@@ -5,6 +5,9 @@ import { LMFilterPrice } from "./LMFilterPrice";
 import { LMFilterSize } from "./LMFilterSize";
 import { LMFilterStyle } from "./LMFilterStyle";
 import { LMFilterProps } from "./types";
+import styles from "./styles.module.scss";
+import LMButton from "../LMButton/LMButton";
+import { filterIconLM } from "../LMIcons";
 
 export const LMFilter: React.FC<LMFilterProps> = ({
   selectedListColor,
@@ -22,7 +25,7 @@ export const LMFilter: React.FC<LMFilterProps> = ({
   onChangeListStyle,
 }) => {
   return (
-    <LMBaseComponent>
+    <LMBaseComponent classNameXtra={styles.cont}>
       <LMFilterColor
         selectedList={selectedListColor}
         onChange={onChangeListColor}
@@ -44,6 +47,7 @@ export const LMFilter: React.FC<LMFilterProps> = ({
         selectedList={selectedListStyle}
         onChange={onChangeListStyle}
       />
+      <LMButton small>{filterIconLM} Filter</LMButton>
     </LMBaseComponent>
   );
 };
