@@ -1,0 +1,35 @@
+@import "../../style.scss";
+
+.cont {
+  position: relative;
+  display: flex;
+  align-content: space-between;
+}
+
+@mixin overlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.currency {
+  @include overlap;
+}
+
+@mixin input {
+  input {
+    @include overlap;
+    border: 2px solid $color-main;
+    border-radius: $border-radius-size;
+    width: 40px;
+    height: 30px;
+  }
+}
+
+.min {
+  @include input;
+}
+
+.max {
+  @include input;
+}

@@ -27,3 +27,4 @@ export { LMMainBar } from "./LMMainBar";
 export { LMMainFooter } from "./LMMainFooter";
 export { LMModal } from "./LMModal";
 export { LMNotification, sendNotificationLM } from "./LMNotification";
+export { LMFilter } from "./LMFilter";

@@ -10,9 +10,11 @@ import {
 import {
   LMCartProduct,
   LMColor,
+  LMFilterPropsSelected,
   LMMainBarConfig,
   LMMainFooterConfig,
   LMProduct,
+  LMSize,
   LMUserInfo,
 } from "./lib/types";
 import {
@@ -20,6 +22,7 @@ import {
   LMBaseLayout,
   sendNotificationLM,
   LMBaseComponent,
+  LMFilter,
 } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
@@ -86,6 +89,55 @@ const App = (): React.FunctionComponentElement<unknown> => {
     credits: WEB_CREDITS,
   };
 
+  const [filterProps, setFilterProps] = useState<LMFilterPropsSelected>();
+
+  const handleChangeListColor = (color: LMColor) => {
+    const { selectedListColor: list } = filterProps as LMFilterPropsSelected;
+    const finded = list.find((ele) => ele === color);
+    const newListColor = finded
+      ? list.filter((ele) => ele !== color)
+      : [...list, color];
+    setFilterProps({
+      ...filterProps,
+      selectedListColor: newListColor,
+    } as LMFilterPropsSelected);
+  };
+
+  const handleChangeListSize = (size: LMSize) => {
+    const { selectedListSize: list } = filterProps as LMFilterPropsSelected;
+    const finded = list.find((ele) => ele === size);
+    const newListSize = finded
+      ? list.filter((ele) => ele !== size)
+      : [...list, size];
+    setFilterProps({
+      ...filterProps,
+      selectedListSize: newListSize,
+    } as LMFilterPropsSelected);
+  };
+
+  const handleChangeListStyle = (style: string) => {
+    const { selectedListStyle: list } = filterProps as LMFilterPropsSelected;
+    const finded = list.find((ele) => ele === style);
+    const newListStyle = finded
+      ? list.filter((ele) => ele !== style)
+      : [...list, style];
+    setFilterProps({
+      ...filterProps,
+      selectedListStyle: newListStyle,
+    } as LMFilterPropsSelected);
+  };
+
+  const handleChangeListFilter = <T,>(value: T, list: T[], param: string) => {
+    const finded = list.find((ele) => ele === value);
+    const newListStyle = finded
+      ? list.filter((ele) => ele !== value)
+      : [...list, value];
+    setFilterProps({
+      ...filterProps,
+      [param]: newListStyle,
+    } as LMFilterPropsSelected);
+  };
+
   return (
     <>
       <LMModal
@@ -144,9 +196,39 @@ const App = (): React.FunctionComponentElement<unknown> => {
           </div>
         </LMBaseComponent>
 
-        <div style={{ textAlign: "center", height: "1000px" }}>
-          {/* <LMCarousel imgList={catImgs} width={1200} /> */}
-        </div>
+        <LMFilter
+          selectedListColor={filterProps?.selectedListColor || []}
+          onChangeListColor={handleChangeListColor}
+          selectedListSize={filterProps?.selectedListSize || []}
+          onChangeListSize={handleChangeListSize}
+          minPrice={10}
+          maxPrice={100}
+          valMinPrice={filterProps?.valMinPrice || 0}
+          valMaxPrice={filterProps?.valMinPrice || 0}
+          onChangeMinPrice={(min: number) =>
+            setFilterProps({
+              ...filterProps,
+              minPrice: min,
+            } as LMFilterPropsSelected)
+          }
+          onChangeMaxPrice={(max: number) =>
+            setFilterProps({
+              ...filterProps,
+              maxPrice: max,
+            } as LMFilterPropsSelected)
+          }
+          listStyle={["urban", "casual", "party", "gothic"]}
+          selectedListStyle={filterProps?.selectedListStyle || []}
+          onChangeListStyle={(style) =>
+            handleChangeListFilter<string>(
+              style,
+              filterProps?.selectedListColor as string[],
+              "selectedListColor"
+            )
+          }
+        />
+
+        <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
       </LMBaseLayout>
     </>
   );
