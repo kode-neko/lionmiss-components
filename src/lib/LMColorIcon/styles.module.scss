@@ -1,13 +1,18 @@
 @import "../style.scss";
 
+.selectable{
+  cursor: pointer;
+}
+
 .color {
   height: 16px;
   width: 16px;
   border-radius: 50%;
   display: inline-block;
+  border: 2px solid $color-trans;
 }
 
-.selected {
+.selected, .selectable:hover .color {
   border: 2px solid $color-black;
 }
 

@@ -89,7 +89,13 @@ const App = (): React.FunctionComponentElement<unknown> => {
     credits: WEB_CREDITS,
   };
 
-  const [filterProps, setFilterProps] = useState<LMFilterPropsSelected>();
+  const [filterProps, setFilterProps] = useState<LMFilterPropsSelected>({
+    selectedListColor: [],
+    selectedListSize: [],
+    valMinPrice: 0,
+    valMaxPrice: 100,
+    selectedListStyle: []
+  });
 
   const handleChangeListColor = (color: LMColor) => {
     const { selectedListColor: list } = filterProps as LMFilterPropsSelected;
@@ -197,14 +203,14 @@ const App = (): React.FunctionComponentElement<unknown> => {
         </LMBaseComponent>
 
         <LMFilter
-          selectedListColor={filterProps?.selectedListColor || []}
+          selectedListColor={filterProps?.selectedListColor}
           onChangeListColor={handleChangeListColor}
-          selectedListSize={filterProps?.selectedListSize || []}
+          selectedListSize={filterProps?.selectedListSize}
           onChangeListSize={handleChangeListSize}
           minPrice={10}
           maxPrice={100}
-          valMinPrice={filterProps?.valMinPrice || 0}
-          valMaxPrice={filterProps?.valMinPrice || 0}
+          valMinPrice={filterProps?.valMinPrice}
+          valMaxPrice={filterProps?.valMinPrice}
           onChangeMinPrice={(min: number) =>
             setFilterProps({
               ...filterProps,
@@ -218,7 +224,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             } as LMFilterPropsSelected)
           }
           listStyle={["urban", "casual", "party", "gothic"]}
-          selectedListStyle={filterProps?.selectedListStyle || []}
+          selectedListStyle={filterProps?.selectedListStyle}
           onChangeListStyle={(style) =>
             handleChangeListFilter<string>(
               style,

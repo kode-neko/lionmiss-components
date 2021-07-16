@@ -10,10 +10,11 @@ const LMFilterColor: React.FC<LMFilterColorProps> = ({
 }) => {
   return (
     <div className={styles.cont}>
-      {Object.keys(LMColor).map((color) => (
-        <div key={color} onChange={() => onChange(color as LMColor)}>
+      {Object.values(LMColor).map((color) => (
+        <div key={color} onClick={() => onChange(color as LMColor)}>
           <LMColorIcon
-            color={color as LMColor}
+            isSelectable
+            color={color}
             selected={
               (color as LMColor) === selectedList.find((ele) => ele === color)
             }

@@ -18,17 +18,27 @@ const ColorBook = {
 
 export const LMColorIcon: React.FC<LMColorIconProps> = ({
   color,
+  isSelectable = false,
   selected,
+  classProp,
   onClick,
 }) => (
   <div
     className={classNames(
-      styles.color,
-      ColorBook[color],
-      selected && styles.selected
+      styles.cont,
+      classProp,
+      isSelectable && styles.selectable
     )}
-    onClick={onClick}
-  />
+  >
+    <div
+      className={classNames(
+        styles.color,
+        ColorBook[color],
+        selected && styles.selected
+      )}
+      onClick={onClick}
+    />
+  </div>
 );
 
 export default LMColorIcon;
