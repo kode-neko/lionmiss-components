@@ -23,14 +23,18 @@ import {
   sendNotificationLM,
   LMBaseComponent,
   LMFilter,
+  LMImgProduct,
 } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
 import model from "./model.webp";
+import model2 from "./model2.webp";
+import model3 from "./model3.webp";
 import "./i18n";
 import LMInput from "./lib/LMForm/LMInput/LMInput";
-import LMCheckBox from "./lib/LMForm/LMCheckbox/LMCheckbox";
+import { LMCheckBox } from "./lib/LMForm/LMCheckBox";
 import { LMButton } from "./lib/LMButton";
+import { LMImgAttr } from "./lib/LMImgProduct";
 
 const product: LMProduct = {
   id: "222",
@@ -66,6 +70,27 @@ const userInfo: LMUserInfo = {
   lang: "en",
   cart: [cartProduct],
 };
+
+const imgList: LMImgAttr[] = [
+  {
+    key: "1",
+    src: model,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+  },
+  {
+    key: "2",
+    src: model2,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+  },
+  {
+    key: "3",
+    src: model3,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+  },
+];
 
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
@@ -210,6 +235,8 @@ const App = (): React.FunctionComponentElement<unknown> => {
             )
           }
         />
+
+        <LMImgProduct imgList={imgList} thumbList={imgList} />
 
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
       </LMBaseLayout>

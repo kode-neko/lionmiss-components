@@ -1,7 +1,7 @@
 @import "../style.scss";
 
 .background {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   background-color: $color-overlay;
   top: 0;
@@ -11,7 +11,7 @@
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   width: 560px;
   height: 340px;
   margin: 0 auto;

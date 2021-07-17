@@ -28,3 +28,4 @@ export { LMMainFooter } from "./LMMainFooter";
 export { LMModal } from "./LMModal";
 export { LMNotification, sendNotificationLM } from "./LMNotification";
 export { LMFilter } from "./LMFilter";
+export { LMImgProduct } from "./LMImgProduct";

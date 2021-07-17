@@ -1,2 +1,3 @@
-export { LMCheckBox } from './LMCheckbox/LMCheckbox';
-export { LMInput } from './LMInput/LMInput';
+export { LMCheckBox } from './LMCheckBox';
+export { LMInput } from './LMInput';
+export { LMStepper } from './LMStepper';
