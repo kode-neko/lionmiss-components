@@ -3,7 +3,7 @@ import { LMBaseComponent } from "../LMBaseComponent";
 import styles from "./styles.module.scss";
 import { LMImgAttr, LMImgProductProps } from "./types";
 import classNames from "classnames";
-import { LMModal } from "../LMModal";
+import LMImgProductModal from "./LMImgProductModal";
 
 const LMImgProduct: React.FC<LMImgProductProps> = ({ imgList, thumbList }) => {
   const [mainImg, setMainImg] = useState<LMImgAttr>(imgList[0]);
@@ -14,39 +14,38 @@ const LMImgProduct: React.FC<LMImgProductProps> = ({ imgList, thumbList }) => {
     setMainImg(img);
   };
   return (
-    <LMBaseComponent
-      classNameXtra={styles.cont}
-      onClick={() => setVisibleModal(true)}
-    >
-      <LMModal
-        visible={visibleModal}
-        title=""
-        content={<img {...mainImg} />}
-        ok="Accept"
-        cancel="Cancel"
-        onClickOk={() => console.log("ok")}
-        onClickCancel={() => console.log("cancel")}
-        onClickClose={() => setVisibleModal(false)}
-      />
-      <div className={styles.imgMain}>
-        <img {...mainImg} />
-      </div>
-      <div className={styles.gallery}>
-        {thumbList.map((thumb) => (
-          <div
-            key={thumb.key}
-            className={classNames(
-              styles.thumb,
-              thumb.key === mainImg.key && styles.selected
-            )}
-            onClick={() => handleClickThumb(thumb)}
-            onMouseEnter={() => handleClickThumb(thumb)}
-          >
-            <img {...thumb} />
-          </div>
-        ))}
-      </div>
-    </LMBaseComponent>
+    <>
+      {visibleModal && (
+        <LMImgProductModal
+          img={mainImg}
+          onClose={() => setVisibleModal(false)}
+        />
+      )}
+      <LMBaseComponent
+        classNameXtra={styles.cont}
+        onClick={() => setVisibleModal(true)}
+      >
+        <div className={styles.imgMain}>
+          <img {...mainImg} />
+        </div>
+        <div className={styles.gallery}>
+          {thumbList.map((thumb) => (
+            <img
+              key={thumb.key}
+              className={classNames(
+                styles.thumb,
+                thumb.key === mainImg.key && styles.selected
+              )}
+              onClick={() => handleClickThumb(thumb)}
+              onMouseEnter={() => handleClickThumb(thumb)}
+              src={thumb.src}
+              title={thumb.title}
+              alt={thumb.alt}
+            />
+          ))}
+        </div>
+      </LMBaseComponent>
+    </>
   );
 };
 

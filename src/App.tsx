@@ -24,6 +24,7 @@ import {
   LMBaseComponent,
   LMFilter,
   LMImgProduct,
+  LMRow,
 } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
@@ -155,88 +156,95 @@ const App = (): React.FunctionComponentElement<unknown> => {
         }}
       />
       <LMBaseLayout mainMenu={mainBarProps} mainFooter={mainFooter}>
-        <LMBaseComponent>
-          <LMButton
-            onClick={() => {
-              setUser({ ...user, cart: [...user.cart, cartProduct] });
-              sendNotificationLM(productAddedNoti);
-            }}
-          >
-            Añadir
-          </LMButton>
-          <LMButton onClick={() => setModal(true)}>Modal</LMButton>
-        </LMBaseComponent>
+        <LMRow>
+          <LMBaseComponent>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <LMButton
+                onClick={() => {
+                  setUser({ ...user, cart: [...user.cart, cartProduct] });
+                  sendNotificationLM(productAddedNoti);
+                }}
+              >
+                Añadir
+              </LMButton>
+              <LMButton onClick={() => setModal(true)}>Modal</LMButton>
+            </div>
+          </LMBaseComponent>
+        </LMRow>
 
-        <LMProductCard
-          img={model}
-          product={product}
-          onClickProduct={() => console.log("product")}
-          onClickAdd={() => console.log("cart")}
-          onClickFav={() => console.log("fav")}
-        />
+        <LMRow>
+          <LMProductCard
+            img={model}
+            product={product}
+            onClickProduct={() => console.log("product")}
+            onClickAdd={() => console.log("cart")}
+            onClickFav={() => console.log("fav")}
+          />
+          <LMBaseComponent>
+            <div>
+              <LMInput
+                label="Title"
+                placeholder="patatas"
+                infoHint="Please don’t exced 50 characters"
+              />
+              <LMCheckBox
+                value="patatas"
+                label="label"
+                checked={w}
+                id="confeti"
+                onChange={() => setw(!w)}
+              />
+            </div>
+          </LMBaseComponent>
+        </LMRow>
 
-        <LMBaseComponent>
-          <div>
-            <LMInput
-              label="Title"
-              placeholder="patatas"
-              infoHint="Please don’t exced 50 characters"
-            />
-            <LMCheckBox
-              value="patatas"
-              label="label"
-              checked={w}
-              id="confeti"
-              onChange={() => setw(!w)}
-            />
-          </div>
-        </LMBaseComponent>
+        <LMRow>
+          <LMFilter
+            selectedListColor={filterProps?.selectedListColor}
+            onChangeListColor={(color) =>
+              handleChangeListFilter<LMColor>(
+                color,
+                filterProps?.selectedListColor,
+                "selectedListColor"
+              )
+            }
+            selectedListSize={filterProps?.selectedListSize}
+            onChangeListSize={(style) =>
+              handleChangeListFilter<LMSize>(
+                style,
+                filterProps?.selectedListSize,
+                "selectedListSize"
+              )
+            }
+            minPrice={10}
+            maxPrice={100}
+            valMinPrice={filterProps?.valMinPrice}
+            valMaxPrice={filterProps?.valMaxPrice}
+            onChangeMinPrice={(min: number) =>
+              setFilterProps({
+                ...filterProps,
+                valMinPrice: min,
+              } as LMFilterPropsSelected)
+            }
+            onChangeMaxPrice={(max: number) =>
+              setFilterProps({
+                ...filterProps,
+                valMaxPrice: max,
+              } as LMFilterPropsSelected)
+            }
+            listStyle={["urban", "casual", "party", "gothic"]}
+            selectedListStyle={filterProps?.selectedListStyle}
+            onChangeListStyle={(style) =>
+              handleChangeListFilter<string>(
+                style,
+                filterProps?.selectedListStyle,
+                "selectedListStyle"
+              )
+            }
+          />
 
-        <LMFilter
-          selectedListColor={filterProps?.selectedListColor}
-          onChangeListColor={(color) =>
-            handleChangeListFilter<LMColor>(
-              color,
-              filterProps?.selectedListColor,
-              "selectedListColor"
-            )
-          }
-          selectedListSize={filterProps?.selectedListSize}
-          onChangeListSize={(style) =>
-            handleChangeListFilter<LMSize>(
-              style,
-              filterProps?.selectedListSize,
-              "selectedListSize"
-            )
-          }
-          minPrice={10}
-          maxPrice={100}
-          valMinPrice={filterProps?.valMinPrice}
-          valMaxPrice={filterProps?.valMaxPrice}
-          onChangeMinPrice={(min: number) =>
-            setFilterProps({
-              ...filterProps,
-              valMinPrice: min,
-            } as LMFilterPropsSelected)
-          }
-          onChangeMaxPrice={(max: number) =>
-            setFilterProps({
-              ...filterProps,
-              valMaxPrice: max,
-            } as LMFilterPropsSelected)
-          }
-          listStyle={["urban", "casual", "party", "gothic"]}
-          selectedListStyle={filterProps?.selectedListStyle}
-          onChangeListStyle={(style) =>
-            handleChangeListFilter<string>(
-              style,
-              filterProps?.selectedListStyle,
-              "selectedListStyle"
-            )
-          }
-        />
-
-        <LMImgProduct imgList={imgList} thumbList={imgList} />
+          <LMImgProduct imgList={imgList} thumbList={imgList} />
+        </LMRow>
 
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
       </LMBaseLayout>

@@ -39,6 +39,7 @@ const LMButton = styled.button<LMButtonProps>`
   font-family: "Roboto";
   font-weight: bold;
   cursor: pointer;
+  transition: filter .3s;
   
   ${(props) => props.small && small}
   ${(props) => props.medium && medium}
@@ -48,6 +49,10 @@ const LMButton = styled.button<LMButtonProps>`
   ${(props) => props.second && second}
 
   ${(props) => (!props.main && !props.second ? second : "")}
+
+  :hover {
+    filter: brightness(1.1);
+  }
 `;
 
 export default LMButton;

@@ -5,12 +5,18 @@
   flex-direction: column;
   justify-content: center;
   background-color: $color-mid;
+
   .body {
     width: 1200px;
     margin: 0 auto;
     margin-top: 20px;
-    &>*{
-      margin-bottom: 20px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
 }
