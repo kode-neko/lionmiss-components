@@ -1,12 +1,49 @@
 import { LMFilterProps } from "./LMFilter/types";
 import { LMMainBarProps } from "./LMMainBar/types";
 import { LMMainFooterProps } from "./LMMainFooter/types";
-interface LMMenuOpt {
-  title: string | JSX.Element;
-  submenu?: LMMenuOpt[];
-  path?: string[];
-  res?: boolean;
-}
+
+type LMMeasures = {
+  chest: string;
+  waist: string;
+  hip: string;
+  size: string;
+};
+
+type LMUser = {
+  username: string;
+  avatar: string;
+  measures: LMMeasures;
+  size: string;
+  email: string;
+};
+
+type LMUserInfo = {
+  lang: string;
+  cart: LMCartProduct[];
+  user: LMUser;
+};
+
+type LMProduct = {
+  id: string;
+  name: string;
+  price: number;
+  description: string;
+  details: LMProductProps[];
+  colors: LMColor[];
+  unds: number;
+  isFav: boolean;
+};
+
+type LMComment = {
+  id: string;
+  title: string;
+  comment: string;
+  date: Date;
+  ratting: number;
+  measures: LMMeasures;
+  user: LMUser;
+  imgs: LMImgAttr[]
+};
 
 enum LMColor {
   Red = "red",
@@ -30,20 +67,20 @@ enum LMSize {
   XXL = "xxl",
 }
 
+interface LMMenuOpt {
+  title: string | JSX.Element;
+  submenu?: LMMenuOpt[];
+  path?: string[];
+  res?: boolean;
+}
+
+type LMMainBarConfig = Omit<LMMainBarProps, "isMobile">;
+
+type LMMainFooterConfig = Omit<LMMainFooterProps, "isMobile">;
+
 type LMProductProps = {
   key: string;
   value: string;
-};
-
-type LMProduct = {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  details: LMProductProps[];
-  colors: LMColor[];
-  unds: number;
-  isFav: boolean;
 };
 
 type LMCartProduct = {
@@ -51,15 +88,6 @@ type LMCartProduct = {
   unds: number;
   product: LMProduct;
 };
-
-type LMUserInfo = {
-  lang: string;
-  cart: LMCartProduct[];
-};
-
-type LMMainBarConfig = Omit<LMMainBarProps, "isMobile">;
-
-type LMMainFooterConfig = Omit<LMMainFooterProps, "isMobile">;
 
 type LMFilterPropsSelected = Pick<
   LMFilterProps,
@@ -77,15 +105,25 @@ type LMPropsBuy = {
   qty: number;
 };
 
+type LMImgAttr = {
+  key: string;
+  src: string;
+  title: string;
+  alt: string;
+};
+
 export {
-  LMMenuOpt,
   LMProduct,
-  LMCartProduct,
+  LMComment,
   LMUserInfo,
   LMColor,
   LMSize,
+  LMMenuOpt,
   LMMainBarConfig,
   LMMainFooterConfig,
+  LMProductProps,
+  LMCartProduct,
   LMFilterPropsSelected,
   LMPropsBuy,
+  LMImgAttr,
 };

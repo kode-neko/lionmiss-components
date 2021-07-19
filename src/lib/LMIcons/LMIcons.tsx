@@ -16,7 +16,8 @@ import {
   faCaretUp,
   faCommentDots,
   faMobileAlt,
-  faHeart
+  faHeart,
+  faStar
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -42,6 +43,7 @@ const arrowUpIconLM: JSX.Element = <FontAwesomeIcon icon={faCaretUp} />;
 const commentIconLM: JSX.Element = <FontAwesomeIcon icon={faCommentDots} />;
 const phoneIconLM: JSX.Element = <FontAwesomeIcon icon={faMobileAlt} />;
 const heartIconLM: JSX.Element = <FontAwesomeIcon icon={faHeart} />;
+const starIconLM: JSX.Element = <FontAwesomeIcon icon={faStar} />;
 
 const instagramIconLM: JSX.Element = <FontAwesomeIcon icon={faInstagram} />;
 const pinterestIconLM: JSX.Element = <FontAwesomeIcon icon={faPinterest} />;
@@ -65,6 +67,7 @@ export {
   commentIconLM,
   phoneIconLM,
   heartIconLM,
+  starIconLM,
   
   instagramIconLM,
   pinterestIconLM,

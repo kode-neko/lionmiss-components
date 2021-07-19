@@ -1,9 +1,4 @@
-type LMImgAttr = {
-  key: string;
-  src: string;
-  title: string;
-  alt: string;
-};
+import { LMImgAttr } from "../types";
 
 type LMImgProductProps = {
   imgList: LMImgAttr[];

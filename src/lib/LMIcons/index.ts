@@ -15,6 +15,7 @@ export {
   commentIconLM,
   phoneIconLM,
   heartIconLM,
+  starIconLM,
   
   instagramIconLM,
   pinterestIconLM,
