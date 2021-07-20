@@ -18,16 +18,11 @@
     font-size: 20px;
 
     .check {
-      cursor: pointer;
       color: $color-rate;
     }
 
     .none {
-      cursor: pointer;
       color: $color-mid;
-      &:hover {
-        color: $color-rate;
-      }
     }
   }
 }
@@ -81,6 +76,12 @@
       gap: 16px;
       .img > img {
         width: 60px;
+        border-radius: $border-radius-size;
+        border: 2px solid $color-white;
+        &:hover {
+          cursor: pointer;
+          border: 2px solid $color-main;
+        }
       }
     }
   }

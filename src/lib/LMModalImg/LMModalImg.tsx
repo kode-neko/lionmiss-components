@@ -1,9 +1,9 @@
 import React from "react";
-import { LMImgProductModalProps } from "./types";
+import { LMModalImgProps } from "./types";
 import styles from "./styles.module.scss";
 import { closeIconLM } from "../LMIcons";
 
-const LMImgProductModal: React.FC<LMImgProductModalProps> = ({
+const LMModalImg: React.FC<LMModalImgProps> = ({
   img,
   onClose,
 }) => {
@@ -29,4 +29,4 @@ const LMImgProductModal: React.FC<LMImgProductModalProps> = ({
   );
 };
 
-export default LMImgProductModal;
+export default LMModalImg;

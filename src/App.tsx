@@ -18,6 +18,7 @@ import {
   LMSize,
   LMUser,
   LMUserInfo,
+  LMImgAttr,
 } from "./lib/types";
 import {
   LMModal,
@@ -38,7 +39,6 @@ import "./i18n";
 import LMInput from "./lib/LMForm/LMInput/LMInput";
 import { LMCheckBox } from "./lib/LMForm/LMCheckBox";
 import { LMButton } from "./lib/LMButton";
-import { LMImgAttr } from "./lib/LMImgProduct";
 import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
 

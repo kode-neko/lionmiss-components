@@ -3,7 +3,7 @@ import { LMBaseComponent } from "../LMBaseComponent";
 import styles from "./styles.module.scss";
 import { LMImgAttr, LMImgProductProps } from "./types";
 import classNames from "classnames";
-import LMImgProductModal from "./LMImgProductModal";
+import { LMModalImg } from "../LMModalImg";
 
 const LMImgProduct: React.FC<LMImgProductProps> = ({ imgList, thumbList }) => {
   const [mainImg, setMainImg] = useState<LMImgAttr>(imgList[0]);
@@ -15,10 +15,7 @@ const LMImgProduct: React.FC<LMImgProductProps> = ({ imgList, thumbList }) => {
   return (
     <>
       {visibleModal && (
-        <LMImgProductModal
-          img={mainImg}
-          onClose={() => setVisibleModal(false)}
-        />
+        <LMModalImg img={mainImg} onClose={() => setVisibleModal(false)} />
       )}
       <LMBaseComponent
         classNameXtra={styles.cont}
