@@ -28,7 +28,7 @@ const config: Configuration = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|webp)$/i,
+        test: /\.(png|jpg|jpeg|gif|webp)$/i,
         loader: "file-loader",
         options: {
           name: (): string => {

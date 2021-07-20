@@ -1,5 +1,91 @@
-.header {}
+@import "../style.scss";
 
-.body {}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
 
-.footer {}
+  .userName {
+    color: $color-main;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .rating {
+    display: flex;
+    gap: 8px;
+    text-align: right;
+    font-size: 20px;
+
+    .check {
+      cursor: pointer;
+      color: $color-rate;
+    }
+
+    .none {
+      cursor: pointer;
+      color: $color-mid;
+      &:hover {
+        color: $color-rate;
+      }
+    }
+  }
+}
+
+.body {
+  display: flex;
+  gap: 24px;
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    min-width: 100px;
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: $border-radius-size;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 18px;
+      width: 100%;
+
+      .line {
+        display: flex;
+        justify-content: space-between;
+        .key {
+          text-align: left;
+        }
+        .value {
+          text-align: right;
+          color: $color-second;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .gallery {
+      display: flex;
+      gap: 16px;
+      .img > img {
+        width: 60px;
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: right;
+}

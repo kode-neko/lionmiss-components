@@ -3,17 +3,16 @@ import { LMMainBarProps } from "./LMMainBar/types";
 import { LMMainFooterProps } from "./LMMainFooter/types";
 
 type LMMeasures = {
-  chest: string;
-  waist: string;
-  hip: string;
-  size: string;
+  chest: number;
+  waist: number;
+  hip: number;
+  size: LMSize;
 };
 
 type LMUser = {
   username: string;
   avatar: string;
   measures: LMMeasures;
-  size: string;
   email: string;
 };
 
@@ -36,7 +35,6 @@ type LMProduct = {
 
 type LMComment = {
   id: string;
-  title: string;
   comment: string;
   date: Date;
   ratting: number;
@@ -116,6 +114,7 @@ export {
   LMProduct,
   LMComment,
   LMUserInfo,
+  LMUser,
   LMColor,
   LMSize,
   LMMenuOpt,

@@ -10,11 +10,13 @@ import {
 import {
   LMCartProduct,
   LMColor,
+  LMComment,
   LMFilterPropsSelected,
   LMMainBarConfig,
   LMMainFooterConfig,
   LMProduct,
   LMSize,
+  LMUser,
   LMUserInfo,
 } from "./lib/types";
 import {
@@ -31,12 +33,14 @@ import LMProductCard from "./lib/LMProductCard/LMProductCard";
 import model from "./model.webp";
 import model2 from "./model2.webp";
 import model3 from "./model3.webp";
+import avatar from "./avatar.jpeg";
 import "./i18n";
 import LMInput from "./lib/LMForm/LMInput/LMInput";
 import { LMCheckBox } from "./lib/LMForm/LMCheckBox";
 import { LMButton } from "./lib/LMButton";
 import { LMImgAttr } from "./lib/LMImgProduct";
 import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
+import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
 
 const product: LMProduct = {
   id: "222",
@@ -63,15 +67,16 @@ const product: LMProduct = {
   isFav: false,
 };
 
-const cartProduct: LMCartProduct = {
-  id: "1",
-  unds: 1,
-  product: product,
-};
-
-const userInfo: LMUserInfo = {
-  lang: "en",
-  cart: [cartProduct],
+const user: LMUser = {
+  username: "Username",
+  avatar: avatar,
+  measures: {
+    chest: 90,
+    waist: 60,
+    hip: 90,
+    size: LMSize.XL,
+  },
+  email: "user@mail.com",
 };
 
 const imgList: LMImgAttr[] = [
@@ -94,6 +99,34 @@ const imgList: LMImgAttr[] = [
     alt: "Una chaqueta muy bonita",
   },
 ];
+
+const comment: LMComment = {
+  id: "2",
+  comment:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+  date: new Date(),
+  ratting: 3,
+  measures: {
+    chest: 90,
+    waist: 60,
+    hip: 90,
+    size: LMSize.XL,
+  },
+  user: user,
+  imgs: imgList,
+};
+
+const cartProduct: LMCartProduct = {
+  id: "1",
+  unds: 1,
+  product: product,
+};
+
+const userInfo: LMUserInfo = {
+  lang: "en",
+  cart: [cartProduct],
+  user: user,
+};
 
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
@@ -253,6 +286,9 @@ const App = (): React.FunctionComponentElement<unknown> => {
           />
         </LMRow>
 
+        <LMRow>
+          <LMCommentCard comment={comment} userInfo={userInfo} />
+        </LMRow>
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
       </LMBaseLayout>
     </>
