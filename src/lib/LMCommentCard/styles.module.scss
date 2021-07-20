@@ -90,3 +90,18 @@
 .footer {
   text-align: right;
 }
+
+@media (max-width: 992px) {
+  .body {
+    flex-direction: column;
+
+    .user {
+      display: flex;
+      flex-direction: row;
+
+      .info {
+        width: 100px;
+      }
+    }
+  }
+}
