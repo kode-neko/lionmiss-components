@@ -30,3 +30,4 @@ export { LMNotification, sendNotificationLM } from "./LMNotification";
 export { LMFilter } from "./LMFilter";
 export { LMCheckBox, LMInput, LMSelectorBox, LMStepper } from "./LMForm";
 export { LMImgProduct } from "./LMImgProduct";
+export { LMHeader } from "./LMHeader";

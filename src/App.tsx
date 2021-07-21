@@ -19,6 +19,7 @@ import {
   LMUser,
   LMUserInfo,
   LMImgAttr,
+  LMPathSegment,
 } from "./lib/types";
 import {
   LMModal,
@@ -28,6 +29,7 @@ import {
   LMFilter,
   LMImgProduct,
   LMRow,
+  LMHeader,
 } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
@@ -41,6 +43,7 @@ import { LMCheckBox } from "./lib/LMForm/LMCheckBox";
 import { LMButton } from "./lib/LMButton";
 import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
+import LMBreadCrumb from "./lib/LMBreadCrumb/LMBreadCrumb";
 
 const product: LMProduct = {
   id: "222",
@@ -127,6 +130,13 @@ const userInfo: LMUserInfo = {
   cart: [cartProduct],
   user: user,
 };
+
+const path: LMPathSegment[] = [
+  { name: "home", href: "", title: "" },
+  { name: "section", href: "", title: "" },
+  { name: "page", href: "", title: "" },
+  { name: "product", href: "", title: "" },
+];
 
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
@@ -289,6 +299,9 @@ const App = (): React.FunctionComponentElement<unknown> => {
         <LMRow>
           <LMCommentCard comment={comment} userInfo={userInfo} />
         </LMRow>
+
+        <LMBreadCrumb path={path} />
+        <LMHeader title="Title" link={{ name: 'back', href: "", title: "titulo" }} />
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
       </LMBaseLayout>
     </>

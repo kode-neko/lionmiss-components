@@ -1,0 +1,20 @@
+@import "../style.scss";
+
+.breadcrum {
+  font-size: 32px;
+  display: flex;
+
+  .slash {
+    color: $color-main;
+  }
+  .last {
+    padding-left: 16px;
+    font-weight: bold;
+  }
+  .segment a{
+    padding: 0 16px;
+  }
+  .segment:hover a {
+    color: $color-main;
+  }
+}

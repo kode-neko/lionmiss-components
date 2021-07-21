@@ -1,0 +1,28 @@
+@import "../style.scss";
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-main;
+  padding: 10px 20px;
+  color: $color-white;
+  font-weight: bold;
+  @include shadow;
+
+  & a {
+    color: $color-white;
+  }
+}
+
+.title {
+  order: 1;
+  font-size: 42px;
+  text-align: right;
+}
+
+.link a {
+  display: flex;
+  font-size: 24px;
+  gap: 8px;
+}

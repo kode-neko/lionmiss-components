@@ -40,7 +40,7 @@ type LMComment = {
   ratting: number;
   measures: LMMeasures;
   user: LMUser;
-  imgs: LMImgAttr[]
+  imgs: LMImgAttr[];
 };
 
 enum LMColor {
@@ -110,6 +110,12 @@ type LMImgAttr = {
   alt: string;
 };
 
+type LMPathSegment = {
+  name?: string;
+  href: string;
+  title: string;
+};
+
 export {
   LMProduct,
   LMComment,
@@ -125,4 +131,5 @@ export {
   LMFilterPropsSelected,
   LMPropsBuy,
   LMImgAttr,
+  LMPathSegment,
 };
