@@ -44,6 +44,7 @@ import { LMButton } from "./lib/LMButton";
 import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
 import LMBreadCrumb from "./lib/LMBreadCrumb/LMBreadCrumb";
+import LMContainerFunc from "./lib/LMContainerFunc/LMContainerFunc";
 
 const product: LMProduct = {
   id: "222",
@@ -215,7 +216,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             </div>
           </LMBaseComponent>
         </LMRow>
-
+        {/*
         <LMRow>
           <LMProductCard
             img={model}
@@ -295,14 +296,46 @@ const App = (): React.FunctionComponentElement<unknown> => {
             onClickBuy={(buy) => console.log("compra: ", buy)}
           />
         </LMRow>
+          */}
 
         <LMRow>
           <LMCommentCard comment={comment} userInfo={userInfo} />
         </LMRow>
 
         <LMBreadCrumb path={path} />
-        <LMHeader title="Title" link={{ name: 'back', href: "", title: "titulo" }} />
+        <LMHeader
+          title="Title"
+          link={{ name: "back", href: "", title: "titulo" }}
+        />
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
+        <LMContainerFunc
+          title="Title"
+          btnsHeader={[
+            {
+              key: "test",
+              name: "test",
+              second: true,
+
+              onClick: () => console.log("click top"),
+            },
+          ]}
+          btnsFooter={[
+            {
+              key: "btn1",
+              name: "btn1",
+              onClick: () => console.log("click top"),
+            },
+          ]}
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur
+          </p>
+        </LMContainerFunc>
       </LMBaseLayout>
     </>
   );
