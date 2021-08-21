@@ -1,7 +1,7 @@
 import React from "react";
 import { LMSelectorBoxProps } from "./types";
 import styles from "./styles.module.scss";
-import classNames from "classnames";
+import LMBox from "./LMBox";
 
 const LMSelectorBox: React.FC<LMSelectorBoxProps> = ({
   options,
@@ -10,13 +10,12 @@ const LMSelectorBox: React.FC<LMSelectorBoxProps> = ({
 }) => (
   <div className={styles.cont}>
     {options.map((opt: string) => (
-      <div
+      <LMBox
         key={opt}
-        className={classNames(styles.box, selected === opt && styles.selected)}
-        onClick={() => onSelect(opt)}
-      >
-        {opt}
-      </div>
+        option={opt}
+        selected={opt === selected}
+        onSelect={() => onSelect(opt)}
+      />
     ))}
   </div>
 );
