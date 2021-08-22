@@ -30,6 +30,7 @@ import {
   LMImgProduct,
   LMRow,
   LMHeader,
+  LMTable,
 } from "./lib";
 import { productAddedNoti } from "./msgs/notifications";
 import LMProductCard from "./lib/LMProductCard/LMProductCard";
@@ -336,6 +337,16 @@ const App = (): React.FunctionComponentElement<unknown> => {
             pariatur
           </p>
         </LMContainerFunc>
+        <LMBaseComponent>
+          <LMTable
+            columns={[
+              { key: "name", title: "Name", width: '100%' },
+              { key: "price", title: "Price" },
+              { key: "unds", title: "Unds" },
+            ]}
+            data={[product, product, product]}
+          />
+        </LMBaseComponent>
       </LMBaseLayout>
     </>
   );

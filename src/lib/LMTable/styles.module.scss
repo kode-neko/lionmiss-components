@@ -1,0 +1,22 @@
+@import "../style.scss";
+
+table,
+tr,
+td {
+  border: none;
+}
+
+.table {
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 20px;
+  }
+}
+
+.headCol {
+  font-weight: bold;
+  background-color: $color-mid;
+  border: 2px solid $color-white;
+}

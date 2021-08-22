@@ -31,3 +31,4 @@ export { LMFilter } from "./LMFilter";
 export { LMCheckBox, LMInput, LMSelectorBox, LMStepper } from "./LMForm";
 export { LMImgProduct } from "./LMImgProduct";
 export { LMHeader } from "./LMHeader";
+export { LMTable } from "./LMTable";
