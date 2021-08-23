@@ -31,6 +31,7 @@ type LMProduct = {
   colors: LMColor[];
   unds: number;
   isFav: boolean;
+  imgs: LMImgAttr[]
 };
 
 type LMComment = {
@@ -108,6 +109,7 @@ type LMImgAttr = {
   src: string;
   title: string;
   alt: string;
+  main?: boolean;
 };
 
 type LMPathSegment = {

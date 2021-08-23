@@ -1,7 +1,7 @@
 type LMBoxProps = {
   option: string;
   selected?: boolean;
-  onSelect: () => void;
+  onSelect?: () => void;
 };
 
 type LMSelectorBoxProps = {
