@@ -11,7 +11,7 @@ type LMTableProps<T extends Record<string, unknown>> = {
 };
 
 type LMTableResProps<T extends Record<string, unknown>> = {
-  cols: LMTableColumn<T>[];
+  columns: LMTableColumn<T>[];
   data: T[];
 };
 

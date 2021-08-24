@@ -52,6 +52,7 @@ import {
   LMTableProductPrice,
   LMTableProductQty,
 } from "./lib/LMTable/cell";
+import LMTableRes from "./lib/LMTable/LMTableRes";
 
 const imgList: LMImgAttr[] = [
   {
@@ -134,7 +135,7 @@ const cartProduct: LMCartProduct = {
   unds: 1,
   product: product,
   size: LMSize.M,
-  color: LMColor.Blue
+  color: LMColor.Blue,
 };
 
 const userInfo: LMUserInfo = {
@@ -390,6 +391,47 @@ const App = (): React.FunctionComponentElement<unknown> => {
             data={userInfo.cart}
           />
         </LMBaseComponent>
+        <LMTableRes
+          columns={[
+            {
+              key: "name",
+              title: "Name",
+              width: "100%",
+              transform: (cart: LMCartProduct) => (
+                <LMTableProductDesc
+                  img={cart.product.imgs.find((img) => img.main) as LMImgAttr}
+                  name={cart.product.name}
+                />
+              ),
+            },
+            {
+              key: "props",
+              title: "Props",
+              transform: (cart: LMCartProduct) => (
+                <LMTableProductAttrs color={cart.color} size={cart.size} />
+              ),
+            },
+            {
+              key: "qty",
+              title: "Qty",
+              transform: (cart: LMCartProduct) => (
+                <LMTableProductQty qty={cart.unds} min={1} max={10} />
+              ),
+            },
+            {
+              key: "price",
+              title: "Price",
+              transform: (cart: LMCartProduct) => (
+                <LMTableProductPrice
+                  price={cart.product.price}
+                  lang={userInfo.lang}
+                  currency="EUR"
+                />
+              ),
+            },
+          ]}
+          data={userInfo.cart}
+        />
       </LMBaseLayout>
     </>
   );
