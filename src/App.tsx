@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import cat01 from "./cat01.jpg";
-import LMCarousel, { ImgCarousel } from "./lib/LMCarousel";
 import {
   WEB_TITLE,
   mainMenu,
@@ -15,30 +13,7 @@ import "./lib/icons";
 import "./lib/i18n";
 import { LMModal } from "./lib/LMModal";
 import { LMBaseLayout } from "./lib/LMBaseLayout";
-import { LMMainBarProps } from "./lib/LMMainBar/types";
-import { LMMainFooterProps } from "./lib/LMMainFooter/types";
-import { LMNotificationProps } from "./lib/LMNotification/types";
-import { tshirtLMIcon } from "./lib/LMIcons";
 import { notProductAddedLM, sendNotificationLM } from "./lib/LMNotification";
-
-const catImgs: ImgCarousel[] = [
-  {
-    src: cat01,
-    alt: "desc",
-  },
-  {
-    src: cat01,
-    alt: "desc",
-  },
-  {
-    src: cat01,
-    alt: "desc",
-  },
-  {
-    src: cat01,
-    alt: "desc",
-  },
-];
 
 const product: LMProduct = {
   id: "1",
