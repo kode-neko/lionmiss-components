@@ -1,3 +1,4 @@
+export { LMBaseComponent } from "./LMBaseComponent";
 export { LMBaseLayout } from "./LMBaseLayout";
 export { LMCarousel } from "./LMCarousel";
 export type { ImgCarousel } from "kodeneko-react-components";

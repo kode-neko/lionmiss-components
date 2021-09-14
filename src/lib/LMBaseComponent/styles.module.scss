@@ -1,0 +1,7 @@
+@import '../style.scss';
+
+.cont {
+    background-color: $color-white;
+    padding: 10px;
+    @include shadow;
+}
