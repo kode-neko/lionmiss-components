@@ -1,0 +1,58 @@
+@import "../style.scss";
+
+.widthCont {
+  width: 420px;
+}
+
+.bloq01,
+.bloq02,
+.info {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.favPrice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+
+  .fav {
+    &:hover, &.selectedFav {
+      cursor: pointer;
+      color: $color-main;
+    }
+  }
+}
+
+.colors {
+  display: flex;
+  gap: 16px;
+}
+
+.info {
+  gap: 8px;
+  margin-bottom: 42px;
+  .line {
+    display: flex;
+    justify-content: flex-start;
+    .key {
+      flex-basis: 100px;
+      text-align: left;
+    }
+
+    .value {
+      flex-basis: 40px;
+      text-align: right;
+      color: $color-main-darken;
+    }
+  }
+}

@@ -12,7 +12,6 @@ export const LMBaseComponent: React.FC<LMBaseComponentProps> = ({
   let classNameXtraExtract: string[] = [];
   if (typeof classNameXtra === "string") classNameXtraExtract = [classNameXtra];
   else if (classNameXtra?.length) classNameXtraExtract = classNameXtra;
-  console.log(classNameXtraExtract)
   return (
     <div
       className={classNames(

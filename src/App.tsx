@@ -36,6 +36,7 @@ import LMInput from "./lib/LMForm/LMInput/LMInput";
 import { LMCheckBox } from "./lib/LMForm/LMCheckBox";
 import { LMButton } from "./lib/LMButton";
 import { LMImgAttr } from "./lib/LMImgProduct";
+import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 
 const product: LMProduct = {
   id: "222",
@@ -59,6 +60,7 @@ const product: LMProduct = {
   ],
   colors: [LMColor.Green, LMColor.Pink, LMColor.Red],
   unds: 10,
+  isFav: false,
 };
 
 const cartProduct: LMCartProduct = {
@@ -128,7 +130,6 @@ const App = (): React.FunctionComponentElement<unknown> => {
     const newListStyle = finded
       ? list.filter((ele) => ele !== value)
       : [...list, value];
-    console.log(newListStyle);
     setFilterProps({
       ...filterProps,
       [param]: newListStyle,
@@ -244,6 +245,12 @@ const App = (): React.FunctionComponentElement<unknown> => {
           />
 
           <LMImgProduct imgList={imgList} thumbList={imgList} />
+
+          <LMInfoProduct
+            product={product}
+            onClickFav={(fav) => (product.isFav = fav)}
+            onClickBuy={(buy) => console.log("compra: ", buy)}
+          />
         </LMRow>
 
         <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>

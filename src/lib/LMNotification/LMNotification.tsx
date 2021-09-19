@@ -40,7 +40,7 @@ const LMNotification: React.FC = () => {
     const subscription = subjectNotificationLM.subscribe({
       next: nextFunc,
       error: () => console.log("error"),
-      complete: () => console.log("error"),
+      complete: () => console.log("complete"),
     });
     return () => {
       subscription.unsubscribe();

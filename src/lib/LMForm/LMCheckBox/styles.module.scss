@@ -42,6 +42,7 @@
   background-color: none;
   border: 2px solid $color-main;
   border-radius: $border-radius-size;
+  transition: background-color 0.1s, border-color 0.1s;
 }
 
 .cont:hover .checkbox {
@@ -60,7 +61,7 @@
 .checkbox:after {
   content: "";
   position: absolute;
-  display: none
+  display: none;
 }
 
 .checkbox:after {
@@ -72,9 +73,9 @@
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
-.checkboxBrowser:checked ~ .checkbox:after{
+.checkboxBrowser:checked ~ .checkbox:after {
   display: block;
 }

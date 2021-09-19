@@ -1,7 +1,9 @@
-type LMStepperProps<T> = {
-  list: T[];
-  selected: T;
-  onSelect: (ele: T) => void;
+type LMStepperProps = {
+  value: number;
+  min: number;
+  max: number;
+  onMinus?: (val: number) => void;
+  onMax?: (val: number) => void;
 };
 
 export { LMStepperProps };

@@ -1,24 +1,33 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { LMStepperProps } from "./types";
 import styles from "./styles.module.scss";
-import classNames from "classnames";
 
-const LMStepper = <T extends Record<string, unknown>>({
-  list,
-  selected,
-  onSelect,
-}: LMStepperProps<T>): ReactElement => (
-  <div className={styles.cont}>
-    {list.map((ele: T, index: number) => (
-      <div
-        key={index}
-        className={classNames(styles.box, selected && styles.selected)}
-        onClick={() => onSelect(ele)}
-      >
-        {ele}
-      </div>
-    ))}
-  </div>
-);
+const LMStepper: React.FC<LMStepperProps> = ({
+  value,
+  min,
+  max,
+  onMinus,
+  onMax,
+}) => {
+  const handleChangeMinus = () => {
+    const cont = value - 1 < min ? value : value - 1;
+    onMinus && onMinus(cont);
+  };
+  const handleChangeMax = () => {
+    const cont = value + 1 > max ? value : value + 1;
+    onMax && onMax(cont);
+  };
 
+  return (
+    <div className={styles.cont}>
+      <button className={styles.minus} onClick={handleChangeMinus}>
+        -
+      </button>
+      <div className={styles.number}>{value}</div>
+      <button className={styles.plus} onClick={handleChangeMax}>
+        +
+      </button>
+    </div>
+  );
+};
 export default LMStepper;

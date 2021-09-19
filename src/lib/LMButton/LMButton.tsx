@@ -23,12 +23,17 @@ const second = css`
   background-color: rgba(111, 175, 234, 1);
 `;
 
+const displayBlock = css`
+  width: 100%;
+`;
+
 interface LMButtonProps {
   readonly small?: boolean;
   readonly medium?: boolean;
   readonly large?: boolean;
   readonly main?: boolean;
   readonly second?: boolean;
+  readonly display?: string;
 }
 
 const LMButton = styled.button<LMButtonProps>`
@@ -39,8 +44,8 @@ const LMButton = styled.button<LMButtonProps>`
   font-family: "Roboto";
   font-weight: bold;
   cursor: pointer;
-  transition: filter .3s;
-  
+  transition: filter 0.15s;
+
   ${(props) => props.small && small}
   ${(props) => props.medium && medium}
   ${(props) => props.large && large}
@@ -49,6 +54,8 @@ const LMButton = styled.button<LMButtonProps>`
   ${(props) => props.second && second}
 
   ${(props) => (!props.main && !props.second ? second : "")}
+
+  ${(props) => props.display === "block" && displayBlock}
 
   :hover {
     filter: brightness(1.1);

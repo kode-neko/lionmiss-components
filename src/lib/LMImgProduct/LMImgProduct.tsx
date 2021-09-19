@@ -8,7 +8,6 @@ import LMImgProductModal from "./LMImgProductModal";
 const LMImgProduct: React.FC<LMImgProductProps> = ({ imgList, thumbList }) => {
   const [mainImg, setMainImg] = useState<LMImgAttr>(imgList[0]);
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
-  console.log("visibleModal:", visibleModal);
   const handleClickThumb = (thumb: LMImgAttr) => {
     const img = imgList.find((img) => img.key === thumb.key) as LMImgAttr;
     setMainImg(img);

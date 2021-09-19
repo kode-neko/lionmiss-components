@@ -43,6 +43,7 @@ type LMProduct = {
   details: LMProductProps[];
   colors: LMColor[];
   unds: number;
+  isFav: boolean;
 };
 
 type LMCartProduct = {
@@ -69,6 +70,12 @@ type LMFilterPropsSelected = Pick<
   | "selectedListStyle"
 >;
 
+type LMPropsBuy = {
+  productId: string;
+  color?: LMColor;
+  size?: LMSize;
+  qty: number;
+};
 
 export {
   LMMenuOpt,
@@ -79,5 +86,6 @@ export {
   LMSize,
   LMMainBarConfig,
   LMMainFooterConfig,
-  LMFilterPropsSelected
+  LMFilterPropsSelected,
+  LMPropsBuy,
 };
