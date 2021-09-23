@@ -10,10 +10,10 @@ const LMTableProductAttrs: React.FC<LMTableProductAttrsProps> = ({
 }) => {
   return (
     <div className={styles.contAttrs}>
-      <div>
-        <LMColorIcon color={color} />
+      <div className={styles.color}>
+        {color && <LMColorIcon color={color} />}
       </div>
-      <div>
+      <div className={styles.size}>
         <LMBox option={size} selected />
       </div>
     </div>

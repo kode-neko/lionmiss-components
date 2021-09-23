@@ -5,17 +5,19 @@ type LMTableProductDescProps = {
   name: string;
 };
 type LMTableProductAttrsProps = {
-  color: LMColor;
+  color?: LMColor;
   size: LMSize;
 };
 type LMTableProductQtyProps = {
   qty: number;
   min: number;
   max: number;
+  onMinus?: (val: number) => void;
+  onMax?: (val: number) => void;
 };
 type LMTableProductPriceProps = {
   price: number;
-  lang: number;
+  lang: string;
   currency: string;
 };
 

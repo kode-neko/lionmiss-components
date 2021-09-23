@@ -7,10 +7,18 @@ const LMTableProductQty: React.FC<LMTableProductQtyProps> = ({
   qty,
   min,
   max,
+  onMinus,
+  onMax,
 }) => {
   return (
-    <div>
-      <LMStepper value={qty} min={min} max={max} />
+    <div className={styles.contQty}>
+      <LMStepper
+        value={qty}
+        min={min}
+        max={max}
+        onMax={onMinus}
+        onMinus={onMax}
+      />
     </div>
   );
 };

@@ -46,6 +46,34 @@ import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
 import LMBreadCrumb from "./lib/LMBreadCrumb/LMBreadCrumb";
 import LMContainerFunc from "./lib/LMContainerFunc/LMContainerFunc";
+import {
+  LMTableProductAttrs,
+  LMTableProductDesc,
+  LMTableProductPrice,
+  LMTableProductQty,
+} from "./lib/LMTable/cell";
+
+const imgList: LMImgAttr[] = [
+  {
+    key: "1",
+    src: model,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+    main: true,
+  },
+  {
+    key: "2",
+    src: model2,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+  },
+  {
+    key: "3",
+    src: model3,
+    title: "Modelo de chaqueta",
+    alt: "Una chaqueta muy bonita",
+  },
+];
 
 const product: LMProduct = {
   id: "222",
@@ -70,6 +98,7 @@ const product: LMProduct = {
   colors: [LMColor.Green, LMColor.Pink, LMColor.Red],
   unds: 10,
   isFav: false,
+  imgs: imgList,
 };
 
 const user: LMUser = {
@@ -83,27 +112,6 @@ const user: LMUser = {
   },
   email: "user@mail.com",
 };
-
-const imgList: LMImgAttr[] = [
-  {
-    key: "1",
-    src: model,
-    title: "Modelo de chaqueta",
-    alt: "Una chaqueta muy bonita",
-  },
-  {
-    key: "2",
-    src: model2,
-    title: "Modelo de chaqueta",
-    alt: "Una chaqueta muy bonita",
-  },
-  {
-    key: "3",
-    src: model3,
-    title: "Modelo de chaqueta",
-    alt: "Una chaqueta muy bonita",
-  },
-];
 
 const comment: LMComment = {
   id: "2",
@@ -125,11 +133,13 @@ const cartProduct: LMCartProduct = {
   id: "1",
   unds: 1,
   product: product,
+  size: LMSize.M,
+  color: LMColor.Blue
 };
 
 const userInfo: LMUserInfo = {
   lang: "en",
-  cart: [cartProduct],
+  cart: [cartProduct, cartProduct, cartProduct],
   user: user,
 };
 
@@ -340,11 +350,44 @@ const App = (): React.FunctionComponentElement<unknown> => {
         <LMBaseComponent>
           <LMTable
             columns={[
-              { key: "name", title: "Name", width: '100%' },
-              { key: "price", title: "Price" },
-              { key: "unds", title: "Unds" },
+              {
+                key: "name",
+                title: "Name",
+                width: "100%",
+                transform: (cart: LMCartProduct) => (
+                  <LMTableProductDesc
+                    img={cart.product.imgs.find((img) => img.main) as LMImgAttr}
+                    name={cart.product.name}
+                  />
+                ),
+              },
+              {
+                key: "props",
+                title: "Props",
+                transform: (cart: LMCartProduct) => (
+                  <LMTableProductAttrs color={cart.color} size={cart.size} />
+                ),
+              },
+              {
+                key: "qty",
+                title: "Qty",
+                transform: (cart: LMCartProduct) => (
+                  <LMTableProductQty qty={cart.unds} min={1} max={10} />
+                ),
+              },
+              {
+                key: "price",
+                title: "Price",
+                transform: (cart: LMCartProduct) => (
+                  <LMTableProductPrice
+                    price={cart.product.price}
+                    lang={userInfo.lang}
+                    currency="EUR"
+                  />
+                ),
+              },
             ]}
-            data={[product, product, product]}
+            data={userInfo.cart}
           />
         </LMBaseComponent>
       </LMBaseLayout>

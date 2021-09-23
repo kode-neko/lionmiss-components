@@ -10,4 +10,9 @@ type LMTableProps<T extends Record<string, unknown>> = {
   data: T[];
 };
 
-export { LMTableColumn, LMTableProps };
+type LMTableResProps<T extends Record<string, unknown>> = {
+  cols: LMTableColumn<T>[];
+  data: T[];
+};
+
+export { LMTableColumn, LMTableProps, LMTableResProps };

@@ -1,0 +1,33 @@
+.contDesc {
+  padding: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  .img {
+    width: 52px;
+  }
+}
+
+.contAttrs {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.contQty {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contPrice {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

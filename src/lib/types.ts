@@ -84,6 +84,8 @@ type LMProductProps = {
 
 type LMCartProduct = {
   id: string;
+  size: LMSize;
+  color?: LMColor;
   unds: number;
   product: LMProduct;
 };

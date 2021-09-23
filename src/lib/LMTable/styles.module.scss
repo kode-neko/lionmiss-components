@@ -1,17 +1,20 @@
 @import "../style.scss";
 
-table,
-tr,
-td {
-  border: none;
-}
-
 .table {
   border-collapse: collapse;
+  width: 100%;
 
-  td,
   th {
     padding: 20px;
+  }
+
+  tr,
+  td {
+    border: none;
+  }
+
+  td {
+    vertical-align: middle;
   }
 }
 

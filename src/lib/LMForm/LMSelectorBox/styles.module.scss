@@ -3,29 +3,29 @@
 .cont {
   display: flex;
   gap: 12px;
+}
 
-  .box {
-    border-radius: $border-radius-size;
-    height: 32px;
-    width: 32px;
-    color: $color-white;
-    font-size: 14px;
-    text-transform: uppercase;
-    background-color: $color-black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.1s;
+.box {
+  border-radius: $border-radius-size;
+  height: 32px;
+  width: 32px;
+  color: $color-white;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s;
 
-    &:hover:not(.selected) {
-      cursor: pointer;
-      background-color: $color-second;
-    }
-  }
-
-  .selected {
+  &:hover:not(.selected) {
     cursor: pointer;
-    background-color: $color-main;
-    transition: background-color 0.1s;
+    background-color: $color-second;
   }
+}
+
+.selected {
+  cursor: pointer;
+  background-color: $color-main;
+  transition: background-color 0.1s;
 }
