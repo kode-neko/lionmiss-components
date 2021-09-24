@@ -1,3 +1,0 @@
-type LMStepperCheckoutProps = {};
-
-export { LMStepperCheckoutProps };

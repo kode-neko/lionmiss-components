@@ -16,6 +16,7 @@ type LMShapeProps = {
   colorActive?: LMColorShape;
   height?: string;
   width?: string;
+  onClick?: () => void;
 };
 
 type LMArrowThickProps = LMShapeProps;

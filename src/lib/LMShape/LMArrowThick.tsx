@@ -13,6 +13,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
   colorActive = LMColorShape.Second,
   height = "52px",
   width = "100%",
+  onClick,
 }) => {
   const cursor = isActivable && !isActive ? "pointer" : "none";
   const arrowColor = isActive ? colorActive : color;
@@ -34,6 +35,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
         className={styles.content}
         style={{ height, cursor }}
         {...handlerMouseColorShape}
+        onClick={onClick}
       >
         {content}
       </div>
@@ -45,6 +47,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
           cursor,
         }}
         {...handlerMouseColorShape}
+        onClick={onClick}
       />
       <div
         className={styles.para02}
@@ -54,6 +57,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
           cursor,
         }}
         {...handlerMouseColorShape}
+        onClick={onClick}
       />
       <div
         className={styles.arrow}
@@ -61,7 +65,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
           left: `calc(40px + ${width})`,
           borderLeftColor: actColor,
           borderTopWidth: `calc(${height} / 2)`,
-          borderLeftWidth: `calc(${height} / 2)`,
+          borderLeftWidth: `calc((${height} / 2) - 4px )`,
           borderBottomWidth: `calc(${height} / 2)`,
         }}
         {...handlerMouseColorShape}
@@ -76,6 +80,7 @@ const LMArrowThick: React.FC<LMArrowThickProps> = ({
           cursor,
         }}
         {...handlerMouseColorShape}
+        onClick={onClick}
       />
     </div>
   );

@@ -55,8 +55,8 @@ import {
 } from "./lib/LMTable/cell";
 import LMTableRes from "./lib/LMTable/LMTableRes";
 import { LMResumeCart } from "./lib/LMResumeCart";
-import { LMStepperCheckout } from "./lib/LMStepperCheckout";
 import LMArrowThick from "./lib/LMShape/LMArrowThick";
+import { LMStepper } from "./lib/LMStepper";
 
 const imgList: LMImgAttr[] = [
   {
@@ -164,6 +164,7 @@ const path: LMPathSegment[] = [
 const App = (): React.FunctionComponentElement<unknown> => {
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
+  const [step, setStep] = useState<React.Key>(1);
 
   const [w, setw] = useState<boolean>(false);
 
@@ -455,7 +456,15 @@ const App = (): React.FunctionComponentElement<unknown> => {
           lang={user.lang}
           currency={user.currency}
         />
-        <LMArrowThick content={<a href="">Link</a>} />
+        <LMStepper
+          options={[
+            { key: 1, name: "opt 01" },
+            { key: 2, name: "opt 02" },
+            { key: 3, name: "opt 03" },
+          ]}
+          active={step}
+          onClick={setStep}
+        />
       </LMBaseLayout>
     </>
   );
