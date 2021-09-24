@@ -1,0 +1,49 @@
+@import "../style.scss";
+
+.cont {
+  position: relative;
+  box-sizing: border-box;
+
+  .content {
+    color: $color-white;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+
+    & a {
+      color: $color-white;
+    }
+  }
+
+  .para01 {
+    position: absolute;
+    width: 100%;
+    transform: skew(40deg);
+    left: 20px;
+  }
+
+  .para02 {
+    position: absolute;
+    width: 100%;
+    transform: skew(-40deg);
+    left: 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .fillArrow {
+    position: absolute;
+  }
+}

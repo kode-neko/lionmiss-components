@@ -55,6 +55,8 @@ import {
 } from "./lib/LMTable/cell";
 import LMTableRes from "./lib/LMTable/LMTableRes";
 import { LMResumeCart } from "./lib/LMResumeCart";
+import { LMStepperCheckout } from "./lib/LMStepperCheckout";
+import LMArrowThick from "./lib/LMShape/LMArrowThick";
 
 const imgList: LMImgAttr[] = [
   {
@@ -453,6 +455,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
           lang={user.lang}
           currency={user.currency}
         />
+        <LMArrowThick content={<a href="">Link</a>} />
       </LMBaseLayout>
     </>
   );
