@@ -20,6 +20,7 @@ import {
   LMUserInfo,
   LMImgAttr,
   LMPathSegment,
+  LMCart,
 } from "./lib/types";
 import {
   LMModal,
@@ -53,6 +54,7 @@ import {
   LMTableProductQty,
 } from "./lib/LMTable/cell";
 import LMTableRes from "./lib/LMTable/LMTableRes";
+import { LMResumeCart } from "./lib/LMResumeCart";
 
 const imgList: LMImgAttr[] = [
   {
@@ -138,9 +140,15 @@ const cartProduct: LMCartProduct = {
   color: LMColor.Blue,
 };
 
+const cart: LMCart = {
+  products: [cartProduct, cartProduct, cartProduct],
+  taxes: 10,
+};
+
 const userInfo: LMUserInfo = {
   lang: "en",
-  cart: [cartProduct, cartProduct, cartProduct],
+  currency: "EUR",
+  cart: cart,
   user: user,
 };
 
@@ -218,7 +226,13 @@ const App = (): React.FunctionComponentElement<unknown> => {
             <div style={{ display: "flex", gap: "20px" }}>
               <LMButton
                 onClick={() => {
-                  setUser({ ...user, cart: [...user.cart, cartProduct] });
+                  setUser({
+                    ...user,
+                    cart: {
+                      ...user.cart,
+                      products: [...user.cart.products, cartProduct],
+                    },
+                  });
                   sendNotificationLM(productAddedNoti);
                 }}
               >
@@ -388,7 +402,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
                 ),
               },
             ]}
-            data={userInfo.cart}
+            data={userInfo.cart.products}
           />
         </LMBaseComponent>
         <LMTableRes
@@ -430,7 +444,14 @@ const App = (): React.FunctionComponentElement<unknown> => {
               ),
             },
           ]}
-          data={userInfo.cart}
+          data={userInfo.cart.products}
+        />
+        <LMResumeCart
+          onPromo={(promo) => console.log(promo)}
+          taxes={user.cart.taxes}
+          total={100}
+          lang={user.lang}
+          currency={user.currency}
         />
       </LMBaseLayout>
     </>

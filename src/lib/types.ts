@@ -18,9 +18,16 @@ type LMUser = {
 
 type LMUserInfo = {
   lang: string;
-  cart: LMCartProduct[];
+  currency: string;
+  cart: LMCart;
   user: LMUser;
 };
+
+type LMCart = {
+  products: LMCartProduct[];
+  promo?: LMPromo;
+  taxes: number;
+}
 
 type LMProduct = {
   id: string;
@@ -31,7 +38,7 @@ type LMProduct = {
   colors: LMColor[];
   unds: number;
   isFav: boolean;
-  imgs: LMImgAttr[]
+  imgs: LMImgAttr[];
 };
 
 type LMComment = {
@@ -120,6 +127,16 @@ type LMPathSegment = {
   title: string;
 };
 
+enum LMPromoType {
+  Percent,
+  Qty,
+}
+
+type LMPromo = {
+  type: LMPromoType;
+  qty: number;
+};
+
 export {
   LMProduct,
   LMComment,
@@ -131,9 +148,12 @@ export {
   LMMainBarConfig,
   LMMainFooterConfig,
   LMProductProps,
+  LMCart,
   LMCartProduct,
   LMFilterPropsSelected,
   LMPropsBuy,
   LMImgAttr,
   LMPathSegment,
+  LMPromoType,
+  LMPromo,
 };

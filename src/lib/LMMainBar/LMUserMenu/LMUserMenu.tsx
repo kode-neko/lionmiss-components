@@ -20,7 +20,7 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
         tpl = <span className={styles.lang}>{userInfo.lang}</span>;
         break;
       case "user.cart":
-        tpl = <LMCartIcon cont={userInfo.cart.length} />;
+        tpl = <LMCartIcon cont={userInfo.cart.products.length} />;
         break;
       default:
         tpl = opt.title as JSX.Element;
