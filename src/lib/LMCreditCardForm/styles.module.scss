@@ -2,7 +2,7 @@
 
 .cardForm {
   position: relative;
-  height: 254px;;
+  height: 254px;
 }
 
 .card {
@@ -84,6 +84,10 @@
     &:focus-visible {
       outline: none;
       border-bottom: 3px solid $color-second;
+    }
+
+    &::placeholder {
+      color: $color-second;
     }
   }
 

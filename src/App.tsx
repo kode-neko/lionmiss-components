@@ -22,6 +22,7 @@ import {
   LMPathSegment,
   LMCart,
   LMAddress,
+  LMCreditCardObj,
 } from "./lib/types";
 import {
   LMModal,
@@ -60,7 +61,8 @@ import LMArrowThick from "./lib/LMShape/LMArrowThick";
 import { LMStepper } from "./lib/LMStepper";
 import LMListBox from "./lib/LMListBox/LMListBox";
 import LMCellAddress from "./lib/LMCellTpl/LMCellAddress";
-import { LMCreditCard } from "./lib/LMCreditCard";
+import { LMCreditCardValues } from "./lib/LMCreditCardForm/types";
+import { LMCreditCardForm } from "./lib/LMCreditCardForm";
 
 const imgList: LMImgAttr[] = [
   {
@@ -179,6 +181,13 @@ const path: LMPathSegment[] = [
 ];
 
 const App = (): React.FunctionComponentElement<unknown> => {
+  const [credit, setCredit] = useState<LMCreditCardValues>({
+    creditNumber: "",
+    fullName: "",
+    month: "",
+    year: "",
+    cvv: "",
+  });
   const [user, setUser] = useState<LMUserInfo>(userInfo);
   const [modal, setModal] = useState<boolean>(false);
   const [step, setStep] = useState<React.Key>(1);
@@ -493,17 +502,16 @@ const App = (): React.FunctionComponentElement<unknown> => {
               />
             )}
           />
-          <LMCreditCard
-            creditNumber={5168441223630339}
-            fullName={"Lana Edward"}
-            month={10}
-            year={25}
-            cvv={258}
-            onChangeCreditNumber={(val) => console.log(val)}
-            onChangeFullName={(val) => console.log(val)}
-            onChangeMonth={(val) => console.log(val)}
-            onChangeYear={(val) => console.log(val)}
-            onChangeCvv={(val) => console.log(val)}
+          <LMCreditCardForm
+            values={credit}
+            placeholder={{
+              creditNumber: "xxxx xxxx xxxx xxxx",
+              fullName: "Full Name",
+              month: "xx",
+              year: "xx",
+              cvv: "xxx",
+            }}
+            onChange={setCredit}
           />
         </LMBaseComponent>
       </LMBaseLayout>

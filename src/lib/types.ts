@@ -28,7 +28,7 @@ type LMCart = {
   products: LMCartProduct[];
   promo?: LMPromo;
   taxes: number;
-}
+};
 
 type LMProduct = {
   id: string;
@@ -148,7 +148,15 @@ type LMAddress = {
   phone: string;
   mail: string;
   comments: string;
-}
+};
+
+type LMCreditCardObj = {
+  creditNumber: number;
+  fullName: string;
+  month: number;
+  year: number;
+  cvv: number;
+};
 
 export {
   LMProduct,
@@ -169,5 +177,6 @@ export {
   LMPathSegment,
   LMPromoType,
   LMPromo,
-  LMAddress
+  LMAddress,
+  LMCreditCardObj
 };
