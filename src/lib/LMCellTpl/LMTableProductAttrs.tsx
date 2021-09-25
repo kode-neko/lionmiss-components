@@ -1,8 +1,8 @@
 import React from "react";
 import { LMTableProductAttrsProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMColorIcon } from "../../LMColorIcon";
-import { LMBox } from "../../LMForm";
+import { LMColorIcon } from "../LMColorIcon";
+import { LMBox } from "../LMForm";
 
 const LMTableProductAttrs: React.FC<LMTableProductAttrsProps> = ({
   color,

@@ -14,6 +14,7 @@ type LMUser = {
   avatar: string;
   measures: LMMeasures;
   email: string;
+  addresses: LMAddress[];
 };
 
 type LMUserInfo = {
@@ -137,6 +138,18 @@ type LMPromo = {
   qty: number;
 };
 
+type LMAddress = {
+  name: string;
+  adress: string;
+  country: string;
+  state: string;
+  town: string;
+  zip: string;
+  phone: string;
+  mail: string;
+  comments: string;
+}
+
 export {
   LMProduct,
   LMComment,
@@ -156,4 +169,5 @@ export {
   LMPathSegment,
   LMPromoType,
   LMPromo,
+  LMAddress
 };

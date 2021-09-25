@@ -21,6 +21,7 @@ import {
   LMImgAttr,
   LMPathSegment,
   LMCart,
+  LMAddress,
 } from "./lib/types";
 import {
   LMModal,
@@ -52,11 +53,14 @@ import {
   LMTableProductDesc,
   LMTableProductPrice,
   LMTableProductQty,
-} from "./lib/LMTable/cell";
+} from "./lib/LMCellTpl";
 import LMTableRes from "./lib/LMTable/LMTableRes";
 import { LMResumeCart } from "./lib/LMResumeCart";
 import LMArrowThick from "./lib/LMShape/LMArrowThick";
 import { LMStepper } from "./lib/LMStepper";
+import LMListBox from "./lib/LMListBox/LMListBox";
+import LMCellAddress from "./lib/LMCellTpl/LMCellAddress";
+import { LMCreditCard } from "./lib/LMCreditCard";
 
 const imgList: LMImgAttr[] = [
   {
@@ -106,6 +110,18 @@ const product: LMProduct = {
   imgs: imgList,
 };
 
+const address: LMAddress = {
+  name: "Lana Edwards",
+  adress: "Evergreen 189",
+  country: "United States",
+  state: "Florida",
+  town: "Lomero",
+  zip: "1224",
+  phone: "600 57 88 55",
+  mail: "lana.edwards@gmail.com",
+  comments: "She a cutty girl",
+};
+
 const user: LMUser = {
   username: "Username",
   avatar: avatar,
@@ -116,6 +132,7 @@ const user: LMUser = {
     size: LMSize.XL,
   },
   email: "user@mail.com",
+  addresses: [address],
 };
 
 const comment: LMComment = {
@@ -465,6 +482,30 @@ const App = (): React.FunctionComponentElement<unknown> => {
           active={step}
           onClick={setStep}
         />
+        <LMBaseComponent>
+          <LMListBox
+            data={[address, address, address]}
+            transform={(address) => (
+              <LMCellAddress
+                address={address}
+                checked={false}
+                onCheck={() => console.log(address.name)}
+              />
+            )}
+          />
+          <LMCreditCard
+            creditNumber={5168441223630339}
+            fullName={"Lana Edward"}
+            month={10}
+            year={25}
+            cvv={258}
+            onChangeCreditNumber={(val) => console.log(val)}
+            onChangeFullName={(val) => console.log(val)}
+            onChangeMonth={(val) => console.log(val)}
+            onChangeYear={(val) => console.log(val)}
+            onChangeCvv={(val) => console.log(val)}
+          />
+        </LMBaseComponent>
       </LMBaseLayout>
     </>
   );

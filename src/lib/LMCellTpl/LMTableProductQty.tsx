@@ -1,7 +1,7 @@
 import React from "react";
 import { LMTableProductQtyProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMStepper } from "../../LMForm";
+import { LMStepper } from "../LMForm";
 
 const LMTableProductQty: React.FC<LMTableProductQtyProps> = ({
   qty,

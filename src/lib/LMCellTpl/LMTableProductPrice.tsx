@@ -1,7 +1,7 @@
 import React from "react";
 import { LMTableProductPriceProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMCurrency } from "../../LMCurrency";
+import { LMCurrency } from "../LMCurrency";
 
 const LMTableProductPrice: React.FC<LMTableProductPriceProps> = ({
   price,

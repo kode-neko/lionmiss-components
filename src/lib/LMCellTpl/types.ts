@@ -1,4 +1,5 @@
-import { LMColor, LMImgAttr, LMSize } from "../../types";
+import { LMColor, LMImgAttr, LMSize } from "../types";
+import { LMAddress } from "../types";
 
 type LMTableProductDescProps = {
   img: LMImgAttr;
@@ -20,10 +21,16 @@ type LMTableProductPriceProps = {
   lang: string;
   currency: string;
 };
+type LMCellAddressProps = {
+  address: LMAddress;
+  checked: boolean;
+  onCheck: () => void;
+}
 
 export {
   LMTableProductDescProps,
   LMTableProductAttrsProps,
   LMTableProductQtyProps,
   LMTableProductPriceProps,
+  LMCellAddressProps
 };
