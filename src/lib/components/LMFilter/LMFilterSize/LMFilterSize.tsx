@@ -1,7 +1,7 @@
 import React from "react";
 import { LMFilterSizeProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMSize } from "../../types";
+import { LMSize } from "../../../../core/model";
 import { LMCheckBox } from "../../LMForm";
 
 export const LMFilterSize: React.FC<LMFilterSizeProps> = ({

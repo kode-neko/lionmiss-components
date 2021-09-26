@@ -1,7 +1,7 @@
 import React from "react";
 import { LMCellProductQtyProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMStepper } from "../LMForm";
+import { LMStepper } from "../../LMForm";
 
 const LMCellProductQty: React.FC<LMCellProductQtyProps> = ({
   qty,

@@ -1,11 +1,10 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import style from "./styles.module.scss";
 import { useTranslation } from "react-i18next";
-import { createPath } from "../utils";
+import { createPath } from "../../../utils";
 import { LMMainFooterProps } from "./types";
-import { LMMenuOpt } from "../types";
-import { smileIconLM } from "../LMIcons";
+import { LMMenuOpt } from "../../../types";
+import { smileIconLM } from "../../LMIcons";
 
 const LMMainFooter: React.FC<LMMainFooterProps> = ({
   isMobile,

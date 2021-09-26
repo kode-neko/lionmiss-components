@@ -1,7 +1,7 @@
 import React from "react";
-import { LMPathSegment } from "../types";
+import { LMPathSegment } from "../../types";
 import styles from "./styles.module.scss";
-import LMBreadCrumbProps from "./types";
+import LMBreadcrumbProps from "./types";
 
 const LMBreadcrumb: React.FC<LMBreadcrumbProps> = ({ path }) => {
   const chunck = ({ name, ...segment }: LMPathSegment) => (

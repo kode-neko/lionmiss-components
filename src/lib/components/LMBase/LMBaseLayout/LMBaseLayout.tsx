@@ -1,10 +1,9 @@
 import React from "react";
-import LMMainBar from "../LMMainBar/LMMainBar";
-import LMMainFooter from "../LMMainFooter/LMMainFooter";
-import LMNotification from "../LMNotification/LMNotification";
+import { LMMainBar, LMMainFooter } from "../../LMMain";
+import { LMNotification } from "../../LMNotification";
 import { LMBaseLayoutProps } from "./types";
 import styles from "./styles.module.scss";
-import { useDisplay } from "../hooks";
+import { useDisplay } from "../../../../core/hooks";
 
 export const LMBaseLayout: React.FC<LMBaseLayoutProps> = ({
   children,

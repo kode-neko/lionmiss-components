@@ -1,4 +1,4 @@
-import { LMProduct, LMPropsBuy } from "../types";
+import { LMProduct, LMPropsBuy } from "../../../../core/model";
 
 type LMProductPurchaseProps = {
   product: LMProduct;

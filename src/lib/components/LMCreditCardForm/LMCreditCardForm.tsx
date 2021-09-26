@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import {
   checkDeleteKey,
   checkNumberKey,
-} from "../utils";
+} from "../../utils";
 
 const CREDIT_LENGTH = 16;
 const MONTH_LENGTH = 2;

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import LMButton from "../LMButton/LMButton";
+import { LMButton } from "../../LMForm";
 import { LMFixedResumeLineInfo, LMFixedResumeProps } from "./types";
 import classNames from "classnames";
-import LMCurrencyFormat from "../LMCurrencyFormat/LMCurrencyFormat";
+import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 
 const LMFixedResume: React.FC<LMFixedResumeProps> = ({
   lang,
@@ -27,7 +27,11 @@ const LMFixedResume: React.FC<LMFixedResumeProps> = ({
       <div className={styles.value}>
         {lineInfo.negative && <span>- </span>}
         {lineInfo.value ? (
-          <LMCurrencyFormat qty={lineInfo.value} lang={lang} currency={currency} />
+          <LMCurrencyFormat
+            qty={lineInfo.value}
+            lang={lang}
+            currency={currency}
+          />
         ) : (
           <span>-</span>
         )}

@@ -1,4 +1,4 @@
-import { LMPathSegment } from "../types";
+import { LMPathSegment } from "../../types";
 
 type LMBreadcrumbProps = {
   path: LMPathSegment[]

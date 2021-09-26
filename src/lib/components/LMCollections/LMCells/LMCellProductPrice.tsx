@@ -1,7 +1,7 @@
 import React from "react";
 import { LMCellProductPriceProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMCurrencyFormat } from "../LMCurrencyFormat";
+import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 
 const LMCellProductPrice: React.FC<LMCellProductPriceProps> = ({
   price,

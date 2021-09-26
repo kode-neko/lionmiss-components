@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { LMBaseCompo } from "../LMBaseCompo";
+import { LMBaseCompo } from "../LMBase";
 import { LMCommentDescProps } from "./types";
 import styles from "./styles.module.scss";
 import { starIconLM } from "../LMIcons";
 import classNames from "classnames";
-import { LMImgAttr } from "../types";
-import { LMModalImg } from "../LMModalImg";
+import { LMImg } from "../../../core/model";
+import { LMModalImg } from "../LMModal";
 
 const MAX_RATING = 5;
 
 const LMCommentDesc: React.FC<LMCommentDescProps> = ({ comment, userInfo }) => {
-  const [img, setImg] = useState<LMImgAttr>();
+  const [img, setImg] = useState<LMImg>();
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
   const { user, measures } = comment;
 
@@ -54,7 +54,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({ comment, userInfo }) => {
     <>
       {visibleModal && (
         <LMModalImg
-          img={img as LMImgAttr}
+          img={img as LMImg}
           onClose={() => setVisibleModal(false)}
         />
       )}

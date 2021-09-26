@@ -1,7 +1,7 @@
 import React from "react";
 import { LMModalImgProps } from "./types";
 import styles from "./styles.module.scss";
-import { closeIconLM } from "../LMIcons";
+import { closeIconLM } from "../../LMIcons";
 
 const LMModalImg: React.FC<LMModalImgProps> = ({
   img,

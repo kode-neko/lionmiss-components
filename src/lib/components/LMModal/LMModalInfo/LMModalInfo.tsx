@@ -2,8 +2,8 @@ import React from "react";
 import { LMModalInfoProps } from "./types";
 import classnames from "classnames";
 import styles from "./styles.module.scss";
-import LMButton from "../LMButton/LMButton";
-import { closeIconLM } from "../LMIcons";
+import { LMButton } from "../../LMForm";
+import { closeIconLM } from "../../LMIcons";
 
 export const LMModalInfo: React.FC<LMModalInfoProps> = ({
   visible,

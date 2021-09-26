@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { LMBaseCompo } from "../LMBaseCompo";
+import { LMBaseCompo } from "../../LMBase";
 import styles from "./styles.module.scss";
-import { LMImgAttr, LMProductPicsProps } from "./types";
+import { LMImg } from "../../../../core/model";
+import { LMProductPicsProps } from "./types";
 import classNames from "classnames";
-import { LMModalImg } from "../LMModalImg";
+import { LMModalImg } from "../../LMModal";
 
 const LMProductPics: React.FC<LMProductPicsProps> = ({ imgList, thumbList }) => {
-  const [mainImg, setMainImg] = useState<LMImgAttr>(imgList[0]);
+  const [mainImg, setMainImg] = useState<LMImg>(imgList[0]);
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
-  const handleClickThumb = (thumb: LMImgAttr) => {
-    const img = imgList.find((img) => img.key === thumb.key) as LMImgAttr;
+  const handleClickThumb = (thumb: LMImg) => {
+    const img = imgList.find((img) => img.key === thumb.key) as LMImg;
     setMainImg(img);
   };
   return (

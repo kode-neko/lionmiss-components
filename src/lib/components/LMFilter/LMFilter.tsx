@@ -1,12 +1,12 @@
 import React from "react";
-import { LMBaseCompo } from "../LMBaseCompo";
+import { LMBaseCompo } from "../LMBase";
 import { LMFilterColor } from "./LMFilterColor";
 import { LMFilterPrice } from "./LMFilterPrice";
 import { LMFilterSize } from "./LMFilterSize";
 import { LMFilterStyle } from "./LMFilterStyle";
 import { LMFilterProps } from "./types";
 import styles from "./styles.module.scss";
-import LMButton from "../LMButton/LMButton";
+import { LMButton } from "../LMForm";
 import { filterIconLM } from "../LMIcons";
 
 export const LMFilter: React.FC<LMFilterProps> = ({

@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { LMBaseCompo } from "../LMBaseCompo";
+import { LMBaseCompo } from "../../LMBase";
 import { LMProductPurchaseProps } from "./types";
 import styles from "./styles.module.scss";
-import { cartIconLM, heartIconLM } from "../LMIcons";
-import { LMColorIcon } from "../LMColorIcon";
-import { LMPropsBuy, LMSize } from "../types";
-import { LMButton } from "../LMButton";
+import { cartIconLM, heartIconLM } from "../../LMIcons";
+import { LMColorIcon } from "../../LMColorIcon";
+import { LMPropsBuy, LMSize } from "../../../../core/model";
+import { LMButton, LMSelectorBox, LMStepper } from "../../LMForm";
 import { useTranslation } from "react-i18next";
-import { LMSelectorBox, LMStepper } from "../LMForm";
 import classNames from "classnames";
 
 const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
@@ -20,7 +19,7 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
     productId: product.id,
     color: product.colors && product.colors[0],
     size: undefined,
-    qty: 1
+    qty: 1,
   });
   return (
     <LMBaseCompo classNameXtra={styles.widthCont}>

@@ -1,7 +1,7 @@
 import React, { useState, KeyboardEvent, ChangeEvent } from "react";
 import style from "./styles.module.scss";
 import { LMSearchInputProps } from "./types";
-import { searchIconLM } from "../../LMIcons";
+import { searchIconLM } from "../../../LMIcons";
 
 export const LMSearchInput: React.FC<LMSearchInputProps> = ({ onSearch }) => {
   const [valueSearch, setValueSearch] = useState<string>("");

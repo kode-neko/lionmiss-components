@@ -1,8 +1,8 @@
 import React from "react";
-import { LMBaseCompo } from "../LMBaseCompo";
+import { LMBaseCompo } from "../../LMBase";
 import styles from "./styles.module.scss";
-import { bagIconLM, heartIconLM } from "../LMIcons";
-import { LMColorIcon } from "../LMColorIcon";
+import { bagIconLM, heartIconLM } from "../../LMIcons";
+import { LMColorIcon } from "../../LMColorIcon";
 import LMProductInfoProps from "./type";
 
 const LMProductInfo: React.FC<LMProductInfoProps> = ({

@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { closeIconLM, arrowDownIconLM, arrowUpIconLM } from "../../LMIcons";
+import { closeIconLM, arrowDownIconLM, arrowUpIconLM } from "../../../LMIcons";
 import { LMMainMenuSideProps } from "./types";
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
-import { createPath } from "../../utils";
+import { createPath } from "../../../../utils";
 import classNames from "classnames";
-import { LMMenuOpt } from "../../types";
+import { LMMenuOpt } from "../../../../types";
 
 const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
   visible,

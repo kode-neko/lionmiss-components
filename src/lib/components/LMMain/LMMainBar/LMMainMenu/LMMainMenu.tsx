@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { LMMenuOpt } from "../../types";
+import { LMMenuOpt } from "../../../../types";
 import { useTranslation } from "react-i18next";
-import { createPath } from "../../utils";
+import { createPath } from "../../../../utils";
 import { LMMainMenuProps, LMMenuOptPlus } from "./types";
 import styles from "./styles.module.scss";
-import { arrowDownIconLM } from "../../LMIcons";
+import { arrowDownIconLM } from "../../../LMIcons";
 
 export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   const { t: tMM } = useTranslation("mainMenu");
