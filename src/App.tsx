@@ -28,7 +28,7 @@ import {
   LMModal,
   LMBaseLayout,
   sendNotificationLM,
-  LMBaseComponent,
+  LMBaseCompo,
   LMFilter,
   LMImgProduct,
   LMRow,
@@ -48,7 +48,7 @@ import { LMButton } from "./lib/LMButton";
 import LMInfoProduct from "./lib/LMInfoProduct/LMInfoProduct";
 import LMCommentCard from "./lib/LMCommentCard/LMCommentCard";
 import LMBreadCrumb from "./lib/LMBreadCrumb/LMBreadCrumb";
-import LMContainerFunc from "./lib/LMContainerFunc/LMContainerFunc";
+import LMBaseCompoFunc from "./lib/LMBaseCompoFunc/LMBaseCompoFunc";
 import {
   LMTableProductAttrs,
   LMTableProductDesc,
@@ -57,7 +57,7 @@ import {
 } from "./lib/LMCellTpl";
 import LMTableRes from "./lib/LMTable/LMTableRes";
 import { LMResumeCart } from "./lib/LMResumeCart";
-import LMArrowThick from "./lib/LMShape/LMArrowThick";
+import LMArrowThick from "./lib/LMShapes/LMArrowThick";
 import { LMStepper } from "./lib/LMStepper";
 import LMListBox from "./lib/LMListBox/LMListBox";
 import LMCellAddress from "./lib/LMCellTpl/LMCellAddress";
@@ -258,7 +258,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
         }
       >
         <LMRow>
-          <LMBaseComponent>
+          <LMBaseCompo>
             <div style={{ display: "flex", gap: "20px" }}>
               <LMButton
                 onClick={() => {
@@ -276,7 +276,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
               </LMButton>
               <LMButton onClick={() => setModal(true)}>Modal</LMButton>
             </div>
-          </LMBaseComponent>
+          </LMBaseCompo>
         </LMRow>
         {/*
         <LMRow>
@@ -287,7 +287,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             onClickAdd={() => console.log("cart")}
             onClickFav={() => console.log("fav")}
           />
-          <LMBaseComponent>
+          <LMBaseCompo>
             <div>
               <LMInput
                 label="Title"
@@ -302,7 +302,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
                 onChange={() => setw(!w)}
               />
             </div>
-          </LMBaseComponent>
+          </LMBaseCompo>
         </LMRow>
 
         <LMRow>
@@ -372,7 +372,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
         <div><LMCarousel imgList={catImgs} width={1200} /> </div>
         
         
-        <LMContainerFunc
+        <LMBaseCompoFunc
           title="Title"
           btnsHeader={[
             {
@@ -399,9 +399,9 @@ const App = (): React.FunctionComponentElement<unknown> => {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur
           </p>
-        </LMContainerFunc>
+        </LMBaseCompoFunc>
         */}
-        <LMBaseComponent>
+        <LMBaseCompo>
           <LMTable
             columns={[
               {
@@ -443,7 +443,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             ]}
             data={userInfo.cart.products}
           />
-        </LMBaseComponent>
+        </LMBaseCompo>
 
         <LMTableRes
           columns={[
@@ -503,7 +503,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
           onClick={setStep}
         />
 
-        <LMBaseComponent>
+        <LMBaseCompo>
           <LMListBox
             data={[address, address, address]}
             transform={(address) => (
@@ -525,7 +525,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             }}
             onChange={setCredit}
           />
-        </LMBaseComponent>
+        </LMBaseCompo>
       </LMBaseLayout>
     </>
   );

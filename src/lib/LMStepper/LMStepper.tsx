@@ -1,7 +1,7 @@
 import React from "react";
 import { LMStepperProps } from "./types";
 import styles from "./styles.module.scss";
-import { LMArrowThick } from "../LMShape";
+import { LMArrowThick } from "../LMShapes";
 
 const LMStepper: React.FC<LMStepperProps> = ({ options, active, onClick }) => {
   return (

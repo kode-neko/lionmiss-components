@@ -1,5 +1,5 @@
 import React from "react";
-import { LMBaseComponent } from "../LMBaseComponent";
+import { LMBaseCompo } from "../LMBaseCompo";
 import { LMFilterColor } from "./LMFilterColor";
 import { LMFilterPrice } from "./LMFilterPrice";
 import { LMFilterSize } from "./LMFilterSize";
@@ -25,7 +25,7 @@ export const LMFilter: React.FC<LMFilterProps> = ({
   onChangeListStyle,
 }) => {
   return (
-    <LMBaseComponent classNameXtra={styles.cont}>
+    <LMBaseCompo classNameXtra={styles.cont}>
       <LMFilterColor
         selectedList={selectedListColor}
         onChange={onChangeListColor}
@@ -48,7 +48,7 @@ export const LMFilter: React.FC<LMFilterProps> = ({
         onChange={onChangeListStyle}
       />
       <LMButton small>{filterIconLM} Filter</LMButton>
-    </LMBaseComponent>
+    </LMBaseCompo>
   );
 };
 

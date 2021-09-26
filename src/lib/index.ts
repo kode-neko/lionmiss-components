@@ -1,4 +1,4 @@
-export { LMBaseComponent } from "./LMBaseComponent";
+export { LMBaseCompo } from "./LMBaseCompo";
 export { LMBaseLayout, LMRow } from "./LMBaseLayout";
 export { LMCarousel } from "./LMCarousel";
 export type { ImgCarousel } from "kodeneko-react-components";
@@ -32,4 +32,4 @@ export { LMCheckBox, LMInput, LMSelectorBox, LMStepper } from "./LMForm";
 export { LMImgProduct } from "./LMImgProduct";
 export { LMHeader } from "./LMHeader";
 export { LMTable } from "./LMTable";
-export { LMCurrency } from "./LMCurrency";
+export { LMCurrencyFormat } from "./LMCurrencyFormat";
