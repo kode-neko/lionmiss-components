@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { LMMenuOpt } from "../../../../types";
-import { useTranslation } from "react-i18next";
 import { createPath } from "../../../../utils";
 import { LMMainMenuProps, LMMenuOptPlus } from "./types";
 import styles from "./styles.module.scss";
 import { arrowDownIconLM } from "../../../LMIcons";
 
 export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
-  const { t: tMM } = useTranslation("mainMenu");
-  const { t: tP } = useTranslation("paths");
   const createMenuPlus = () =>
     mainMenu.map((opt) => ({ ...opt, visible: false }));
   const [menuPlus, setMenuPlus] = useState<LMMenuOptPlus[]>(createMenuPlus());
@@ -33,9 +30,7 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
       <ul className={styles.list}>
         {menu.map((opt) => (
           <li key={opt.title as string}>
-            <a href={createPath(opt.path || [], tP)}>
-              {tMM(opt.title as string)}
-            </a>
+            <a href={createPath(opt.path || [])}>{opt.title}</a>
           </li>
         ))}
       </ul>
@@ -45,8 +40,8 @@ export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
   const createLMMenuOpt = (opt: LMMenuOptPlus) => {
     const submenu = opt.submenu && createSubmenu(opt.submenu, opt.visible);
     const link = (
-      <a href={createPath(opt.path || [], tP)}>
-        {tMM(opt.title as string)}
+      <a href={createPath(opt.path || [])}>
+        {opt.title as string}
         {opt.submenu && <span className={styles.arrow}>{arrowDownIconLM}</span>}
       </a>
     );

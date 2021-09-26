@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { closeIconLM, arrowDownIconLM, arrowUpIconLM } from "../../../LMIcons";
 import { LMMainMenuSideProps } from "./types";
-import { useTranslation } from "react-i18next";
 import styles from "./styles.module.scss";
 import { createPath } from "../../../../utils";
 import classNames from "classnames";
@@ -16,17 +15,6 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
 }) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [visibleSubmenu, setvisibleSubmenu] = useState<string>();
-  const { t: tMM } = useTranslation("mainMenu");
-  const { t: tMF } = useTranslation("mainFooter");
-  const { t: tP } = useTranslation("paths");
-
-  /*
-  const handlerAnimationEnd = (e: Event): void => {
-    console.log("prueba", e as AnimationEvent);
-  };
-  useAddEvent(menuRef, "animationend", handlerAnimationEnd);
-  */
-
   const handleClickOpt = (name: string) =>
     setvisibleSubmenu(visibleSubmenu !== name ? name : undefined);
 
@@ -35,9 +23,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
       <ul className={styles.submenu}>
         {subMenu.map((opt) => (
           <li key={opt.title as string}>
-            <a href={opt.path && createPath(opt.path, tP)}>
-              {tMM(opt.title as string)}
-            </a>
+            <a href={opt.path && createPath(opt.path)}>{opt.title}</a>
           </li>
         ))}
       </ul>
@@ -47,9 +33,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
   const createOption = (opt: LMMenuOpt) => {
     return (
       <li key={opt.title as string}>
-        <a href={opt.path && createPath(opt.path, tP)}>
-          {tMM(opt.title as string)}
-        </a>
+        <a href={opt.path && createPath(opt.path)}>{opt.title}</a>
         {opt.submenu && (
           <span
             className={styles.arrow}
@@ -89,9 +73,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
         <ul className={styles.info}>
           {columnsInfo.map((opt) => (
             <li key={opt.title as string}>
-              <a href={createPath(opt.path || [], tP)}>
-                {tMF(opt.title as string)}
-              </a>
+              <a href={createPath(opt.path || [])}>{opt.title}</a>
             </li>
           ))}
         </ul>
@@ -99,7 +81,7 @@ const LMMainMenuSide: React.FC<LMMainMenuSideProps> = ({
           {socialMedia.map((ele) => (
             <a
               key={ele.title as string}
-              href={createPath(ele.path || [], tP)}
+              href={createPath(ele.path || [])}
               title={ele.title as string}
             >
               {ele.title}

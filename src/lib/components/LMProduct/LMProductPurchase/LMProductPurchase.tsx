@@ -6,7 +6,6 @@ import { cartIconLM, heartIconLM } from "../../LMIcons";
 import { LMColorIcon } from "../../LMColorIcon";
 import { LMPropsBuy, LMSize } from "../../../../core/model";
 import { LMButton, LMSelectorBox, LMStepper } from "../../LMForm";
-import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 
@@ -17,7 +16,6 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
   onClickFav,
   onClickBuy,
 }) => {
-  const { t } = useTranslation("");
   const [propsBuy, setPropsBuy] = useState<LMPropsBuy>({
     productId: product.id,
     color: product.colors && product.colors[0],
@@ -90,7 +88,7 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
       </div>
       <div className={styles.btnBuy}>
         <LMButton medium display="block" onClick={() => onClickBuy(propsBuy)}>
-          {cartIconLM} {t("buy")}
+          {cartIconLM} {"buy"}
         </LMButton>
       </div>
     </LMBaseCompo>

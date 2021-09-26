@@ -1,6 +1,5 @@
 import React from "react";
 import { LMMenuOpt } from "../../../../types";
-import { useTranslation } from "react-i18next";
 import { createPath } from "../../../../utils";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
@@ -10,8 +9,6 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   userMenu,
   userInfo,
 }) => {
-  const { t } = useTranslation("paths");
-
   const createLMMenuOpt = (opt: LMMenuOpt) => {
     let tpl: JSX.Element;
 
@@ -29,7 +26,7 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
     return (
       <li key={opt.title as string} className={styles.opt}>
         {opt.path && (
-          <a className={styles.link} href={createPath(opt.path, t)}>
+          <a className={styles.link} href={createPath(opt.path)}>
             {tpl}
           </a>
         )}

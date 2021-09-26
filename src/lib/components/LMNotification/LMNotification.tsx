@@ -4,7 +4,6 @@ import { LMNotificationProps, LMNotificationPropsPlus } from "./types";
 import styles from "./styles.module.scss";
 import { closeIconLM } from "../LMIcons";
 import classNames from "classnames";
-import { useTranslation } from "react-i18next";
 
 const subjectNotificationLM: Subject<LMNotificationPropsPlus> = new Subject();
 
@@ -17,7 +16,6 @@ export function sendNotificationLM(notification: LMNotificationProps): void {
 }
 
 const LMNotification: React.FC = () => {
-  const { t } = useTranslation("notification");
   const [notificationList, _setNotificationList] = useState<
     LMNotificationPropsPlus[]
   >([]);
@@ -47,7 +45,6 @@ const LMNotification: React.FC = () => {
     };
   }, []);
 
-  
   useEffect(() => {
     if (closeSelected)
       setNotificationList(
@@ -55,7 +52,6 @@ const LMNotification: React.FC = () => {
       );
     setCloseSelected(undefined);
   }, [closeSelected]);
-
 
   return (
     <div className={styles.cont}>
@@ -76,9 +72,7 @@ const LMNotification: React.FC = () => {
           </div>
           <div className={styles.body}>
             <span className={styles.icon}>{noti.icon}</span>
-            <span className={styles.msg}>
-              {t(noti.msg)}
-            </span>
+            <span className={styles.msg}>{noti.msg}</span>
           </div>
         </div>
       ))}

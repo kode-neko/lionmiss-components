@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./styles.module.scss";
-import { useTranslation } from "react-i18next";
 import { createPath } from "../../../utils";
 import { LMMainFooterProps } from "./types";
 import { LMMenuOpt } from "../../../types";
@@ -12,20 +11,15 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
   socialMedia,
   credits,
 }) => {
-  const { t: tMM } = useTranslation("mainFooter");
-  const { t: tP } = useTranslation("paths");
-
   const colInfo = (col: LMMenuOpt) => {
     const { title, submenu } = col;
     return (
       <div className={style.info}>
-        <div className={style.title}>{tMM(title as string)}</div>
+        <div className={style.title}>{title}</div>
         <ul>
-          {submenu?.map(opt => (
+          {submenu?.map((opt) => (
             <li key={opt.title as string}>
-              <a href={createPath(opt.path || [], tP)}>
-                {typeof opt.title === "string" ? tMM(opt.title) : opt.title}
-              </a>
+              <a href={createPath(opt.path || [])}>{opt.title}</a>
             </li>
           ))}
         </ul>
@@ -45,7 +39,7 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
               {socialMedia.map((social) => (
                 <a
                   key={social.title as string}
-                  href={createPath(social.path || [], tP)}
+                  href={createPath(social.path || [])}
                   title={social.title as string}
                 >
                   {social.title}
@@ -53,11 +47,9 @@ const LMMainFooter: React.FC<LMMainFooterProps> = ({
               ))}
             </div>
             <div className={style.about}>
-              <a href={tP('about-us')}>
-                <span className={style.text}>{tMM('about-us')}</span>
-                <span className={style.icon}>
-                  {smileIconLM}
-                </span>
+              <a href={"about-us"}>
+                <span className={style.text}>{"about-us"}</span>
+                <span className={style.icon}>{smileIconLM}</span>
               </a>
             </div>
           </div>
