@@ -1,1 +1,1 @@
-export { default as LMCurrencyFormatFormat } from "./LMCurrencyFormatFormat";
+export { default as LMCurrencyFormat } from "./LMCurrencyFormat";

@@ -1,6 +1,6 @@
-import { LMButtonProps } from "../LMButton/LMButton";
+import { LMButtonProps } from "../../LMForm/";
 
-type LMBtnSize = Pick<LMButtonProps, "small" | "medium">;
+type LMBtnSize = Partial<LMButtonProps>;
 
 interface LMBaseCompoFuncBtn extends Pick<LMButtonProps, "main" | "second"> {
   key: string;

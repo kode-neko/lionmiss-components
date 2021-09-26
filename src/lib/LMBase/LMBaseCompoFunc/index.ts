@@ -1,1 +1,1 @@
-export { default as LMBaseCompoFunc } from "./LMBaseCompoFunc";
+export { default as LMBaseCompoFunc } from "./LMContainerFunc";

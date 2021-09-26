@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { LMCurrencyFormatFormatProps } from "./types";
+import { LMCurrencyFormatProps } from "./types";
 
-const LMCurrencyFormatFormat: React.FC<LMCurrencyFormatFormatProps> = ({ qty, lang, currency }) => {
+const LMCurrencyFormat: React.FC<LMCurrencyFormatProps> = ({ qty, lang, currency }) => {
   const formatStr = Number(qty).toLocaleString(lang, {
     style: "currency",
     currency,
@@ -10,4 +10,4 @@ const LMCurrencyFormatFormat: React.FC<LMCurrencyFormatFormatProps> = ({ qty, la
   return <span className={styles.currency}>{formatStr}</span>;
 };
 
-export default LMCurrencyFormatFormat;
+export default LMCurrencyFormat;

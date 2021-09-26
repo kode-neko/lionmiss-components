@@ -5,9 +5,4 @@ type LMProductPicsProps = {
   thumbList: LMImgAttr[];
 };
 
-type LMProductPicsModalProps = {
-  img: LMImgAttr;
-  onClose: () => void;
-};
-
-export { LMImgAttr, LMProductPicsProps, LMProductPicsModalProps };
+export { LMProductPicsProps, LMProductPicsModalProps };
