@@ -10,6 +10,7 @@ export const LMBaseLayout: React.FC<LMBaseLayoutProps> = ({
   children,
   mainMenu,
   mainFooter,
+  xtraFooterRes,
 }) => {
   const isMobile = useDisplay(992);
   return (
@@ -18,6 +19,7 @@ export const LMBaseLayout: React.FC<LMBaseLayoutProps> = ({
       <div className={styles.layout}>
         <LMMainBar {...mainMenu} isMobile={!!isMobile} />
         <div className={styles.body}>{children}</div>
+        {isMobile && xtraFooterRes}
         <LMMainFooter {...mainFooter} isMobile={!!isMobile} />
       </div>
     </>

@@ -1,0 +1,10 @@
+@import "../style.scss";
+
+.cont {
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: $color-black;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}

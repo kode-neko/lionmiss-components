@@ -31,6 +31,7 @@ interface LMButtonProps {
   readonly small?: boolean;
   readonly medium?: boolean;
   readonly large?: boolean;
+  readonly width?: number
   readonly main?: boolean;
   readonly second?: boolean;
   readonly display?: string;
@@ -49,6 +50,7 @@ const LMButton = styled.button<LMButtonProps>`
   ${(props) => props.small && small}
   ${(props) => props.medium && medium}
   ${(props) => props.large && large}
+  ${(props) => props.width && `width: ${props.width}px;`}
 
   ${(props) => props.main && main}
   ${(props) => props.second && second}

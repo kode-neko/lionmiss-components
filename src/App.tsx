@@ -63,6 +63,7 @@ import LMListBox from "./lib/LMListBox/LMListBox";
 import LMCellAddress from "./lib/LMCellTpl/LMCellAddress";
 import { LMCreditCardValues } from "./lib/LMCreditCardForm/types";
 import { LMCreditCardForm } from "./lib/LMCreditCardForm";
+import LMFixedCheckoutBtn from "./lib/LMFixedCheckoutBtn/LMFixedCheckoutBtn";
 
 const imgList: LMImgAttr[] = [
   {
@@ -249,7 +250,13 @@ const App = (): React.FunctionComponentElement<unknown> => {
           setModal(false);
         }}
       />
-      <LMBaseLayout mainMenu={mainBarProps} mainFooter={mainFooter}>
+      <LMBaseLayout
+        mainMenu={mainBarProps}
+        mainFooter={mainFooter}
+        xtraFooterRes={
+          <LMFixedCheckoutBtn onClick={() => console.log("patata")} />
+        }
+      >
         <LMRow>
           <LMBaseComponent>
             <div style={{ display: "flex", gap: "20px" }}>
@@ -351,7 +358,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             onClickBuy={(buy) => console.log("compra: ", buy)}
           />
         </LMRow>
-          */}
+          
 
         <LMRow>
           <LMCommentCard comment={comment} userInfo={userInfo} />
@@ -362,7 +369,9 @@ const App = (): React.FunctionComponentElement<unknown> => {
           title="Title"
           link={{ name: "back", href: "", title: "titulo" }}
         />
-        <div>{/* <LMCarousel imgList={catImgs} width={1200} /> */}</div>
+        <div><LMCarousel imgList={catImgs} width={1200} /> </div>
+        
+        
         <LMContainerFunc
           title="Title"
           btnsHeader={[
@@ -391,6 +400,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             pariatur
           </p>
         </LMContainerFunc>
+        */}
         <LMBaseComponent>
           <LMTable
             columns={[
@@ -434,6 +444,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
             data={userInfo.cart.products}
           />
         </LMBaseComponent>
+
         <LMTableRes
           columns={[
             {
@@ -491,6 +502,7 @@ const App = (): React.FunctionComponentElement<unknown> => {
           active={step}
           onClick={setStep}
         />
+
         <LMBaseComponent>
           <LMListBox
             data={[address, address, address]}
