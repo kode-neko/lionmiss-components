@@ -1,5 +1,5 @@
-import { LMMenuOpt } from "../../types";
-import { LMUserInfo } from "../../../core/model";
+import { LMMenuOpt } from "../../../types";
+import { LMUserInfo } from "../../../../core/model";
 import { LMSearchInputProps } from "./LMSearchInput/types";
 
 type LMMainBarProps = {

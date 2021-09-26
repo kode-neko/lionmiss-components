@@ -1,4 +1,4 @@
-import { LMColor } from "../types";
+import { LMColor } from "../../../core/model";
 
 type LMColorIconProps = {
   color: LMColor;

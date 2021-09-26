@@ -1,4 +1,4 @@
-import { LMSize } from "../../types";
+import { LMSize } from "../../../../core/model";
 
 type LMFilterSizeProps = {
     selectedList: LMSize[];

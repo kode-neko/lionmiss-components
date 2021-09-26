@@ -1,4 +1,4 @@
-import { LMFilterProps } from "../LMFilter/types";
+import { LMFilterProps } from "../components/LMFilter/types";
 
 type LMFilterPropsSelected = Pick<
   LMFilterProps,

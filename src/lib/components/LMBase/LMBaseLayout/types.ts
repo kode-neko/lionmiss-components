@@ -1,4 +1,4 @@
-import { LMMainBarConfig, LMMainFooterConfig } from "../types";
+import { LMMainBarConfig, LMMainFooterConfig } from "../../../types";
 
 interface LMBaseLayoutProps {
   mainMenu: LMMainBarConfig;

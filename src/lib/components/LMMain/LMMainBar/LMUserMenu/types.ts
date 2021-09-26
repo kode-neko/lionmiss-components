@@ -1,4 +1,5 @@
-import { LMMenuOpt, LMUserInfo } from "../../types";
+import { LMMenuOpt } from "../../../../types";
+import { LMUserInfo } from "../../../../../core/model";
 
 type LMUserMenuProps = {
     userMenu: LMMenuOpt[];

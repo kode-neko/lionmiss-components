@@ -1,4 +1,4 @@
-import { LMMainFooterProps } from "../../LMMain/LMMainFooter/types";
+import { LMMainFooterProps } from "../../components/LMMain/LMMainFooter/types";
 
 type LMMainFooterConfig = Omit<LMMainFooterProps, "isMobile">;
 

@@ -1,4 +1,4 @@
-import { userIconLM } from "../lib/LMIcons";
+import { userIconLM } from "../lib/components/LMIcons";
 import { LMMenuOpt } from "../lib/types";
 
 const userMenu: LMMenuOpt[] = [

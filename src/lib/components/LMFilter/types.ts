@@ -1,4 +1,4 @@
-import { LMColor, LMSize } from "../types";
+import { LMColor, LMSize } from "../../../core/model";
 
 type LMFilterProps = {
     selectedListColor: LMColor[];

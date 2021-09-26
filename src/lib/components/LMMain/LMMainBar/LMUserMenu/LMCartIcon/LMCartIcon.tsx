@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { bagIconLM } from "../../../LMIcons";
+import { bagIconLM } from "../../../../LMIcons";
 import styles from "./styles.module.scss";
 import { LMCartIconProps } from "./types";
 

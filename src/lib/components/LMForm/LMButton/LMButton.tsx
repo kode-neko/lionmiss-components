@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { LMButtonProps } from "./types";
 
 const small = css`
   height: 36px;
@@ -26,16 +27,6 @@ const second = css`
 const displayBlock = css`
   width: 100%;
 `;
-
-interface LMButtonProps {
-  readonly small?: boolean;
-  readonly medium?: boolean;
-  readonly large?: boolean;
-  readonly width?: number
-  readonly main?: boolean;
-  readonly second?: boolean;
-  readonly display?: string;
-}
 
 const LMButton = styled.button<LMButtonProps>`
   border-radius: 2px;

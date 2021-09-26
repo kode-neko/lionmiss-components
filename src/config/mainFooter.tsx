@@ -1,5 +1,12 @@
 import React from "react";
-import { commentIconLM, facebookIconLM, instagramIconLM, phoneIconLM, pinterestIconLM, twitterIconLM } from "../lib/LMIcons";
+import {
+  commentIconLM,
+  facebookIconLM,
+  instagramIconLM,
+  phoneIconLM,
+  pinterestIconLM,
+  twitterIconLM,
+} from "../lib/components/LMIcons";
 import { LMMenuOpt } from "../lib/types";
 
 const columnsInfo: LMMenuOpt[] = [

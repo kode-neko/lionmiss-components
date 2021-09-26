@@ -1,4 +1,4 @@
-import { LMButtonProps } from "../../LMForm/";
+import { LMButtonProps } from "../../LMForm/LMButton/types";
 
 type LMBtnSize = Partial<LMButtonProps>;
 

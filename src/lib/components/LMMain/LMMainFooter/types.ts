@@ -1,4 +1,4 @@
-import { LMMenuOpt } from "../types";
+import { LMMenuOpt } from "../../../types";
 
 type LMMainFooterProps = {
   isMobile: boolean;

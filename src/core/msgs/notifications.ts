@@ -1,5 +1,5 @@
-import { shirtIconLM } from "../lib/LMIcons";
-import { LMNotificationProps } from "../lib/LMNotification/types";
+import { shirtIconLM } from "../../lib/components";
+import { LMNotificationProps } from "../../lib/components/LMNotification/types";
 
 const productAddedNoti: LMNotificationProps = {
   icon: shirtIconLM,

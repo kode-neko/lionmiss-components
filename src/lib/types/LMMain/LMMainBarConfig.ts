@@ -1,4 +1,4 @@
-import { LMMainBarProps } from "../../LMMain/LMMainBar/types";
+import { LMMainBarProps } from "../../components/LMMain/LMMainBar/types";
 
 type LMMainBarConfig = Omit<LMMainBarProps, "isMobile">;
 

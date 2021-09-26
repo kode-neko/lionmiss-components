@@ -1,7 +1,7 @@
-import { LMImgAttr } from "../types";
+import { LMImg } from "../../../../core/model";
 
 type LMModalImgProps = {
-  img: LMImgAttr;
+  img: LMImg;
   onClose: () => void;
 };
 

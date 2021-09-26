@@ -5,8 +5,8 @@ import styles from "./styles.module.scss";
 import LMSearchInput from "./LMSearchInput";
 import LMUserMenu from "./LMUserMenu";
 import { LMMainBarProps } from "./types";
-import { useDisplay } from "../hooks";
-import { menuIconLM } from "../LMIcons";
+import { useDisplay } from "../../../../core/hooks";
+import { menuIconLM } from "../../LMIcons";
 import { LMMainMenuSide } from "./LMMainMenuSide";
 
 export const LMMainBar: React.FC<LMMainBarProps> = ({

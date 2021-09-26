@@ -1,8 +1,7 @@
-import { LMColor, LMImgAttr, LMSize } from "../types";
-import { LMAddress } from "../types";
+import { LMColor, LMSize, LMAddress, LMImg } from "../../../../core/model";
 
 type LMCellProductDescProps = {
-  img: LMImgAttr;
+  img: LMImg;
   name: string;
 };
 type LMCellProductAttrsProps = {
@@ -25,12 +24,12 @@ type LMCellAddressProps = {
   address: LMAddress;
   checked: boolean;
   onCheck: () => void;
-}
+};
 
 export {
   LMCellProductDescProps,
   LMCellProductAttrsProps,
   LMCellProductQtyProps,
   LMCellProductPriceProps,
-  LMCellAddressProps
+  LMCellAddressProps,
 };

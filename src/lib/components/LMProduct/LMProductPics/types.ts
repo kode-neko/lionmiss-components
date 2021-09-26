@@ -1,8 +1,8 @@
-import { LMImgAttr } from "../types";
+import { LMImg } from "../../../../core/model";
 
 type LMProductPicsProps = {
-  imgList: LMImgAttr[];
-  thumbList: LMImgAttr[];
+  imgList: LMImg[];
+  thumbList: LMImg[];
 };
 
-export { LMProductPicsProps, LMProductPicsModalProps };
+export { LMProductPicsProps };
