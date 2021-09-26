@@ -1,6 +1,8 @@
-import { LMProduct } from "../types";
+import { LMProduct } from "../../../../core/model";
 
 type LMProductInfoProps = {
+  lang: string;
+  currency: string;
   img: string;
   product: LMProduct;
   onClickProduct: () => void;

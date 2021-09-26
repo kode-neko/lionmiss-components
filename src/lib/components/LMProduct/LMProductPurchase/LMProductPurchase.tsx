@@ -8,8 +8,11 @@ import { LMPropsBuy, LMSize } from "../../../../core/model";
 import { LMButton, LMSelectorBox, LMStepper } from "../../LMForm";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
+import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 
 const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
+  lang,
+  currency,
   product,
   onClickFav,
   onClickBuy,
@@ -35,7 +38,13 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
           >
             {heartIconLM}
           </div>
-          <div className={styles.price}>{product.price} €</div>
+          <div className={styles.price}>
+            <LMCurrencyFormat
+              qty={product.price}
+              lang={lang}
+              currency={currency}
+            />{" "}
+          </div>
         </div>
       </div>
 

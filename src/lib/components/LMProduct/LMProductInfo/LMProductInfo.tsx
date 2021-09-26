@@ -4,8 +4,11 @@ import styles from "./styles.module.scss";
 import { bagIconLM, heartIconLM } from "../../LMIcons";
 import { LMColorIcon } from "../../LMColorIcon";
 import LMProductInfoProps from "./type";
+import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 
 const LMProductInfo: React.FC<LMProductInfoProps> = ({
+  lang,
+  currency,
   img,
   product,
   onClickProduct,
@@ -21,7 +24,9 @@ const LMProductInfo: React.FC<LMProductInfoProps> = ({
       <div className={styles.infoCont}>
         <h3 className={styles.title}>{name}</h3>
         <div className={styles.info}>
-          <div className={styles.price}>{price} €</div>
+          <div className={styles.price}>
+            <LMCurrencyFormat qty={price} lang={lang} currency={currency} />
+          </div>
           <div className={styles.actions}>
             <button
               onClick={(e) => {
