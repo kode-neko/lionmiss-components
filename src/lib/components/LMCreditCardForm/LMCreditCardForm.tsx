@@ -48,7 +48,7 @@ const LMCreditCardForm: React.FC<LMCreditCardFormProps> = ({
           }
         />
         <input
-          placeholder="Fullname"
+          placeholder={placeholder.fullName}
           className={styles.fullName}
           value={values.fullName}
           onChange={(e) => handleChange(e, "fullname")}

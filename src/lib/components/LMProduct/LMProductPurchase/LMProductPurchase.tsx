@@ -13,6 +13,8 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
   lang,
   currency,
   product,
+  min,
+  max,
   onClickFav,
   onClickBuy,
 }) => {
@@ -70,8 +72,8 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
         <div className={styles.qty}>
           <LMStepper
             value={propsBuy.qty}
-            min={1}
-            max={5}
+            min={min}
+            max={max}
             onMinus={(val) => setPropsBuy({ ...propsBuy, qty: val })}
             onMax={(val) => setPropsBuy({ ...propsBuy, qty: val })}
           />

@@ -5,12 +5,15 @@ import classNames from "classnames";
 import { LMCurrencyFormat } from "../LMCurrencyFormat";
 
 const LMResumeCheckout: React.FC<LMResumeCheckoutProps> = ({
-  promoTitle,
-  onPromo,
-  taxes,
-  total,
   lang,
   currency,
+  promoTitle,
+  taxes,
+  total,
+  promoLabel,
+  taxesLabel,
+  totalLabel,
+  onPromo,
 }) => {
   const [promo, setPromo] = useState<string>("");
   const promoTpl = promoTitle ? (
@@ -25,17 +28,17 @@ const LMResumeCheckout: React.FC<LMResumeCheckoutProps> = ({
   return (
     <div className={styles.cont}>
       <div className={classNames(styles.block, styles.promo)}>
-        <div className={styles.label}>Promo</div>
+        <div className={styles.label}>{promoLabel}</div>
         <div className={styles.value}>{promoTpl}</div>
       </div>
       <div className={classNames(styles.block, styles.taxes)}>
-        <div className={styles.label}>Taxes</div>
+        <div className={styles.label}>{taxesLabel}</div>
         <div className={styles.value}>
           <LMCurrencyFormat qty={taxes} lang={lang} currency={currency} />
         </div>
       </div>
       <div className={classNames(styles.block, styles.total)}>
-        <div className={styles.label}>Total</div>
+        <div className={styles.label}>{totalLabel}</div>
         <div className={styles.value}>
           <LMCurrencyFormat qty={total} lang={lang} currency={currency} />
         </div>

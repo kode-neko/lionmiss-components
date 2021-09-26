@@ -9,7 +9,11 @@ import { LMModalImg } from "../LMModal";
 
 const MAX_RATING = 5;
 
-const LMCommentDesc: React.FC<LMCommentDescProps> = ({ comment, userInfo }) => {
+const LMCommentDesc: React.FC<LMCommentDescProps> = ({
+  comment,
+  userInfo,
+  altAvatar,
+}) => {
   const [img, setImg] = useState<LMImg>();
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
   const { user, measures } = comment;
@@ -53,10 +57,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({ comment, userInfo }) => {
   return (
     <>
       {visibleModal && (
-        <LMModalImg
-          img={img as LMImg}
-          onClose={() => setVisibleModal(false)}
-        />
+        <LMModalImg img={img as LMImg} onClose={() => setVisibleModal(false)} />
       )}
       <LMBaseCompo>
         <div className={styles.header}>
@@ -68,11 +69,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({ comment, userInfo }) => {
         </div>
         <div className={styles.body}>
           <div className={styles.user}>
-            <img
-              className={styles.avatar}
-              src={user.avatar}
-              alt="user avatar"
-            />
+            <img className={styles.avatar} src={user.avatar} alt={altAvatar} />
             <div className={styles.info}>{infoMeasures}</div>
           </div>
           <div className={styles.comment}>

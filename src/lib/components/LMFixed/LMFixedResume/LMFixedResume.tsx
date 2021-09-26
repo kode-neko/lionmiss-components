@@ -8,19 +8,12 @@ import { LMCurrencyFormat } from "../../LMCurrencyFormat";
 const LMFixedResume: React.FC<LMFixedResumeProps> = ({
   lang,
   currency,
-  total,
-  promo,
-  taxes,
-  shipping,
+  infoList,
+  btnLabelPrev,
+  btnLabelNext,
   onClickPrev,
   onClickNext,
 }) => {
-  const listInfo: LMFixedResumeLineInfo[] = [
-    { label: "Total", value: total, main: true },
-    { label: "Promo", value: promo, negative: true },
-    { label: "Taxes", value: taxes },
-    { label: "Shipping", value: shipping },
-  ];
   const createInfo = (lineInfo: LMFixedResumeLineInfo) => (
     <div className={classNames(styles.line, lineInfo.main && styles.main)}>
       <div className={styles.label}>{lineInfo.label}</div>
@@ -41,13 +34,13 @@ const LMFixedResume: React.FC<LMFixedResumeProps> = ({
 
   return (
     <div className={styles.cont}>
-      <div className={styles.info}>{listInfo.map(createInfo)}</div>
+      <div className={styles.info}>{infoList.map(createInfo)}</div>
       <div className={styles.btns}>
         <LMButton onClick={onClickPrev} width={250} medium main>
-          Prev
+          {btnLabelPrev}
         </LMButton>
         <LMButton onClick={onClickNext} width={250} medium main>
-          Next
+          {btnLabelNext}
         </LMButton>
       </div>
     </div>

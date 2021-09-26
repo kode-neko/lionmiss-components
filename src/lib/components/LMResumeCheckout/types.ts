@@ -1,10 +1,13 @@
 type LMResumeCheckoutProps = {
-    promoTitle?: string;
-    onPromo: (code: string) => void;
-    taxes: number;
-    total: number;
     lang: string;
     currency: string; 
+    promoTitle?: string;
+    taxes: number;
+    total: number;
+    promoLabel: string;
+    taxesLabel: string;
+    totalLabel: string;
+    onPromo: (code: string) => void;
 };
 
 export { LMResumeCheckoutProps };

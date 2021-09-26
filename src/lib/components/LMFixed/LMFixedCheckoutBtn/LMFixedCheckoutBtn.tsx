@@ -4,11 +4,14 @@ import { LMButton } from "../../LMForm";
 import { cartIconLM } from "../../LMIcons";
 import { LMFixedCheckoutBtnProps } from "./types";
 
-const LMFixedCheckoutBtn: React.FC<LMFixedCheckoutBtnProps> = ({ onClick }) => {
+const LMFixedCheckoutBtn: React.FC<LMFixedCheckoutBtnProps> = ({
+  onClick,
+  btnLabel,
+}) => {
   return (
     <div className={styles.cont}>
       <LMButton large display="block" main onClick={onClick}>
-        {cartIconLM} Checkout
+        {cartIconLM} {btnLabel || <>Checkout</>}
       </LMButton>
     </div>
   );

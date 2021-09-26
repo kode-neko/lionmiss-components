@@ -8,10 +8,9 @@ type LMFixedResumeLineInfo = {
 type LMFixedResumeProps = {
   lang: string;
   currency: string;
-  total?: number;
-  promo?: number;
-  taxes?: number;
-  shipping?: number;
+  infoList: LMFixedResumeLineInfo[];
+  btnLabelPrev: string;
+  btnLabelNext: string;
   onClickPrev: () => void;
   onClickNext: () => void;
 };
