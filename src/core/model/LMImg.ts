@@ -1,4 +1,4 @@
-type LMImgAttr = {
+type LMImg = {
   key: string;
   src: string;
   title: string;
@@ -6,4 +6,4 @@ type LMImgAttr = {
   main?: boolean;
 };
 
-export { LMImgAttr };
+export { LMImg };

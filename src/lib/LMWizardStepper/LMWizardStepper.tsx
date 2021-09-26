@@ -3,7 +3,7 @@ import { LMStepperProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMArrowThick } from "../LMShapes";
 
-const LMStepper: React.FC<LMStepperProps> = ({ options, active, onClick }) => {
+const LMWizardStepper: React.FC<LMStepperProps> = ({ options, active, onClick }) => {
   return (
     <div className={styles.list}>
       {options.map((opt) => (
@@ -18,4 +18,4 @@ const LMStepper: React.FC<LMStepperProps> = ({ options, active, onClick }) => {
   );
 };
 
-export default LMStepper;
+export default LMWizardStepper;

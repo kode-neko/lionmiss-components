@@ -1,3 +1,7 @@
+import { LMMeasures } from "./LMMeasures";
+import { LMUser } from "./LMUser";
+import { LMImg } from "./LMImg";
+
 type LMComment = {
   id: string;
   comment: string;
@@ -5,7 +9,7 @@ type LMComment = {
   ratting: number;
   measures: LMMeasures;
   user: LMUser;
-  imgs: LMImgAttr[];
+  imgs: LMImg[];
 };
 
 export { LMComment };

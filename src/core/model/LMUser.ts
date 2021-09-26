@@ -1,3 +1,6 @@
+import { LMMeasures } from "./LMMeasures";
+import { LMAddress } from "./LMAddress";
+
 type LMUser = {
   username: string;
   avatar: string;

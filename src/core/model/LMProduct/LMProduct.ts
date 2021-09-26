@@ -1,3 +1,7 @@
+import { LMProductProps } from "../LMProduct";
+import { LMColor } from "../LMEnum";
+import { LMImg } from "../LMImg";
+
 type LMProduct = {
   id: string;
   name: string;
@@ -7,7 +11,7 @@ type LMProduct = {
   colors: LMColor[];
   unds: number;
   isFav: boolean;
-  imgs: LMImgAttr[];
+  imgs: LMImg[];
 };
 
 export { LMProduct };

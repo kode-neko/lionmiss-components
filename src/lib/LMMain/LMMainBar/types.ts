@@ -1,4 +1,5 @@
-import { LMMenuOpt, LMUserInfo } from "../types";
+import { LMMenuOpt } from "../../types";
+import { LMUserInfo } from "../../../core/model";
 import { LMSearchInputProps } from "./LMSearchInput/types";
 
 type LMMainBarProps = {
@@ -9,7 +10,7 @@ type LMMainBarProps = {
   userInfo: LMUserInfo;
   columnsInfo: LMMenuOpt[];
   socialMedia: LMMenuOpt[];
-  onSearch: LMSearchInputProps['onSearch']
+  onSearch: LMSearchInputProps["onSearch"];
 };
 
 export { LMMainBarProps };

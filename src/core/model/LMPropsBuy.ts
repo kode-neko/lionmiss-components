@@ -1,3 +1,5 @@
+import { LMColor, LMSize } from "./LMEnum";
+
 type LMPropsBuy = {
   productId: string;
   color?: LMColor;

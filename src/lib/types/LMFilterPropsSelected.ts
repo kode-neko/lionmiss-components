@@ -1,3 +1,5 @@
+import { LMFilterProps } from "../LMFilter/types";
+
 type LMFilterPropsSelected = Pick<
   LMFilterProps,
   | "selectedListColor"
@@ -7,4 +9,4 @@ type LMFilterPropsSelected = Pick<
   | "selectedListStyle"
 >;
 
-export {LMFilterPropsSelected}
+export { LMFilterPropsSelected };
