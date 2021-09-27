@@ -4,7 +4,7 @@ import { LMProductPurchaseProps } from "./types";
 import styles from "./styles.module.scss";
 import { cartIconLM, heartIconLM } from "../../LMIcons";
 import { LMColorIcon } from "../../LMColorIcon";
-import { LMPropsBuy, LMSize } from "../../../../core/model";
+import { LMPropsBuy, LMSize } from "lionmiss-core";
 import { LMButton, LMSelectorBox, LMStepper } from "../../LMForm";
 import classNames from "classnames";
 import { LMCurrencyFormat } from "../../LMCurrencyFormat";

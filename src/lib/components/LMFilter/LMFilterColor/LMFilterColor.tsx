@@ -1,6 +1,6 @@
 import React from "react";
 import { LMColorIcon } from "../../LMColorIcon";
-import { LMColor } from "../../../../core/model";
+import { LMColor } from "lionmiss-core";
 import { LMFilterColorProps } from "./types";
 import styles from "./styles.module.scss";
 

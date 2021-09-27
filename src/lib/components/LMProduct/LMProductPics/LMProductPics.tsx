@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LMBaseCompo } from "../../LMBase";
 import styles from "./styles.module.scss";
-import { LMImg } from "../../../../core/model";
+import { LMImg } from "lionmiss-core";
 import { LMProductPicsProps } from "./types";
 import classNames from "classnames";
 import { LMModalImg } from "../../LMModal";

@@ -1,4 +1,4 @@
-import { LMColor, LMSize, LMAddress, LMImg } from "../../../../core/model";
+import { LMColor, LMSize, LMAddress, LMImg } from "lionmiss-core";
 
 type LMCellProductDescProps = {
   img: LMImg;

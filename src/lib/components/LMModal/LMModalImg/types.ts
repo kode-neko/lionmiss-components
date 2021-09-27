@@ -1,4 +1,4 @@
-import { LMImg } from "../../../../core/model";
+import { LMImg } from "lionmiss-core";
 
 type LMModalImgProps = {
   img: LMImg;

@@ -1,4 +1,4 @@
-import { LMComment, LMUserInfo } from "../../../core/model";
+import { LMComment, LMUserInfo } from "lionmiss-core";
 
 type LMCommentDescProps = {
     comment: LMComment;

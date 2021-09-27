@@ -1,4 +1,4 @@
-import { LMColor, LMSize } from "../../../core/model";
+import { LMColor, LMSize } from "lionmiss-core";
 
 type LMFilterProps = {
     selectedListColor: LMColor[];

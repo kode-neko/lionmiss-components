@@ -1,4 +1,4 @@
-import { LMColor } from "../../../core/model";
+import { LMColor } from "lionmiss-core";
 
 type LMColorIconProps = {
   color: LMColor;

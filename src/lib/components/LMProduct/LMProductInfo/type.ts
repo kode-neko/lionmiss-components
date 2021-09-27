@@ -1,4 +1,4 @@
-import { LMProduct } from "../../../../core/model";
+import { LMProduct } from "lionmiss-core";
 
 type LMProductInfoProps = {
   lang: string;

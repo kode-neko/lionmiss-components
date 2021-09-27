@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import LMSearchInput from "./LMSearchInput";
 import LMUserMenu from "./LMUserMenu";
 import { LMMainBarProps } from "./types";
-import { useDisplay } from "../../../../core/hooks";
+import { useDisplay } from "lionmiss-core";
 import { menuIconLM } from "../../LMIcons";
 import { LMMainMenuSide } from "./LMMainMenuSide";
 

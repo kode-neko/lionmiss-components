@@ -4,7 +4,7 @@ import { LMCommentDescProps } from "./types";
 import styles from "./styles.module.scss";
 import { starIconLM } from "../LMIcons";
 import classNames from "classnames";
-import { LMImg } from "../../../core/model";
+import { LMImg } from "lionmiss-core";
 import { LMModalImg } from "../LMModal";
 
 const MAX_RATING = 5;

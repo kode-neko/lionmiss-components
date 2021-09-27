@@ -1,4 +1,4 @@
-import { LMSize } from "../../../../core/model";
+import { LMSize } from "lionmiss-core";
 
 type LMFilterSizeProps = {
     selectedList: LMSize[];
