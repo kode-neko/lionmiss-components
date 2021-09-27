@@ -56,9 +56,6 @@ const config: Configuration = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
-    alias: {
-      "@node_modules": path.resolve(__dirname, "node_modules/"),
-    },
   },
   plugins: [
     new HtmlWebpackPlugin({

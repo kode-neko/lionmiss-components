@@ -1,18 +1,20 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react",
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src/lib/**/*", "src/declarations.d.ts"],
+  "exclude": ["src/lib/**/*.test.*"]
 }
