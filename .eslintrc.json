@@ -1,26 +1,27 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "react-hooks"
-    ],
-    "extends": [
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "rules": {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
-      "react/prop-types": "off"
-    },
-    "settings": {
-      "react": {
-        "pragma": "React",
-        "version": "detect"
-      }
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:react/jsx-runtime"
+  ],
+  "overrides": [],
+  "settings": {
+    "react": {
+      "version": "18.2"
     }
-  }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["react"],
+  "rules": {}
+}
