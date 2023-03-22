@@ -5,15 +5,11 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "standard-with-typescript",
-    "plugin:react/jsx-runtime"
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "overrides": [],
-  "settings": {
-    "react": {
-      "version": "18.2"
-    }
-  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -22,6 +18,23 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react"],
-  "rules": {}
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/typedef": [
+      "warn",
+      {
+        "parameter": true,
+        "arrowParameter": true,
+        "variableDeclaration": true,
+        "memberVariableDeclaration": true,
+        "objectDestructuring": true
+      }
+    ]
+  }
 }

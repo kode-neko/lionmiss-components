@@ -1,16 +1,14 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '../../../../vite.svg'
 import './App.css'
 
-const App = (): React.FunctionComponentElement<unknown> => {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [count, setCount] = useState<number>(0)
 
   return (
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
