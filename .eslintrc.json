@@ -24,7 +24,7 @@
     }
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint"],
+
   "rules": {
     "@typescript-eslint/typedef": [
       "warn",
@@ -32,8 +32,14 @@
         "parameter": true,
         "arrowParameter": true,
         "variableDeclaration": true,
-        "memberVariableDeclaration": true,
-        "objectDestructuring": true
+        "memberVariableDeclaration": true
+      }
+    ],
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        "allowNumber": true,
+        "allowNullish": true
       }
     ]
   }
