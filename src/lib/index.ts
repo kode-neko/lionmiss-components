@@ -56,7 +56,7 @@ export {
   LMWizardStepper,
 } from "./components";
 
-export {
+export type {
   LMMainBarConfig,
   LMMainFooterConfig,
   LMFilterPropsSelected,

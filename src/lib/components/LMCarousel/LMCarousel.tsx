@@ -1,8 +1,9 @@
 import React from "react";
-import { useKNCarousel, KNCarouselSlides } from "kodeneko-react-components";
+import { useKNCarousel } from "./utils";
 import LMCarouselControls from "./LMCarouselControls";
 import styles from "./styles.module.scss";
 import { LMCarouselProps } from "./types";
+import KNCarouselSlides from "./LMCarouselSlides";
 
 const LMCarousel: React.FC<LMCarouselProps> = ({
   imgList,
