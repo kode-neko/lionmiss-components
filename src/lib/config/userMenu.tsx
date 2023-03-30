@@ -1,5 +1,5 @@
-import { userIconLM } from "../lib/components/LMIcons";
-import { LMMenuOpt } from "../lib/types";
+import { userIconLM } from "../components/LMIcons";
+import { LMMenuOpt } from "../types";
 
 const userMenu: LMMenuOpt[] = [
   { title: "user.language" },

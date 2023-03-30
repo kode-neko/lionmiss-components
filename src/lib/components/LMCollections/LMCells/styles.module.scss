@@ -1,4 +1,4 @@
-@import "../style.scss";
+@import "../../style.scss";
 
 .contDesc {
   padding: 4px;
@@ -43,7 +43,7 @@
   min-width: 400px;
   cursor: pointer;
 
-  .radio input{
+  .radio input {
     height: 20px;
     width: 20px;
   }

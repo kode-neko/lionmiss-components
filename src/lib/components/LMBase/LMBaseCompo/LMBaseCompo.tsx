@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import React, { PropsWithChildren } from "react";
-import styles from "./styles.module.scss";
-import LMBaseCompoProps from "./types";
+import classNames from 'classnames'
+import React, { PropsWithChildren } from 'react'
+import styles from './styles.module.scss'
+import LMBaseCompoProps from './types'
 
 export const LMBaseCompo: React.FC<PropsWithChildren<LMBaseCompoProps>> = ({
   children,
@@ -9,9 +9,9 @@ export const LMBaseCompo: React.FC<PropsWithChildren<LMBaseCompoProps>> = ({
   onClick,
   ...props
 }: PropsWithChildren<LMBaseCompoProps>) => {
-  let classNameXtraExtract: string[] = [];
-  if (typeof classNameXtra === "string") classNameXtraExtract = [classNameXtra];
-  else if (classNameXtra?.length) classNameXtraExtract = classNameXtra;
+  let classNameXtraExtract: string[] = []
+  if (typeof classNameXtra === 'string') classNameXtraExtract = [classNameXtra]
+  else if (classNameXtra?.length) classNameXtraExtract = classNameXtra
   return (
     <div
       className={classNames(
@@ -23,7 +23,7 @@ export const LMBaseCompo: React.FC<PropsWithChildren<LMBaseCompoProps>> = ({
     >
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default LMBaseCompo;
+export default LMBaseCompo

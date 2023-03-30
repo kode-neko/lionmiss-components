@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { LMButtonProps } from "./types";
+import type { LMButtonProps } from "./types";
 
 const small = css`
   height: 36px;

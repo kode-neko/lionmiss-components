@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "./**/*.js",
+        "./**/*.cjs"
+      ],
+      "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true
+      },
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      }
+    }
+  ]
+}

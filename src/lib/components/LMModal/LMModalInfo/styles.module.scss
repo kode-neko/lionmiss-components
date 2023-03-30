@@ -1,4 +1,4 @@
-@import "../style.scss";
+@import "../../style.scss";
 
 .background {
   position: fixed;
@@ -61,12 +61,12 @@
 
 .pulse {
   animation-name: pulse;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
 }
 
 .fadeOut {

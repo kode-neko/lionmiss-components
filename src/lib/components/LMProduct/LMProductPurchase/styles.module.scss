@@ -1,4 +1,4 @@
-@import "../style.scss";
+@import "../../style.scss";
 
 .widthCont {
   width: 420px;
@@ -26,7 +26,8 @@
   font-weight: bold;
 
   .fav {
-    &:hover, &.selectedFav {
+    &:hover,
+    &.selectedFav {
       cursor: pointer;
       color: $color-main;
     }
