@@ -1,4 +1,4 @@
-@import "../../style.scss";
+@import "../../../style.scss";
 
 .mainTitle {
   display: inline-block;
@@ -17,7 +17,7 @@
     color: $color-white;
     font-weight: normal;
 
-    a{
+    a {
       text-decoration: none;
       color: inherit;
     }

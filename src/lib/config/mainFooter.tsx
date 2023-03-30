@@ -6,8 +6,8 @@ import {
   phoneIconLM,
   pinterestIconLM,
   twitterIconLM,
-} from "../lib/components/LMIcons";
-import { LMMenuOpt } from "../lib/types";
+} from "../components/LMIcons";
+import { LMMenuOpt } from "../types";
 
 const columnsInfo: LMMenuOpt[] = [
   {

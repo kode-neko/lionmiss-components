@@ -8,4 +8,4 @@ interface LMButtonProps {
   readonly display?: string;
 }
 
-export { LMButtonProps };
+export type { LMButtonProps };
