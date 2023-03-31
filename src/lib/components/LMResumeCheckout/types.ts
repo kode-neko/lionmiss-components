@@ -10,4 +10,4 @@ type LMResumeCheckoutProps = {
     onPromo: (code: string) => void;
 };
 
-export { LMResumeCheckoutProps };
+export type { LMResumeCheckoutProps };

@@ -16,4 +16,4 @@ type LMFilterProps = {
     onChangeListStyle: (vale: string) => void;
 };
 
-export { LMFilterProps };
+export type { LMFilterProps };

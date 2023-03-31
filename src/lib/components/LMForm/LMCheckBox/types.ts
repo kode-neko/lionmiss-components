@@ -8,4 +8,4 @@ type LMCheckBoxProps = {
   onBlur?: () => void;
 };
 
-export { LMCheckBoxProps };
+export type { LMCheckBoxProps };

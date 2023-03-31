@@ -9,4 +9,4 @@ type LMStepperProps = {
     onClick?: (key: React.Key) => void
 };
 
-export { LMStepperProps };
+export type { LMStepperProps };

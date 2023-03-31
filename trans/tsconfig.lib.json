@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "../lib",
+    "target": "ESNext",
+    "declaration": true,
+    "useDefineForClassFields": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "emitDeclarationOnly": true
+  },
+  "include": [
+    "../src/lib",
+    "../src/lib/gloabl.d.ts"
+  ]
+}

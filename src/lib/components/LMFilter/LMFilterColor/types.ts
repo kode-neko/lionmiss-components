@@ -5,4 +5,4 @@ type LMFilterColorProps = {
     onChange: (color: LMColor) => void
 };
 
-export { LMFilterColorProps };
+export type { LMFilterColorProps };

@@ -3,7 +3,7 @@ import { bagIconLM } from "../../../../LMIcons";
 import styles from "./styles.module.scss";
 import { LMCartIconProps } from "./types";
 
-export const LMCartIcon: React.FC<LMCartIconProps> = ({ cont }) => {
+export const LMCartIcon: React.FC<LMCartIconProps> = ({ cont = 0 }) => {
   const refCounter = useRef<HTMLDivElement>(null);
   const removeAnimation = () => {
     refCounter.current?.classList.remove(styles.addedItem);

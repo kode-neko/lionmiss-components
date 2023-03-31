@@ -1,2 +1,2 @@
-export { LMMainBarConfig } from "./LMMainBarConfig";
-export { LMMainFooterConfig } from "./LMMainFooterConfig";
+export type { LMMainBarConfig } from "./LMMainBarConfig";
+export type { LMMainFooterConfig } from "./LMMainFooterConfig";

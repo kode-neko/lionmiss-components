@@ -2,6 +2,4 @@ type LMCartIconProps = {
     cont: number
 }
 
-export {
-    LMCartIconProps
-}
+export type { LMCartIconProps }

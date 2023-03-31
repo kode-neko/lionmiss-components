@@ -6,4 +6,4 @@ type LMStepperProps = {
   onMax?: (val: number) => void;
 };
 
-export { LMStepperProps };
+export type { LMStepperProps };

@@ -10,4 +10,4 @@ type LMProductPurchaseProps = {
   onClickBuy: (buy: LMPropsBuy) => void;
 };
 
-export { LMProductPurchaseProps };
+export type { LMProductPurchaseProps };

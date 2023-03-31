@@ -7,4 +7,4 @@ type LMFilterPriceProps = {
     onChangeMax: (max: number) => void
 };
 
-export { LMFilterPriceProps };
+export type { LMFilterPriceProps };

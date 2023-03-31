@@ -10,7 +10,7 @@ const LMProductPics: React.FC<LMProductPicsProps> = ({ imgList, thumbList }) => 
   const [mainImg, setMainImg] = useState<LMImg>(imgList[0]);
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
   const handleClickThumb = (thumb: LMImg) => {
-    const img = imgList.find((img) => img.key === thumb.key) as LMImg;
+    const img = imgList.find((img) => img._id === thumb._id) as LMImg;
     setMainImg(img);
   };
   return (
@@ -28,10 +28,10 @@ const LMProductPics: React.FC<LMProductPicsProps> = ({ imgList, thumbList }) => 
         <div className={styles.gallery}>
           {thumbList.map((thumb) => (
             <img
-              key={thumb.key}
+              key={thumb._id}
               className={classNames(
                 styles.thumb,
-                thumb.key === mainImg.key && styles.selected
+                thumb._id === mainImg._id && styles.selected
               )}
               onClick={() => handleClickThumb(thumb)}
               onMouseEnter={() => handleClickThumb(thumb)}

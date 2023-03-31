@@ -43,7 +43,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({
 
   const gallery = comment.imgs.map((img) => (
     <div
-      key={img.key}
+      key={img._id}
       className={styles.img}
       onClick={() => {
         setImg(img);
@@ -79,7 +79,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({
         </div>
         <div className={styles.footer}>
           <div className={styles.date}>
-            {Intl.DateTimeFormat(userInfo.lang).format(comment.date)}
+            {Intl.DateTimeFormat(userInfo.user.lang).format(comment.date)}
           </div>
         </div>
       </LMBaseCompo>

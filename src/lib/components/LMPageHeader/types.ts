@@ -5,4 +5,4 @@ type LMPageHeaderProps = {
   link: LMPathSegment;
 };
 
-export { LMPageHeaderProps };
+export type { LMPageHeaderProps };

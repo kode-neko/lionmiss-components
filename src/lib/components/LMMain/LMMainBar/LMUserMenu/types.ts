@@ -6,6 +6,4 @@ type LMUserMenuProps = {
     userInfo: LMUserInfo;
 }
 
-export {
-    LMUserMenuProps
-}
+export type { LMUserMenuProps }

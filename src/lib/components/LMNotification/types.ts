@@ -11,4 +11,4 @@ interface LMNotificationPropsPlus extends LMNotificationProps {
   ref?: React.RefObject<HTMLDivElement>;
 }
 
-export { LMNotificationProps, LMNotificationPropsPlus };
+export type { LMNotificationProps, LMNotificationPropsPlus };

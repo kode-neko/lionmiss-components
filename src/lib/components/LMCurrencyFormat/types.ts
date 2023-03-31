@@ -4,4 +4,4 @@ type LMCurrencyFormatProps = {
   currency: string;
 };
 
-export { LMCurrencyFormatProps };
+export type { LMCurrencyFormatProps };

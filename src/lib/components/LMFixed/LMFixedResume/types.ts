@@ -15,4 +15,4 @@ type LMFixedResumeProps = {
   onClickNext: () => void;
 };
 
-export { LMFixedResumeLineInfo, LMFixedResumeProps };
+export type { LMFixedResumeLineInfo, LMFixedResumeProps };

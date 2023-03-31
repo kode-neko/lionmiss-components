@@ -5,4 +5,4 @@ type LMModalImgProps = {
   onClose: () => void;
 };
 
-export { LMModalImgProps };
+export type { LMModalImgProps };

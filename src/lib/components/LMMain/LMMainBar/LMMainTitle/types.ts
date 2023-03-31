@@ -2,4 +2,4 @@ type LMMainTitleProps = {
   webTitle: string;
 };
 
-export { LMMainTitleProps };
+export type { LMMainTitleProps };

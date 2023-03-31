@@ -14,10 +14,10 @@ export const LMUserMenu: React.FC<LMUserMenuProps> = ({
 
     switch (opt.title) {
       case "user.language":
-        tpl = <span className={styles.lang}>{userInfo.lang}</span>;
+        tpl = <span className={styles.lang}>{userInfo.user.lang}</span>;
         break;
       case "user.cart":
-        tpl = <LMCartIcon cont={userInfo.cart.products.length} />;
+        tpl = <LMCartIcon cont={userInfo.cart?.products.length || 0} />;
         break;
       default:
         tpl = opt.title as JSX.Element;

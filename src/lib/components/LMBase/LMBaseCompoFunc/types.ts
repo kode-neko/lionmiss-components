@@ -16,4 +16,4 @@ type LMBaseCompoFuncProps = {
   btnsFooter: LMBaseCompoFuncBtn[];
 };
 
-export { LMBtnSize, LMBaseCompoFuncBtn, LMBaseCompoFuncProps };
+export type { LMBtnSize, LMBaseCompoFuncBtn, LMBaseCompoFuncProps };

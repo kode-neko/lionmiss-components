@@ -10,4 +10,4 @@ type LMModalInfoProps = {
   onClickClose?: () => void;
 };
 
-export { LMModalInfoProps };
+export type { LMModalInfoProps };

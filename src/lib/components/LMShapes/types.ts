@@ -21,4 +21,5 @@ type LMShapesProps = {
 
 type LMArrowThickProps = LMShapesProps;
 
-export { LMColorShape, LMArrowThickProps };
+export { LMColorShape }
+export type { LMShapesProps, LMArrowThickProps };

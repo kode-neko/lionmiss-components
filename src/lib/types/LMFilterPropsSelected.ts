@@ -9,4 +9,4 @@ type LMFilterPropsSelected = Pick<
   | "selectedListStyle"
 >;
 
-export { LMFilterPropsSelected };
+export type { LMFilterPropsSelected };

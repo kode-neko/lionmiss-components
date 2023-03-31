@@ -1,3 +1,3 @@
 type LMRowProps = Record<string, unknown>;
 
-export { LMRowProps };
+export type { LMRowProps };

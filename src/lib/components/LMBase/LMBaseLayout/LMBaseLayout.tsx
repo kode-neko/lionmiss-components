@@ -1,11 +1,11 @@
 import React from "react";
 import { LMMainBar, LMMainFooter } from "../../LMMain";
 import { LMNotification } from "../../LMNotification";
-import { LMBaseLayoutProps } from "./types";
+import type { LMBaseLayoutProps } from "./types";
 import styles from "./styles.module.scss";
 import { useDisplay } from "lionmiss-core";
 
-export const LMBaseLayout: React.FC<LMBaseLayoutProps> = ({
+export const LMBaseLayout: React.FC<React.PropsWithChildren<LMBaseLayoutProps>> = ({
   children,
   mainMenu,
   mainFooter,

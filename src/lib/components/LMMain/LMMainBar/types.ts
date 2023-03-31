@@ -13,4 +13,4 @@ type LMMainBarProps = {
   onSearch: LMSearchInputProps["onSearch"];
 };
 
-export { LMMainBarProps };
+export type { LMMainBarProps };
