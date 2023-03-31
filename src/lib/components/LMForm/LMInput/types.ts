@@ -9,4 +9,4 @@ type LMInputProps = {
   onBlur?: () => void;
 };
 
-export { LMInputProps };
+export type { LMInputProps };

@@ -4,4 +4,4 @@ type LMPathSegment = {
   title: string;
 };
 
-export { LMPathSegment };
+export type { LMPathSegment };

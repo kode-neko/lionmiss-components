@@ -6,4 +6,4 @@ interface LMBaseLayoutProps {
   xtraFooterRes?: JSX.Element;
 }
 
-export { LMBaseLayoutProps };
+export type { LMBaseLayoutProps };

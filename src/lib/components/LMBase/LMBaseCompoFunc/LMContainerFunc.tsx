@@ -1,10 +1,10 @@
 import React from "react";
-import { LMBtnSize, LMBaseCompoFuncBtn, LMBaseCompoFuncProps } from "./types";
+import type { LMBtnSize, LMBaseCompoFuncBtn, LMBaseCompoFuncProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMBaseCompo } from "../LMBaseCompo";
 import { LMButton } from "../../LMForm";
 
-const LMBaseCompoFunc: React.FC<LMBaseCompoFuncProps> = ({
+const LMBaseCompoFunc: React.FC<React.PropsWithChildren<LMBaseCompoFuncProps>> = ({
   title,
   btnsHeader,
   btnsFooter,

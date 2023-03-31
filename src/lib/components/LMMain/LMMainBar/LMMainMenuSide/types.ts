@@ -18,4 +18,4 @@ type LMMainMenuSideProps = {
   onClose: () => void;
 };
 
-export { LMMainMenuSideProps, LMMainSubMenuOptProps, LMMainSubMenuSideProps };
+export type { LMMainMenuSideProps, LMMainSubMenuOptProps, LMMainSubMenuSideProps };

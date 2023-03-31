@@ -2,4 +2,4 @@ type LMSearchInputProps = {
   onSearch: (value: string) => void;
 };
 
-export { LMSearchInputProps };
+export type { LMSearchInputProps };

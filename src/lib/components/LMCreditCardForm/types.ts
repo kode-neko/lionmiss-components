@@ -12,4 +12,4 @@ type LMCreditCardFormProps = {
   onChange: (creditCard: LMCreditCardValues) => void;
 };
 
-export { LMCreditCardValues, LMCreditCardFormProps };
+export type { LMCreditCardValues, LMCreditCardFormProps };

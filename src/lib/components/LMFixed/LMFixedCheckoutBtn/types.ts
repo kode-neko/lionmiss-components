@@ -3,4 +3,4 @@ type LMFixedCheckoutBtnProps = {
   btnLabel?: string;
 };
 
-export { LMFixedCheckoutBtnProps };
+export type { LMFixedCheckoutBtnProps };

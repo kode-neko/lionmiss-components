@@ -6,4 +6,4 @@ type LMCommentDescProps = {
     altAvatar?: string;
 };
 
-export { LMCommentDescProps };
+export type { LMCommentDescProps };

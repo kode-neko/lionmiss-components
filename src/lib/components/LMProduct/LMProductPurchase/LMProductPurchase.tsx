@@ -19,7 +19,7 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
   onClickBuy,
 }) => {
   const [propsBuy, setPropsBuy] = useState<LMPropsBuy>({
-    productId: product.id,
+    productId: product._id || '',
     color: product.colors && product.colors[0],
     size: undefined,
     qty: 1,
@@ -32,7 +32,7 @@ const LMProductPurchase: React.FC<LMProductPurchaseProps> = ({
           <div
             className={classNames(
               styles.fav,
-              product.isFav && styles.selectedFav
+              product.isFav ? styles.selectedFav : false
             )}
             onClick={() => onClickFav(!product.isFav)}
           >

@@ -7,6 +7,4 @@ type LMMainFooterProps = {
   credits: string[];
 };
 
-export {
-  LMMainFooterProps,
-};
+export type { LMMainFooterProps };

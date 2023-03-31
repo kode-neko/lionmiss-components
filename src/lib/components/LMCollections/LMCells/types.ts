@@ -26,7 +26,7 @@ type LMCellAddressProps = {
   onCheck: () => void;
 };
 
-export {
+export type {
   LMCellProductDescProps,
   LMCellProductAttrsProps,
   LMCellProductQtyProps,

@@ -5,4 +5,4 @@ type LMFilterSizeProps = {
     onChange: (size: LMSize) => void;
 };
 
-export { LMFilterSizeProps };
+export type { LMFilterSizeProps };

@@ -4,4 +4,4 @@ type LMFilterStyleProps = {
     onChange: (vale: string) => void;
 };
 
-export { LMFilterStyleProps };
+export type { LMFilterStyleProps };

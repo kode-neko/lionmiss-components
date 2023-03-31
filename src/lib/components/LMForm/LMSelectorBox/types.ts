@@ -10,4 +10,4 @@ type LMSelectorBoxProps = {
   onSelect: (opt: string) => void;
 };
 
-export { LMBoxProps, LMSelectorBoxProps };
+export type { LMBoxProps, LMSelectorBoxProps };

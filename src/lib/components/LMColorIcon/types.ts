@@ -8,4 +8,4 @@ type LMColorIconProps = {
   onClick?: () => void;
 };
 
-export { LMColorIconProps };
+export type { LMColorIconProps };

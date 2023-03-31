@@ -8,4 +8,4 @@ interface LMMenuOptPlus extends LMMenuOpt {
   visible: boolean;
 }
 
-export { LMMainMenuProps, LMMenuOptPlus };
+export type { LMMainMenuProps, LMMenuOptPlus };

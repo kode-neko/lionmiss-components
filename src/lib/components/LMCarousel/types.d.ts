@@ -33,8 +33,8 @@ export {
   StyleList,
   StyleWidth,
   ImgCarousel,
-  CarouselProps,
-  KNCarouselControlsProps,
+  // CarouselProps,
+  // KNCarouselControlsProps,
   KNCarouselSlidesProps,
   useKNCarouselData
 };

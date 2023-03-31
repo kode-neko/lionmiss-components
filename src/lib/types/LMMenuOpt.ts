@@ -5,4 +5,4 @@ interface LMMenuOpt {
   res?: boolean;
 }
 
-export { LMMenuOpt };
+export type { LMMenuOpt };

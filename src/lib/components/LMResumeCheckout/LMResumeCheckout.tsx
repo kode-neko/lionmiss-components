@@ -16,8 +16,8 @@ const LMResumeCheckout: React.FC<LMResumeCheckoutProps> = ({
   onPromo,
 }) => {
   const [promo, setPromo] = useState<string>("");
-  const promoTpl = promoTitle ? (
-    { promoTitle }
+  const promoTpl: JSX.Element = promoTitle ? (
+    <div>{promoTitle}</div>
   ) : (
     <div>
       <input value={promo} onChange={(e) => setPromo(e.target.value)} />

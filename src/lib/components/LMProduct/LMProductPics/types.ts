@@ -5,4 +5,4 @@ type LMProductPicsProps = {
   thumbList: LMImg[];
 };
 
-export { LMProductPicsProps };
+export type { LMProductPicsProps };

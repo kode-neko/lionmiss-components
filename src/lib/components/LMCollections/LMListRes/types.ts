@@ -3,4 +3,4 @@ type LMListResProps<T extends Record<string, unknown>> = {
   transform: (data: T) => JSX.Element;
 };
 
-export { LMListResProps };
+export type { LMListResProps };
