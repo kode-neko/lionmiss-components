@@ -3,5 +3,9 @@
     "@babel/preset-env",
     "@babel/preset-react",
     "@babel/preset-typescript"
+  ],
+  "ignore": [
+    "../src/**/*.test.js",
+    "../src/**/*.test.ts"
   ]
 }
