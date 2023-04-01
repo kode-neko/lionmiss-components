@@ -20,6 +20,7 @@
     "noEmit": false, // Hay casos que no interesa que compile. Solo usarlo paar typechecking o que lo haga un transpialdor como babel o swc
     "jsx": "react-jsx", // Como traducir los jsx
     // "esModuleInterop": true // Permitir importar CommonJs
+    "sourceMap": false, // Generar los sourcemaps
   },
   "include": [ // A que ficheros se aplica la config. Muy útil para ESLint y transpialdores
     "../src/**/*.ts"

@@ -1,5 +1,4 @@
 {
-  "minify": true,
   "jsc": {
     "minify": {
       "compress": true
@@ -13,5 +12,11 @@
         "runtime": "automatic"
       }
     }
-  }
+  },
+  // "minify": true,
+  // "sourceMaps": true,
+  "exclude": [
+    "../src/**/*.test.js",
+    "../src/**/*.test.ts"
+  ],
 }
