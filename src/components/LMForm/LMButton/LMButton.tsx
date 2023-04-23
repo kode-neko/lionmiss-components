@@ -56,4 +56,3 @@ const LMButton = styled.button<LMButtonProps>`
 `;
 
 export default LMButton;
-export { LMButtonProps };
