@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import LMSelectorBox from "./LMSelectorBox";
+import { LMSelectorBoxProps } from "./types";
 
 const meta: Meta = {
   title: 'Form / LMSelectorBox',
@@ -15,8 +16,9 @@ const meta: Meta = {
         'XL'
       ],
       control: {
-        type: 'radio'
+        type: 'select'
       },
+      defaultValue: 'M',
       description: "Selector options"
     }
   }
@@ -24,15 +26,20 @@ const meta: Meta = {
 
 type Story = StoryObj<typeof meta>;
 
+const args: Partial<LMSelectorBoxProps> = {
+  options: [
+    'XS',
+    'S',
+    'M',
+    'L',
+    'XL'
+  ],
+  selected: 'M'
+}
+
 const Sizes: Story = {
   args: {
-    options: [
-      'XS',
-      'S',
-      'M',
-      'L',
-      'XL'
-    ],
+    ...args
   }
 }
 
