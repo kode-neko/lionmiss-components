@@ -27,14 +27,14 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = 'medium',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode: string = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"

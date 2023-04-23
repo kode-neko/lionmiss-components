@@ -3,13 +3,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../../components/Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: { control: 'color' },
-  },
+  }
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -20,6 +20,15 @@ export const Primary: Story = {
   args: {
     primary: true,
     label: 'Button',
+  },
+  parameters: {
+    backgrounds: {
+      values: [
+        { name: 'red', value: '#f00' },
+        { name: 'green', value: '#ccc' },
+        { name: 'blue', value: '#00f' },
+      ],
+    },
   },
 };
 
