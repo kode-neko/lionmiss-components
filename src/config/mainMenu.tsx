@@ -2,49 +2,49 @@ import { LMMenuOpt } from "../types";
 
 const mainMenu: LMMenuOpt[] = [
   {
-    title: "woman.title",
+    title: "woman",
     path: ["woman"],
     submenu: [
-      { title: "woman.tops", path: ["woman", "top"] },
+      { title: "woman", path: ["woman", "top"] },
       {
-        title: "woman.bottom",
+        title: "bottom",
         path: ["woman", "bottom"],
       },
       {
-        title: "woman.dress",
+        title: "dress",
         path: ["woman", "dress"],
       },
       {
-        title: "woman.overcoat",
+        title: "overcoat",
         path: ["woman", "overcoat"],
       },
       {
-        title: "woman.accesories",
+        title: "accesories",
         path: ["woman", "accesories"],
       },
     ],
   },
   {
-    title: "man.title",
+    title: "man",
     path: ["man"],
     submenu: [
-      { title: "man.tops", path: ["man", "top"] },
+      { title: "man", path: ["man", "top"] },
       {
-        title: "man.bottom",
+        title: "bottom",
         path: ["man", "bottom"],
       },
-      { title: "man.robe", path: ["man", "robe"] },
+      { title: "robe", path: ["man", "robe"] },
       {
-        title: "man.overcoat",
+        title: "overcoat",
         path: ["man", "overcoat"],
       },
       {
-        title: "man.accesories",
+        title: "accesories",
         path: ["man", "accesories"],
       },
     ],
   },
-  { title: "about-us", path: ["about-us"] },
+  { title: "about us", path: ["about-us"] },
   { title: "faq", path: ["faq"] },
 ];
 

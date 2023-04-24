@@ -2,9 +2,9 @@ import { userIconLM } from "../components/LMIcons";
 import { LMMenuOpt } from "../types";
 
 const userMenu: LMMenuOpt[] = [
-  { title: "user.language" },
+  { title: "language" },
   {
-    title: "user.cart",
+    title: "cart",
     path: ["cart"],
     res: true,
   },

@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@js-joda/core": "^5.5.3",
+    "@stein197/css-reset": "^1.1.1",
     "classname": "^0.0.0",
     "classnames": "^2.3.2",
     "jsdom": "^21.1.1",
