@@ -11,7 +11,7 @@ LionMiss is an unreal online shop about fashion 🛒 This is a UI component cata
 - [🐱 Back | Github](https://github.com/kode-neko/lionmiss-back)
 - [🌳 Back | Swagger](https://www.kodeneko.com/lionmiss/swagger)
 - [❄️ Back | GraphQL](https://www.kodeneko.com/lionmiss/gql)
-- [🐱 Front | Storybook](https://github.com/kode-neko/lionmiss-components)
+- [🐱 Front | Storybook](https://www.kodeneko.com/lionmiss/storybook)
 - [🐱 Core | Github](https://github.com/kode-neko/lionmiss-core)
 - [✏️ UI | Wireframe](https://www.kodeneko.com/lionmiss/wireframe)
 - [📱 UI | Mockup](https://www.kodeneko.com/lionmiss/mockup)
