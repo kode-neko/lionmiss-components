@@ -7,6 +7,7 @@
   align-items: center;
   .opt {
     display: inline-block;
+
     .link {
       display: inline-block;
       padding: 12px;
@@ -19,9 +20,9 @@
       padding: 12px;
       top: 2px;
       color: $color-main;
-      font-size: 24px;
       text-transform: uppercase;
       font-weight: bold;
+      font-size: 24px;
     }
   }
 }

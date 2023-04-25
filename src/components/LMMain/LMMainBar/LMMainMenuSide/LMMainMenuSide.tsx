@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/typedef */
 import React, { useRef, useState } from "react";
 import { closeIconLM, arrowDownIconLM, arrowUpIconLM } from "../../../LMIcons";
 import { LMMainMenuSideProps } from "./types";

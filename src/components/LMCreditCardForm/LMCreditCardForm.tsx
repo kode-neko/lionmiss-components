@@ -39,6 +39,7 @@ const LMCreditCardForm: React.FC<LMCreditCardFormProps> = ({
         <input
           ref={refCreditNumber}
           placeholder={placeholder.creditNumber}
+          pattern="([0-9]{4})(\s([0-9]{4})){3}"
           className={styles.creditNumber}
           value={values.creditNumber}
           onKeyDown={handleKeyDownNumbers}

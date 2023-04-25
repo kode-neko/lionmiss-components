@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/typedef */
 import React, { useState } from "react";
 import { LMMenuOpt } from "../../../../types";
 import { createPath } from "../../../../utils";
@@ -5,7 +6,7 @@ import { LMMainMenuProps, LMMenuOptPlus } from "./types";
 import styles from "./styles.module.scss";
 import { arrowDownIconLM } from "../../../LMIcons";
 
-export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }) => {
+export const LMMainMenu: React.FC<LMMainMenuProps> = ({ mainMenu }: LMMainMenuProps) => {
   const createMenuPlus = () =>
     mainMenu.map((opt) => ({ ...opt, visible: false }));
   const [menuPlus, setMenuPlus] = useState<LMMenuOptPlus[]>(createMenuPlus());

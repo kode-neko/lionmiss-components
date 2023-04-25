@@ -1,6 +1,8 @@
 {
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended"
   ],
   "overrides": [
     {
@@ -15,6 +17,8 @@
       "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
+        "plugin:storybook/recommended",
+        "plugin:storybook/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
       ],

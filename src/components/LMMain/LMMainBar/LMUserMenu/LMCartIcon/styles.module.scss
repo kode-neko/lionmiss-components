@@ -12,18 +12,17 @@
   .counter {
     display: inline-block;
     position: absolute;
-    right: 44px;
-    bottom: -4px;
     text-align: center;
     height: 22px;
     width: 22px;
+    bottom: -5px;
+    left: 10px;
     background-color: darken($color-main, 30%);
     border: 1px solid $color-black;
     border-radius: 50%;
     .number {
       display: inline-block;
       position: relative;
-      top: -4px;
       font-size: 14px;
       font-weight: bold;
       color: $color-white;

@@ -8,8 +8,10 @@
 .box {
   border-radius: $border-radius-size;
   height: 32px;
-  width: 32px;
+  min-width: 32px;
   color: $color-white;
+  padding: 0 6px;
+  box-sizing: border-box;
   font-size: 14px;
   text-transform: uppercase;
   background-color: $color-black;
