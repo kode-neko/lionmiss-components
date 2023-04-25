@@ -34,7 +34,21 @@ const Default: Story = {
   }
 }
 
+const NotFilled: Story = {
+  args: {
+    ...args,
+    values: {
+      creditNumber: "",
+      fullName: "",
+      month: "",
+      year: "",
+      cvv: ""
+    }
+  }
+}
+
 export default meta;
 export {
-  Default
+  Default,
+  NotFilled
 }
