@@ -1,10 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import LMMainBar from "./LMMainBar";
 import { LMMainBarProps } from "./types";
-import { mainMenu } from "../../../config/mainMenu";
-import { userMenu } from "../../../config/userMenu";
-import { WEB_TITLE } from "../../../config/constants";
 import {userInfo} from '../../../stories/fixtures'
+import { WEB_TITLE, mainMenu, userMenu } from "../../../stories/constants";
 
 const meta: Meta = {
   title: 'Bars & Footers / LMMainBar',
@@ -29,9 +27,6 @@ const Web: Story = {
 }
 
 const Mobile: Story = {
-  decorators: [
-    (Story) => <div style={{maxWidth: '600px'}}><Story /></div> 
-  ],
   args: {
     ...args,
     isMobile: true
