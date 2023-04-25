@@ -10,38 +10,36 @@ import { LMModalImg } from "../LMModal";
 const MAX_RATING = 5;
 
 const LMCommentDesc: React.FC<LMCommentDescProps> = ({
-  comment,
-  userInfo,
-  altAvatar,
-}) => {
+  comment
+}: LMCommentDescProps) => {
   const [img, setImg] = useState<LMImg>();
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
   const { user, measures } = comment;
 
-  const ratingCheck = Array(comment.ratting)
+  const ratingCheck: JSX.Element[] = Array(comment.ratting)
     .fill(0)
-    .map((ele) => (
+    .map((ele: number) => (
       <div key={ele} className={classNames(styles.check)}>
         {starIconLM}
       </div>
     ));
 
-  const ratingNone = Array(MAX_RATING - comment.ratting)
+  const ratingNone: JSX.Element[] = Array(MAX_RATING - comment.ratting)
     .fill(0)
-    .map((ele) => (
+    .map((ele: number) => (
       <div key={ele} className={classNames(styles.none)}>
         {starIconLM}
       </div>
     ));
 
-  const infoMeasures = Object.entries(measures).map(([key, value]) => (
+  const infoMeasures: JSX.Element[] = Object.entries(measures).map(([key, value]) => (
     <div key={key} className={styles.line}>
       <div className={styles.key}>{key}</div>
       <div className={styles.value}>{value}</div>
     </div>
   ));
 
-  const gallery = comment.imgs.map((img) => (
+  const gallery: JSX.Element[] = comment.imgs.map((img) => (
     <div
       key={img._id}
       className={styles.img}
@@ -57,7 +55,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({
   return (
     <>
       {visibleModal && (
-        <LMModalImg img={img } onClose={() => setVisibleModal(false)} />
+        <LMModalImg img={img} onClose={() => setVisibleModal(false)} />
       )}
       <LMBaseCompo>
         <div className={styles.header}>
@@ -69,7 +67,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({
         </div>
         <div className={styles.body}>
           <div className={styles.user}>
-            <img className={styles.avatar} src={user.userInfo.avatar} alt={altAvatar} />
+            <img className={styles.avatar} src={user.userInfo.avatar} />
             <div className={styles.info}>{infoMeasures}</div>
           </div>
           <div className={styles.comment}>
@@ -79,7 +77,7 @@ const LMCommentDesc: React.FC<LMCommentDescProps> = ({
         </div>
         <div className={styles.footer}>
           <div className={styles.date}>
-            {Intl.DateTimeFormat(userInfo.lang).format(comment.date)}
+            {Intl.DateTimeFormat(comment.user.userInfo.lang).format(comment.date)}
           </div>
         </div>
       </LMBaseCompo>
