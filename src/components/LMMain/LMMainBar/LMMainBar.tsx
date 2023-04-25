@@ -7,9 +7,10 @@ import LMUserMenu from "./LMUserMenu";
 import { LMMainBarProps } from "./types";
 import { menuIconLM } from "../../LMIcons";
 import { LMMainMenuSide } from "./LMMainMenuSide";
-import { useDisplay } from "../../../utils";
+import { LMMenuOpt } from "../../../types";
 
 export const LMMainBar: React.FC<LMMainBarProps> = ({
+  isMobile,
   webTitle,
   mainMenu,
   userMenu,
@@ -17,9 +18,8 @@ export const LMMainBar: React.FC<LMMainBarProps> = ({
   columnsInfo,
   socialMedia,
   onSearch,
-}) => {
+}: LMMainBarProps) => {
   const [visibleMenuSlide, setVisibleMenuSlide] = useState<boolean>(false);
-  const isMobile = useDisplay(992);
   return isMobile ? (
     <>
       <LMMainMenuSide
@@ -43,7 +43,7 @@ export const LMMainBar: React.FC<LMMainBarProps> = ({
         </div>
         <div className={styles.right}>
           <LMUserMenu
-            userMenu={userMenu.filter((opt) => opt.res === isMobile)}
+            userMenu={userMenu.filter((opt: LMMenuOpt) => opt.res === isMobile)}
             userInfo={userInfo}
           />
         </div>

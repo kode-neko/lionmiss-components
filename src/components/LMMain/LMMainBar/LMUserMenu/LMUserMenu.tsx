@@ -1,22 +1,22 @@
 import React from "react";
-import { LMMenuOpt } from "../../../../types";
 import { createPath } from "../../../../utils";
 import { LMUserMenuProps } from "./types";
 import styles from "./styles.module.scss";
 import { LMCartIcon } from "./LMCartIcon";
+import { LMMenuOpt } from "../../../../types";
 
 export const LMUserMenu: React.FC<LMUserMenuProps> = ({
   userMenu,
   userInfo,
-}) => {
-  const createLMMenuOpt = (opt: LMMenuOpt) => {
+}: LMUserMenuProps) => {
+  const createLMMenuOpt: JSX.Element = (opt: LMMenuOpt) => {
     let tpl: JSX.Element;
 
-    switch (opt.title) {
-      case "user.language":
+    switch (opt.id) {
+      case "lang":
         tpl = <span className={styles.lang}>{userInfo.lang}</span>;
         break;
-      case "user.cart":
+      case "cart":
         tpl = <LMCartIcon cont={userInfo.cart?.products.length || 0} />;
         break;
       default:
