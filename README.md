@@ -8,9 +8,11 @@
 LionMiss is an unreal online shop about fashion 🛒 This is a UI component cataloge made by Storybook. You can interact with several of them in the side menu. This site may change every now and then, so you can be surprised in the next visit. Enjoy and send me recommendations through my social media and mail 😀
 
 # Demo
+- [🐱 Back | Github](https://github.com/kode-neko/lionmiss-back)
 - [🌳 Back | Swagger](https://www.kodeneko.com/lionmiss/swagger)
 - [❄️ Back | GraphQL](https://www.kodeneko.com/lionmiss/gql)
-- [🐱 Front | Github](https://github.com/kode-neko/lionmiss-components)
+- [🐱 Front | Storybook](https://github.com/kode-neko/lionmiss-components)
+- [🐱 Core | Github](https://github.com/kode-neko/lionmiss-core)
 - [✏️ UI | Wireframe](https://www.kodeneko.com/lionmiss/wireframe)
 - [📱 UI | Mockup](https://www.kodeneko.com/lionmiss/mockup)
 
