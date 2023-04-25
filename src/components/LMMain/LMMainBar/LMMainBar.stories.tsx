@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import LMMainBar from "./LMMainBar";
 import { LMMainBarProps } from "./types";
 import {userInfo} from '../../../stories/fixtures'
-import { WEB_TITLE, mainMenu, userMenu } from "../../../stories/constants";
+import { WEB_TITLE, mainMenu, userMenu, socialMedia, columnsInfo } from "../../../stories/constants";
 
 const meta: Meta = {
   title: 'Bars & Footers / LMMainBar',
@@ -17,7 +17,9 @@ const args: Partial<LMMainBarProps> = {
   isMobile: false,
   mainMenu,
   userMenu,
-  userInfo
+  userInfo,
+  socialMedia,
+  columnsInfo
 }
 
 const Web: Story = {
