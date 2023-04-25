@@ -1,4 +1,4 @@
-import { LMMenuOpt } from "../types";
+import { LMMenuOpt } from "../../types";
 
 const mainMenu: LMMenuOpt[] = [
   {

@@ -1,5 +1,7 @@
-import { userIconLM } from "../components/LMIcons";
-import { LMMenuOpt } from "../types";
+import React from "react";
+import { LMMenuOpt } from "../../types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 const userMenu: LMMenuOpt[] = [
   { title: "language" },
@@ -8,7 +10,7 @@ const userMenu: LMMenuOpt[] = [
     path: ["cart"],
     res: true,
   },
-  { title: userIconLM, path: ["config"], res: true },
+  { title: <FontAwesomeIcon icon={faUser} />, path: ["config"], res: true },
 ];
 
 export { userMenu };
