@@ -1,0 +1,40 @@
+@import "../../style.scss";
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    padding: 20px;
+  }
+
+  tr,
+  td {
+    border: none;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  .headCol {
+    font-weight: bold;
+    background-color: $color-mid;
+    border: 2px solid $color-white;
+  }
+}
+
+.tableList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .ele {
+    background-color: $color-white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    @include shadow;
+  }
+}

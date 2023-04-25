@@ -1,0 +1,158 @@
+@import "../style.scss";
+
+.cardForm {
+  position: relative;
+  height: 254px;
+}
+
+.card {
+  position: absolute;
+  background-color: $color-main-darken;
+  border-radius: 12px;
+  width: 432px;
+  height: 254px;
+
+  .chip,
+  .circle,
+  .band {
+    position: absolute;
+  }
+
+  .chip {
+    background-color: $color-black;
+    border-radius: 6px;
+    width: 50px;
+    height: 42px;
+    top: 30px;
+    left: 30px;
+
+    .lineH {
+      position: absolute;
+      display: inline-block;
+      height: 42px;
+      border-left: 2px solid $color-main-darken;
+    }
+
+    .lineW {
+      position: absolute;
+      display: inline-block;
+      width: 50px;
+      border-bottom: 2px solid $color-main-darken;
+    }
+  }
+
+  .circle {
+    top: 30px;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+  }
+
+  .black {
+    background-color: $color-black;
+    right: 0;
+    right: 55px;
+  }
+
+  .aqua {
+    background-color: $color-second;
+    right: 0;
+    right: 30px;
+  }
+
+  .band {
+    bottom: 0;
+    background-color: $color-main;
+    height: 52px;
+    width: 432px;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+.form {
+  position: absolute;
+  width: 432px;
+  height: 254px;
+  color: $color-white;
+
+  input {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: $color-white;
+
+    &:focus-visible {
+      outline: none;
+      border-bottom: 3px solid $color-second;
+    }
+
+    &::placeholder {
+      color: $color-second;
+    }
+  }
+
+  @mixin position {
+    display: block;
+    position: relative;
+    left: 30px;
+  }
+
+  @mixin numName {
+    font-size: 28px;
+    width: 300px;
+  }
+
+  .creditNumber {
+    @include position;
+    top: 94px;
+    @include numName;
+  }
+
+  .fullName {
+    @include position;
+    top: 100px;
+    @include numName;
+    font-weight: bold;
+  }
+
+  .bandCont {
+    @include position;
+    font-size: 24px;
+    top: 140px;
+  }
+
+  .bandCont,
+  .endDate,
+  .cvv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .month,
+  .year {
+    width: 30px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .slash {
+    width: 15px;
+    text-align: center;
+  }
+
+  .cvv {
+    margin-left: 40px;
+
+    .label {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .value {
+      width: 50px;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+}

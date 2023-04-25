@@ -1,0 +1,55 @@
+@import "../../style.scss";
+
+@mixin baseMenu {
+  display: flex;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-black;
+  padding: 0 20px;
+  height: 100px;
+  @include shadow-below;
+}
+
+.contRes {
+  @include baseMenu;
+  .left .menu {
+    color: $color-main;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.cont {
+  @include baseMenu;
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    .mainTitle {
+      margin-right: 92px;
+    }
+    .mainMenu {
+      position: relative;
+      top: 10px;
+      display: inline-block;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    .search {
+      display: inline-block;
+      margin-right: 32px;
+    }
+  }
+}

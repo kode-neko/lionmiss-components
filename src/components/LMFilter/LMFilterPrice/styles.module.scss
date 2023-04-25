@@ -1,0 +1,35 @@
+@import "../../style.scss";
+
+.cont {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.currency {
+  position: absolute;
+  top: 10px;
+  left: 46px;
+}
+
+@mixin input {
+  position: relative;
+  input {
+    border: 2px solid $color-main;
+    border-radius: $border-radius-size;
+    width: 50px;
+    height: 30px;
+    padding: 0 6px;
+    margin-left: 10px;
+    text-align: right;
+  }
+}
+
+.min {
+  @include input;
+}
+
+.max {
+  @include input;
+}

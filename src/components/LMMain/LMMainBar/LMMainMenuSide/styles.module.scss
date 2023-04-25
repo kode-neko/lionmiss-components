@@ -1,0 +1,76 @@
+@import "../../../style.scss";
+
+.cont {
+  background-color: $color-black;
+  width: 379px;
+  min-height: 100vh;
+  color: $color-white;
+  position: fixed;
+  z-index: 101;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  padding: 20px;
+
+  li {
+    font-size: 42px;
+  }
+
+  li a {
+    display: inline-block;
+    padding: 8px;
+    color: $color-white;
+    &:hover {
+      color: $color-main;
+      cursor: pointer;
+    }
+  }
+
+  .close {
+    text-align: right;
+    button {
+      border: none;
+      background: none;
+      color: $color-main;
+      font-size: 32px;
+      cursor: pointer;
+    }
+  }
+
+  .mainMenu {
+    list-style: none;
+
+    .arrow {
+      margin-left: 12px;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+
+    .submenu {
+      margin-left: 24px;
+      font-size: 18px;
+      overflow: hidden;
+    }
+  }
+
+  .divider {
+    border: 2px solid $color-main;
+    width: 100%;
+    margin: 32px 0;
+  }
+
+  .social {
+    margin-top: 42px;
+    a {
+      font-size: 42px;
+      padding: 8px;
+      color: $color-white;
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+}

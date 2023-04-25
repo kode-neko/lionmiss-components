@@ -1,0 +1,13 @@
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+
+  .check {
+    display: inline-block;
+    width: 60px;
+  }
+}

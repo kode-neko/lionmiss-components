@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/blocks';
+import logo from './assets/logo.png';
+import exampleScreen from './assets/example-screen.png';
+
+<Meta title="Docs / Introduction" />
+
+<style>
+  {`
+    #main p, #main a {
+      font-size: 18px;
+    }
+
+    a {
+      color: #A06BE3;
+    }
+
+    .center {
+      text-align: center;
+      margin-bottom: 42px;
+      border-bottom: 1px solid black;
+    }
+
+    .center a, .demo a {
+      color: #A06BE3;
+    }
+
+    .center a:hover, .demo a:hover {
+      color: black;
+    }
+
+    .logo {
+      margin: 0 auto;
+      width: 200px;
+    }
+
+    .demo {
+      margin-top: 36px;
+    }
+
+    .exampleScreen {
+      margin-top: 36px;
+    }
+
+  `}
+</style>
+
+<div id="main">
+
+  <div class="center">
+    <img class="logo" src={logo} />
+    [💃 Personal Page](https://www.kodeneko.com) | 
+    [👗 Lion Miss Hub](https://kodeneko.com/lionmiss) | 
+    [🐱 Github](https://github.com/kode-neko) | 
+    [🐤 Twitter](https://twitter.com/KodenekoFront) | 
+    [✉️ Contact Mail](mailto:ladysun.freedom@gmail.com)
+  </div>
+
+  <div class="desc">
+    LionMiss is an unreal online shop about fashion 🛒 This is a UI component cataloge made by Storybook. You can interact with several of them in the side menu. This site may change every now and then, so you can be surprised in the next visit. Enjoy and send me recommendations through my social media and mail 😀
+  </div>
+
+  <div class="demo">
+    # Demo
+    - [🌳 Back | Swagger](https://www.kodeneko.com/lionmiss/swagger)
+    - [❄️ Back | GraphQL](https://www.kodeneko.com/lionmiss/gql)
+    - [🐱 Front | Github](https://github.com/kode-neko/lionmiss-components)
+    - [✏️ UI | Wireframe](https://www.kodeneko.com/lionmiss/wireframe)
+    - [📱 UI | Mockup](https://www.kodeneko.com/lionmiss/mockup)
+  </div>
+
+  <img class="exampleScreen" src={exampleScreen} />
+
+</div>

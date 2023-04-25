@@ -1,0 +1,38 @@
+@import "../../style.scss";
+
+.cont {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: $color-black;
+}
+
+@mixin superFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.line {
+  @include superFlex();
+  color: $color-white;
+  font-size: 24px;
+}
+
+.main {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.btns {
+  @include superFlex();
+}

@@ -1,0 +1,88 @@
+@import "../../style.scss";
+
+.cont {
+  width: 100%;
+}
+
+.infoCont {
+  height: 237px;
+  background-color: $color-black;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  .columnsInfo {
+    display: flex;
+    .info {
+      margin-right: 84px;
+      .title {
+        font-size: 28px;
+        color: $color-main;
+        margin-bottom: 24px;
+        font-weight: bold;
+      }
+      & ul {
+        list-style: none;
+        & li {
+          & a {
+            display: inline-block;
+            padding: 5px 0;
+            width: 100%;
+            color: $color-white;
+            &:hover {
+              color: $color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .socialMedia {
+    .socialList {
+      margin-bottom: 32px;
+      a {
+        color: $color-white;
+        font-size: 48px;
+        display: inline-block;
+        margin-right: 32px;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+    .about {
+      font-size: 24px;
+      text-align: center;
+      &:hover {
+        color: $color-main;
+      }
+      & > a .text {
+        color: $color-white;
+        font-weight: bold;
+        margin-right: 10px;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+      & > a .icon {
+        color: $color-main;
+      }
+    }
+  }
+}
+
+.credits {
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: $color-main;
+  color: $color-black;
+  text-align: center;
+  & span {
+    margin: 0px 6px;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../../../style.scss";
+
+.cont {
+  display: inline-block;
+
+  .bag {
+    display: inline-block;
+    position: relative;
+    color: $color-main;
+    font-size: 24px;
+  }
+  .counter {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    height: 22px;
+    width: 22px;
+    bottom: -5px;
+    left: 10px;
+    background-color: darken($color-main, 30%);
+    border: 1px solid $color-black;
+    border-radius: 50%;
+    .number {
+      display: inline-block;
+      position: relative;
+      font-size: 14px;
+      font-weight: bold;
+      color: $color-white;
+    }
+  }
+}
+
+@keyframes addedItemAnimation {
+  0% {
+    bottom: -4px;
+  }
+  50% {
+    bottom: 8px;
+  }
+  75% {
+    bottom: -8px;
+  }
+  100% {
+    bottom: -4px;
+  }
+}
+
+.addedItem {
+  animation-name: addedItemAnimation;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+}

@@ -1,0 +1,33 @@
+@import "../../style.scss";
+
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+
+  .minus,
+  .plus {
+    border: none;
+    background-color: $color-main;
+    color: $color-white;
+    height: 24px;
+    width: 24px;
+    border-radius: $border-radius-size;
+    font-size: 20px;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-second;
+    }
+  }
+
+  .number {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

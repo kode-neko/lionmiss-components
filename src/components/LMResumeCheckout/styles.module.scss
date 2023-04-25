@@ -1,0 +1,65 @@
+@import "../style.scss";
+
+.cont {
+  background-color: $color-white;
+  border-radius: $border-radius-size;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  @include shadow;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.value {
+  text-align: right;
+}
+
+.promo,
+.taxes {
+  font-size: 24px;
+}
+
+.promo {
+  margin-bottom: 42px;
+
+  .value {
+    input {
+      box-sizing: border-box;
+      border-radius: $border-radius-size;
+      background-color: $color-white;
+      border: 2px solid $color-main;
+      height: 40px;
+      margin-right: 8px;
+      padding: 4px 10px;
+
+      &:focus-visible {
+          outline: $color-second;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: $border-radius-size;
+      background-color: $color-main;
+      color: $color-white;
+      border: none;
+      font-weight: bold;
+      padding: 10px 10px;
+      height: 40px;
+    }
+  }
+}
+
+.taxes {
+  margin-bottom: 16px;
+}
+
+.total {
+  font-size: 36px;
+  font-weight: bold;
+}

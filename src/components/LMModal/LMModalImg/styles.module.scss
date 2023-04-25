@@ -1,0 +1,43 @@
+@import "../../style.scss";
+
+.overlay {
+  position: fixed;
+  z-index: 110;
+  background-color: $color-overlay;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+
+  .modal {
+    display: inline-block;
+    border: 1px solid $color-main;
+    background-color: $color-black;
+    border-radius: $border-radius-size;
+    padding: 20px;
+    padding-top: 10px;
+    margin: 20px auto;
+
+    .title {
+      text-align: right;
+      padding-bottom: 10px;
+
+      .close {
+        display: inline-block;
+        cursor: pointer;
+        color: $color-white;
+        font-size: 24px;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+
+    & > img {
+      height: 80vh;
+      border-radius: $border-radius-size;
+    }
+  }
+}
