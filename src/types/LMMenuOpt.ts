@@ -1,4 +1,5 @@
 interface LMMenuOpt {
+  id: string,
   title: string | JSX.Element;
   submenu?: LMMenuOpt[];
   path?: string[];

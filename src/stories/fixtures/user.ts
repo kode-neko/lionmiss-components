@@ -1,13 +1,11 @@
 import { LMUser, LMUserInfo } from "lionmiss-core";
 import { measures } from "./measures";
+import { cart } from "./cart";
 import {avatar01} from '../../stories/assets/avatar';
 import {faker} from '@faker-js/faker'
 
 const userInfo: LMUserInfo = {
-  cart: {
-    products: [],
-    taxes: 21
-  },
+  cart,
   favProducts: [],
   avatar: avatar01,
   lang: "en",

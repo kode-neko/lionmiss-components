@@ -7,33 +7,39 @@ import {faker} from '@faker-js/faker'
 
 const columnsInfo: LMMenuOpt[] = [
   {
+    id: "help",
     title: "help",
     path: ["help"],
     submenu: [
-      { title: "sizing", path: ["help", "sizing"] },
-      { title: "shipping", path: ["help", "shipping"] },
-      { title: "payment", path: ["help", "payment"] },
-      { title: "questions", path: ["help", "question"] },
+      { id: "sizing", title: "sizing", path: ["help", "sizing"] },
+      { id: "shipping", title: "shipping", path: ["help", "shipping"] },
+      { id: "payment", title: "payment", path: ["help", "payment"] },
+      { id: "payment", title: "payment", path: ["help", "payment"] },
+      { id: "questions", title: "questions", path: ["help", "question"] },
     ],
   },
   {
+    id: "policies",
     title: "policies",
     path: ["policies"],
     submenu: [
-      { title: "private", path: ["policies", "private"] },
-      { title: "cookies", path: ["policies", "cookies"] },
-      { title: "terms", path: ["policies", "terms"] },
+      { id: "private", title: "private", path: ["policies", "private"] },
+      { id: "cookies", title: "cookies", path: ["policies", "cookies"] },
+      { id: "terms", title: "terms", path: ["policies", "terms"] },
     ],
   },
   {
+    id: "contact.title",
     title: "contact.title",
     path: ["contact"],
     submenu: [
       {
+        id: "chat",
         title: <><FontAwesomeIcon icon={faComment} /> <span>Chat</span></>,
         path: ["contact", "chat"],
       },
       {
+        id: "phone",
         title: <><FontAwesomeIcon icon={faPhone} /> <span>{faker.phone.number('600 ## ## ##')}</span></>,
         path: ["contact", "phone"],
       },
@@ -43,18 +49,22 @@ const columnsInfo: LMMenuOpt[] = [
 
 const socialMedia: LMMenuOpt[] = [
   {
+    id: "instagram",
     title: <FontAwesomeIcon icon={faInstagram} />,
     path: [],
   },
   {
+    id: "pinterest",
     title: <FontAwesomeIcon icon={faPinterest} />,
     path: [],
   },
   {
+    id: "twitter",
     title: <FontAwesomeIcon icon={faTwitter} />,
     path: [],
   },
   {
+    id: "faceboo",
     title: <FontAwesomeIcon icon={faFacebook} />,
     path: [],
   },
