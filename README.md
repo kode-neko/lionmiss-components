@@ -3,19 +3,20 @@
   <img width="200" class="logo" src="./src/stories/assets/logo.png" />
 </p>
 
-[💃 Personal Page](https://www.kodeneko.com) | [👗 Lion Miss Hub](https://kodeneko.com/lionmiss) | [🐱 Github](https://github.com/kode-neko) | [🐤 Twitter](https://twitter.com/KodenekoFront) | [✉️ Contact Mail](mailto:ladysun.freedom@gmail.com)
+[💃 Personal Page](https://www.kodeneko.com) | [👗 Lion Miss Hub](https://kodeneko.com/lionmiss/hub) | [🐱 Github](https://github.com/kode-neko) | [🐤 Twitter](https://twitter.com/KodenekoFront) | [🎨 Figma](https://figma.com/@kodeneko) | [✉️ Contact Mail](mailto:ladysun.freedom@gmail.com)
 
-LionMiss is an unreal online shop about fashion 🛒 This is the front-end project. This site may change every now and then, so you can be surprised in the next visit. Enjoy and send me recommendations through my social media and mail 😀
+LionMiss is an imaginary online shop about fashion 🛍️🛒 This is the front-end project. This site may change every now and then, so you could you find new features or fixes in the next visit 🚧 Enjoy and send me recommendations through my social media and mail 😀
 
 # Demo
-- [🐱 Back | Github](https://github.com/kode-neko/lionmiss-back)
-- [🌳 Back | Swagger](https://www.kodeneko.com/lionmiss/swagger)
-- [❄️ Back | GraphQL](https://www.kodeneko.com/lionmiss/gql)
-- [🐱 Front | Storybook](https://www.kodeneko.com/lionmiss/storybook)
+- [🛍️ Hub](https://www.kodeneko.com/lionmiss)
+- [🌳 Back | Swagger](https://www.kodeneko.com/lionmiss/docs)
+- [❄️ Back | GraphQL](https://www.kodeneko.com/lionmiss/hub/gql-sandbox)
+- [📱 Front | Storybook](https://www.kodeneko.com/lionmiss/components)
+- [🎨 UI | Figma](https://www.figma.com/community/file/1238958209605645090)
+
+# Repos Related
 - [🐱 Core | Github](https://github.com/kode-neko/lionmiss-core)
-- [✏️ UI | Wireframe](https://www.kodeneko.com/lionmiss/wireframe)
-- [📱 UI | Mockup](https://www.kodeneko.com/lionmiss/mockup)
+- [🐱 Back | Github](https://github.com/kode-neko/lionmiss-back)
 
-<br/>
-
+# Sample
 <img class="exampleImg" src="./src/stories/assets/example-screen.png" />

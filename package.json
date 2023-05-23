@@ -13,7 +13,7 @@
     "clean:disaster": "find . -type f -name \"*.d.ts\" -name \".js\" -name \".js.map\" -delete",
     "eslint": "npx eslint --config ./.eslintrc.json ./src",
     "test": "vitest",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev --no-open --no-version-updates --no-release-notes -p 5001",
     "build-storybook": "storybook build"
   },
   "dependencies": {
